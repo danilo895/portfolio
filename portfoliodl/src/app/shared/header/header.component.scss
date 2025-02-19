@@ -135,6 +135,43 @@ nav a {
 }
 
 
+.nav-projects-cont {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.nav-projects-cont a {
+    position: relative; 
+    z-index: 3; /* ✅ Link bleibt klickbar */
+    cursor: pointer;
+    color: white; /* Falls der Effekt nicht funktioniert, Textfarbe überprüfen */
+}
+
+.nav-projects-cont img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    max-width: 120px;
+    z-index: 2; /* ✅ Bild liegt über dem Text */
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.3s ease-in-out;
+    pointer-events: none; /* ✅ Link bleibt klickbar */
+    mix-blend-mode: difference; /* 🔥 Lässt den Text durchscheinen */
+}
+
+/* Beim Hover wird das Bild von links nach rechts sichtbar */
+.nav-projects-cont:hover img {
+    clip-path: inset(0 0 0 0);
+}
+
+
+
+
 
 
 
