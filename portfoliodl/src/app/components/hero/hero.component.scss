@@ -26,3 +26,27 @@
     align-items: center;
     gap: 20px;
 }
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.image-wrapper img {
+    display: block;
+    width: 100%;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    width: 86%;
+    height: 91%;
+    background-color: rgba(0, 128, 0, 0.406);
+    opacity: 1;
+    pointer-events: none;
+    transform: rotate(8deg);
+}
+
+
