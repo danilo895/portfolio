@@ -2,3 +2,24 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: 'Bricolage Grotesque';
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/bricolage-grotesque-v7-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/assets/fonts/bricolage-grotesque-v7-latin-500.woff2') format('woff2');
+}
