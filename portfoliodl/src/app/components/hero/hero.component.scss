@@ -43,10 +43,15 @@
     left: 16px;
     width: 86%;
     height: 91%;
-    background-color: rgba(0, 128, 0, 0.406);
+    background-color: rgba(255, 255, 255, 0.406);
     opacity: 1;
     pointer-events: none;
     transform: rotate(8deg);
+}
+
+.personal-img{
+width: 100%;
+background-color: rgba(255, 255, 255, 0.499);
 }
 
 
