@@ -22,7 +22,7 @@ nav {
 nav a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Bricolage Grotesque';
 }
 
@@ -73,3 +73,35 @@ nav a {
     z-index: 1;
     width: 100%;
 }
+
+.nav-about-cont {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.nav-about-cont a {
+    position: relative;
+    z-index: 1; 
+}
+
+.nav-about-cont img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    max-width: 120px;
+    z-index: 2;
+    opacity: 0; 
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.nav-about-cont:hover img {
+    opacity: 1;
+}
+
+
