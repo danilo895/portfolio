@@ -78,8 +78,11 @@ nav a {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    overflow: visible;
+
 }
+
 
 .nav-about-cont a {
     position: relative;
@@ -93,15 +96,14 @@ nav a {
     transform: translate(-50%, -50%);
     width: 120%;
     max-width: 120px;
-    z-index: 2;
-    opacity: 0; 
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
+    clip-path: inset(100% 0 0 0);
+    transition: clip-path 0.3s ease-in-out;
 }
 
 
 .nav-about-cont:hover img {
-    opacity: 1;
+    clip-path: inset(0 0 0 0);
 }
+
 
 
