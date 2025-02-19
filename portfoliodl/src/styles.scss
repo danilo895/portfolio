@@ -6,8 +6,13 @@
 body {
     font-family: 'Bricolage Grotesque';
     color: white;
+    background-color: black;
 }
 
+.portfolio-content-container{
+    max-width: 1900px;
+    margin: 0 auto;
+}
 
 @font-face {
     font-display: swap;

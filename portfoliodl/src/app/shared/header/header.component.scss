@@ -1,22 +1,25 @@
 header {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1440px;
+    height: 100px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin: 0;
     z-index: 10;
     background: transparent;
-    display: flex;
 }
 
+
 nav {
-    width: 70vw;
     display: flex;
+    flex: 5;
     justify-content: space-around;
     align-items: center;
-    
 }
 
 nav a {
@@ -26,12 +29,15 @@ nav a {
     font-family: 'Bricolage Grotesque';
 }
 
-.my-logo{
-    width: 15vw;
+
+.my-logo {
+    flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    min-width: 150px;
 }
+
 
 .logo-circle{
     display: flex;
@@ -43,14 +49,15 @@ nav a {
     background-color: blue;
 }
 
-.change-lang{
-    width: 15vw;
+.change-lang {
+    flex: 1; /* 🔥 Flexibel anpassbar */
     display: flex;
-    justify-content: around;
-    justify-content: center;
-    gap: 4px;
+    justify-content: flex-end;
     align-items: center;
+    gap: 10px;
+    min-width: 150px; /* 🔥 Verhindert zu kleine Größe */
 }
+
 
 .toggle-lang {
     position: relative;
@@ -145,7 +152,7 @@ nav a {
 
 .nav-projects-cont a {
     position: relative; 
-    z-index: 3;
+    z-index: 2;
     cursor: pointer;
     color: white;
 }
@@ -157,11 +164,11 @@ nav a {
     transform: translate(-50%, -50%);
     width: 150%;
     max-width: 150px;
-    z-index: 2;
+    z-index: 3;
     clip-path: inset(0 100% 0 0);
     transition: clip-path 0.3s ease-in-out;
     pointer-events: none;
-    mix-blend-mode: difference;
+    
 }
 
 
