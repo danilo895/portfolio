@@ -145,29 +145,63 @@ nav a {
 
 .nav-projects-cont a {
     position: relative; 
-    z-index: 3; /* ✅ Link bleibt klickbar */
+    z-index: 3;
     cursor: pointer;
-    color: white; /* Falls der Effekt nicht funktioniert, Textfarbe überprüfen */
+    color: white;
 }
 
 .nav-projects-cont img {
     position: absolute;
-    top: 0;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 120%;
-    max-width: 120px;
-    z-index: 2; /* ✅ Bild liegt über dem Text */
+    width: 150%;
+    max-width: 150px;
+    z-index: 2;
     clip-path: inset(0 100% 0 0);
     transition: clip-path 0.3s ease-in-out;
-    pointer-events: none; /* ✅ Link bleibt klickbar */
-    mix-blend-mode: difference; /* 🔥 Lässt den Text durchscheinen */
+    pointer-events: none;
+    mix-blend-mode: difference;
 }
 
-/* Beim Hover wird das Bild von links nach rechts sichtbar */
+
 .nav-projects-cont:hover img {
     clip-path: inset(0 0 0 0);
 }
+
+
+
+.nav-contact-cont {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.nav-contact-cont a {
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.nav-contact-cont img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130%;
+    max-width: 130px;
+    z-index: 2;
+    clip-path: inset(0 100% 0 0); 
+    transition: clip-path 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.nav-contact-cont:hover img {
+    clip-path: inset(0 0 0 0);
+}
+
 
 
 
