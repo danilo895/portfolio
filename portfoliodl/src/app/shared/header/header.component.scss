@@ -83,7 +83,6 @@ nav a {
 
 }
 
-
 .nav-about-cont a {
     position: relative;
     z-index: 1; 
@@ -100,10 +99,44 @@ nav a {
     transition: clip-path 0.3s ease-in-out;
 }
 
-
 .nav-about-cont:hover img {
     clip-path: inset(0 0 0 0);
 }
+
+.nav-skills-cont {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.nav-skills-cont a {
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.nav-skills-cont img {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    max-width: 150px;
+    z-index: 2;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.nav-skills-cont:hover img {
+    clip-path: inset(0 0 0 0);
+}
+
+
+
+
 
 
 
