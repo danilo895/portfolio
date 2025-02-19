@@ -25,7 +25,7 @@ nav {
 nav a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Bricolage Grotesque';
 }
 
@@ -39,23 +39,27 @@ nav a {
 }
 
 
-.logo-circle{
+.logo-circle {
+    font-family: 'Helix Regular';
+    font-size: 48px;
+    color: #3355FF;
+    font-weight: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    background-color: blue;
+    &:hover {
+        color: #F7C518;
+    }
 }
 
+
 .change-lang {
-    flex: 1; /* 🔥 Flexibel anpassbar */
+    flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
-    min-width: 150px; /* 🔥 Verhindert zu kleine Größe */
+    min-width: 150px;
 }
 
 

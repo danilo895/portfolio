@@ -1,10 +1,16 @@
 .hero {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 800px; 
-    background: url('/assets/img/welcome-bg.png') no-repeat center center/cover;
+    height: auto;
+    min-height: 800px;
+    aspect-ratio: 16 / 9;
+    background: url('/assets/img/welcome-bg.png') no-repeat center bottom;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
 }
+

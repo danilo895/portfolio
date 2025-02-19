@@ -4,14 +4,16 @@
 }
 
 body {
-    font-family: 'Bricolage Grotesque';
+    font-family:'Bricolage Grotesque', sans-serif;
     color: white;
-    background-color: black;
 }
 
-.portfolio-content-container{
-    max-width: 1900px;
-    margin: 0 auto;
+@font-face {
+    font-display: swap;
+    font-family: 'Helix Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/HelixRegular-ARLXp.ttf') format('truetype');
 }
 
 @font-face {
