@@ -32,11 +32,13 @@
                 </div>
             </div>
         </div>
+        <div class="dev-headline-cont">
         <h1>
             <span *ngFor="let letter of 'DEVELOPER'.split('')">
             <span appHoverTransform [attr.data-alt]="letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase()">{{ letter }}</span>
             </span>
         </h1>
+        </div>
 
         <div class="get-in-touch-btn-cont">
             <button class="get-in-touch-btn">Get In Touch</button>

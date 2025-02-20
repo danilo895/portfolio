@@ -10,7 +10,6 @@ body {
 
 h1{
     display: flex;
-    justify-content: center;
     font-family:'Bricolage Grotesque';
     font-size: 128px;
     font-weight: 700;
@@ -46,7 +45,7 @@ h1 span::before {
 
 h1 span.hover-active {
     color: transparent !important;
-    min-width: 1.2ch;
+    min-width: 1.08ch;
 }
 
 

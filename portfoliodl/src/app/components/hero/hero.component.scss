@@ -38,8 +38,8 @@
 .image-wrapper {
     position: absolute;
     display: inline-block;
-    right: -20%;
-    top: -30%;
+    right: -6%;
+    top: -40%;
 }
 
 .image-wrapper img {
@@ -191,6 +191,12 @@ background-color: rgba(255, 255, 255, 0.499);
     box-shadow: none;
     cursor: pointer;
     background-color: #F87A55;
+}
+
+.dev-headline-cont{
+    display: flex;
+    width: 110%;
+    justify-content: end;
 }
 
 
