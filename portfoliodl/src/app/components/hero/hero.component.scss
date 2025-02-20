@@ -55,3 +55,64 @@ background-color: rgba(255, 255, 255, 0.499);
 }
 
 
+
+
+.long-welcome-btn-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.long-welcome-btn {
+    width: 120px;
+    padding: 8px;
+    border-radius: 100px;
+    background-color: transparent;
+    border: 1px solid white;
+    font-family: 'Bricolage Grotesque';
+    color: white;
+    font-size: 16px;
+    position: relative; 
+    overflow: visible;
+    transition: width 0.4s ease-in-out;
+    white-space: nowrap;
+}
+
+
+.welcome-hand {
+    position: absolute;
+    top: -40px; 
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    opacity: 0; 
+    z-index: 2; 
+    pointer-events: none; 
+}
+
+
+.long-welcome-btn:hover .welcome-hand {
+    opacity: 1; 
+}
+
+
+.long-welcome-btn:hover {
+    width: 200px;
+    background-color: blue;
+}
+
+.long-welcome-btn:hover .btn-text::after {
+    content: "I am Daniel Löffler";
+}
+
+.long-welcome-btn .btn-text::after {
+    content: "Hello World";
+    display: block;
+}
+
+
+
+
+
+
+
