@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    position: relative;
 }
 
 .polaroid-cont{
@@ -54,9 +55,6 @@ width: 100%;
 background-color: rgba(255, 255, 255, 0.499);
 }
 
-
-
-
 .long-welcome-btn-cont {
     display: flex;
     justify-content: center;
@@ -64,6 +62,10 @@ background-color: rgba(255, 255, 255, 0.499);
 }
 
 .long-welcome-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
     width: 120px;
     padding: 8px;
     border-radius: 100px;
@@ -74,10 +76,44 @@ background-color: rgba(255, 255, 255, 0.499);
     font-size: 16px;
     position: relative;
     overflow: visible;
-    transition: width 0.3s ease-in-out; /* 🔥 Langsamere Animation für sanftes Wachstum */
+    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out; 
     white-space: nowrap;
 }
 
+.btn-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.default-text {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hover-text {
+    opacity: 0;
+    z-index: 0;
+    transform: scale(0.9);
+}
+
+.long-welcome-btn:hover {
+    width: 200px;
+    background-color: blue;
+}
+
+.long-welcome-btn:hover .default-text {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.long-welcome-btn:hover .hover-text {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1);
+    transition-delay: 0.08s;
+}
 
 .welcome-hand {
     position: absolute;
@@ -87,7 +123,7 @@ background-color: rgba(255, 255, 255, 0.499);
     width: 40px;
     opacity: 0;
     transform: rotate(-180deg);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
     z-index: 2;
     pointer-events: none;
 }
@@ -115,22 +151,41 @@ background-color: rgba(255, 255, 255, 0.499);
     animation: wave 0.8s ease-in-out forwards; 
 }
 
-
-
-
-.long-welcome-btn:hover {
-    width: 200px;
-    background-color: blue;
+.get-in-touch-btn-cont{
+    position: absolute;
+    bottom: -10%;
+    right: 0;
 }
 
-.long-welcome-btn:hover .btn-text::after {
-    content: "I am Daniel Löffler";
+.get-in-touch-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+    padding: 8px;
+    border-radius: 100px;
+    background-color: transparent;
+    border: 1px solid white;
+    font-family: "Bricolage Grotesque";
+    color: white;
+    font-size: 16px;
+    box-shadow: 3px 3px rgba(255, 255, 255, 1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.long-welcome-btn .btn-text::after {
-    content: "Hello World";
-    display: block;
+.get-in-touch-btn:hover {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+    cursor: pointer;
+    background-color: #F87A55;
 }
+
+
+
+
+
+
 
 
 
