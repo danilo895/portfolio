@@ -14,6 +14,7 @@ h1{
     font-family:'Bricolage Grotesque';
     font-size: 128px;
     font-weight: 700;
+    width: 800px;
 }
 
 h1 span {
@@ -23,37 +24,37 @@ h1 span {
     transition: color 0.2s ease-in-out, min-width 0.2s ease-in-out;
     min-width: 1ch;
     color: white;
-    width: auto; /* 🔥 Dynamische Breite */
-    min-width: 0; /* 🔥 Falls nötig, um automatische Anpassung zu erlauben */
-    text-align: center; /* 🔥 Damit das Zeichen sich nicht verschiebt */
-  }
-  
-  /* 🔥 Standard: Buchstaben werden angezeigt */
-  h1 span::before {
+    width: auto;
+    min-width: 0;
+    text-align: center;
+}
+
+
+h1 span::before {
     content: attr(data-alt);
     position: absolute;
     top: 0;
-    left: 50%; /* 🔥 Buchstaben mittig ausrichten */
-    transform: translateX(-50%); /* 🔥 Perfekte Zentrierung */
+    left: 50%;
+    transform: translateX(-50%);
     text-transform: none;
     color: #F7C518;
-    opacity: 0; /* 🔥 Standardmäßig unsichtbar */
+    opacity: 0;
     transition: opacity 0.3s ease-in-out, min-width 0.3s ease-in-out;
-    white-space: nowrap; /* 🔥 Verhindert Umbrüche */
-  }
-  
-  /* 🔥 Hover: Original-Buchstaben unsichtbar machen */
-  h1 span.hover-active {
+    white-space: nowrap; 
+}
+
+
+h1 span.hover-active {
     color: transparent !important;
-    min-width: 1.2ch; /* 🔥 Erlaubt dynamische Breite je nach Buchstabe */
-  }
-  
-  /* 🔥 Hover: Alternativen Buchstaben einblenden */
-  h1 span.hover-active::before {
+    min-width: 1.2ch;
+}
+
+
+h1 span.hover-active::before {
     opacity: 1;
     
-  }
-  
+}
+
 
 h2{
     font-family: 'Kalam';
