@@ -4,8 +4,7 @@
     justify-content: center;
     width: 100%;
     height: auto;
-    min-height: 800px;
-    aspect-ratio: 16 / 9;
+    min-height: 1000px;
     background: url('/assets/img/welcome-bg.png') no-repeat center bottom;
     background-size: cover;
     display: flex;
@@ -13,7 +12,7 @@
     justify-content: center;
     text-align: center;
     position: relative;
-    max-height: 800px;
+
 }
 
 .hover-job-title{
@@ -23,23 +22,20 @@
 }
 
 .introduction{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    position: relative;
-}
-
-.polaroid-cont{
-    display: flex;
     align-items: center;
-    gap: 20px;
 }
 
 .image-wrapper {
     position: absolute;
     display: inline-block;
-    right: -6%;
-    top: -40%;
 }
 
 .image-wrapper img {
@@ -64,12 +60,6 @@ width: 100%;
 background-color: rgba(255, 255, 255, 0.499);
 }
 
-.long-welcome-btn-cont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .long-welcome-btn {
     display: flex;
     justify-content: center;
@@ -84,7 +74,7 @@ background-color: rgba(255, 255, 255, 0.499);
     color: white;
     font-size: 16px;
     position: absolute;
-    top: -13%;
+    top: 20%;
     left: 0;
     overflow: visible;
     transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out; 
@@ -163,11 +153,6 @@ background-color: rgba(255, 255, 255, 0.499);
     animation: wave 0.8s ease-in-out forwards; 
 }
 
-.get-in-touch-btn-cont{
-    position: absolute;
-    bottom: -10%;
-    right: 0;
-}
 
 .get-in-touch-btn {
     display: flex;
@@ -193,11 +178,7 @@ background-color: rgba(255, 255, 255, 0.499);
     background-color: #F87A55;
 }
 
-.dev-headline-cont{
-    display: flex;
-    width: 110%;
-    justify-content: end;
-}
+
 
 .social-media-icons-cont {
     position: absolute;
@@ -209,7 +190,7 @@ background-color: rgba(255, 255, 255, 0.499);
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    bottom: 10%;
+    bottom: 20%;
 }
 
 .social-media-icons-cont img {
@@ -221,7 +202,16 @@ background-color: rgba(255, 255, 255, 0.499);
     background-color: #3355FF;
 }
 
+.firstInfosHero{
+    display: flex;
+    align-items: end;
+    position: relative;
+}
 
+.get-in-touch-btn-cont{
+    display: flex;
+    justify-content: end;
+}
 
 
 

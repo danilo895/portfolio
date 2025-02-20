@@ -6,6 +6,7 @@
 body {
     font-family:'Bricolage Grotesque';
     color: white;
+    overflow-x: hidden !important;
 }
 
 h1{
@@ -13,7 +14,7 @@ h1{
     font-family:'Bricolage Grotesque';
     font-size: 128px;
     font-weight: 700;
-    width: 800px;
+    width: 730px;
 }
 
 h1 span {

@@ -1,51 +1,50 @@
 <section class="hero">
 
-    <div class="test">
-
     <div class="introduction">
-        <section class="hello-world-sec">
-            <div class="long-welcome-btn-cont">
-                <button class="long-welcome-btn">
-                    <img src="/assets/img/hero/welcome-hand.svg" alt="Hand" class="welcome-hand">
-                    <span class="btn-text default-text">Hello World</span>
-                    <span class="btn-text hover-text">I AM DANIEL LÖFFLER</span>
-                </button>
-            </div>
-        </section>
-        <div class="polaroid-cont">
-            <h1>
-                <span *ngFor="let letter of 'Frontend'.split('')">
-                <span appHoverTransform [attr.data-alt]="letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase()">{{ letter }}</span>
-                </span>
-            </h1>
-            <div class="image-wrapper">
-                <img src="/assets/img/hero/polaroid-frame.svg" alt="">
 
-                <div class="image-overlay">
-                    <div class="personal-img">
-                        <img src="/assets/img/hero/avatar.png" alt="">
-                        <h2>I am Daniel :) </h2>
-                    </div>
-                </div>
-            </div>
+
+
+        <section class="firstInfosHero">
+        <div class="btn-and-frntend">
+            <button class="long-welcome-btn">
+                <img src="/assets/img/hero/welcome-hand.svg" alt="Hand" class="welcome-hand">
+                <span class="btn-text default-text">Hello World</span>
+                <span class="btn-text hover-text">I AM DANIEL LÖFFLER</span>
+            </button>
+        <h1>
+            <span *ngFor="let letter of 'Frontend'.split('')">
+            <span appHoverTransform [attr.data-alt]="letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase()">{{ letter }}</span>
+            </span>
+        </h1>
         </div>
-        <div class="dev-headline-cont">
+        <div class="polaroid-cont">
+                <img src="/assets/img/hero/polaroid-frame.svg" alt="">
+        </div>
+    </section>
+
+    <section class="secondInfosHero">
         <h1>
             <span *ngFor="let letter of 'DEVELOPER'.split('')">
             <span appHoverTransform [attr.data-alt]="letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase()">{{ letter }}</span>
             </span>
         </h1>
-        </div>
+
         <div class="get-in-touch-btn-cont">
             <button class="get-in-touch-btn">Get In Touch</button>
         </div>
+
+
+    </section>
+
+
     </div>
+
+        
     <div class="social-media-icons-cont">
         <img src="/assets/img/hero/network1.svg" alt="">
         <img src="/assets/img/hero/network2.svg" alt="">
         <img src="/assets/img/hero/network3.svg" alt="">
     </div>
 
-</div>
 
 </section>
