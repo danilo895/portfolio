@@ -2,7 +2,6 @@
 
 
     <div class="introduction">
-
         <section class="hello-world-sec">
             <div class="long-welcome-btn-cont">
                 <button class="long-welcome-btn">
@@ -12,15 +11,12 @@
                 </button>
             </div>
         </section>
-        
-
         <div class="polaroid-cont">
             <h1>
                 <span *ngFor="let letter of 'Frontend'.split('')">
                 <span appHoverTransform [attr.data-alt]="letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase()">{{ letter }}</span>
                 </span>
             </h1>
-            
             <div class="image-wrapper">
                 <img src="/assets/img/hero/polaroid-frame.svg" alt="">
 
@@ -39,13 +35,8 @@
             </span>
         </h1>
         </div>
-
         <div class="get-in-touch-btn-cont">
             <button class="get-in-touch-btn">Get In Touch</button>
         </div>
-
     </div>
-    
-
-
 </section>
