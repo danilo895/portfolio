@@ -15,7 +15,11 @@
         
 
         <div class="polaroid-cont">
-            <h1>Frontend</h1>
+            <h1>
+                <span *ngFor="let letter of 'FRONTEND'.split('')">
+                <span appHoverTransform>{{ letter }}</span>
+                </span>
+            </h1>
             <div class="image-wrapper">
                 <img src="/assets/img/hero/polaroid-frame.svg" alt="">
 
@@ -27,7 +31,12 @@
                 </div>
             </div>
         </div>
-        <h1>DEVELOPER</h1>
+        
+        <h1>
+            <span *ngFor="let letter of 'DEVELOPER'.split('')">
+            <span appHoverTransform>{{ letter }}</span>
+            </span>
+        </h1>
 
         <div class="get-in-touch-btn-cont">
             <button class="get-in-touch-btn">Get In Touch</button>
