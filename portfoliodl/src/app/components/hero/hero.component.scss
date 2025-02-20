@@ -91,10 +91,26 @@ background-color: rgba(255, 255, 255, 0.499);
     pointer-events: none;
 }
 
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(360deg);
+    }
+    90% {
+        transform: rotate(345deg); 
+    }
+    100% {
+        transform: rotate(352deg); 
+    }
+}
+
 .long-welcome-btn:hover .welcome-hand {
     opacity: 1;
-    transform: rotate(360deg);
+    animation: wave 0.7s ease-in-out forwards; 
 }
+
 
 
 .long-welcome-btn:hover {
