@@ -199,12 +199,29 @@ background-color: rgba(255, 255, 255, 0.499);
     justify-content: end;
 }
 
-.social-media-icons-cont{
+.social-media-icons-cont {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    bottom: 0;
+    align-items: flex-start;
+    gap: 10px;
+    bottom: 10%;
 }
+
+.social-media-icons-cont img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.social-media-icons-cont img:hover {
+    background-color: #3355FF;
+}
+
+
 
 
 
