@@ -72,27 +72,28 @@ background-color: rgba(255, 255, 255, 0.499);
     font-family: 'Bricolage Grotesque';
     color: white;
     font-size: 16px;
-    position: relative; 
+    position: relative;
     overflow: visible;
-    transition: width 0.4s ease-in-out;
+    transition: width 0.3s ease-in-out; /* 🔥 Langsamere Animation für sanftes Wachstum */
     white-space: nowrap;
 }
 
 
 .welcome-hand {
     position: absolute;
-    top: -40px; 
+    top: -40px;
     right: 10px;
     height: 40px;
     width: 40px;
-    opacity: 0; 
-    z-index: 2; 
-    pointer-events: none; 
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 2;
+    pointer-events: none;
 }
 
-
 .long-welcome-btn:hover .welcome-hand {
-    opacity: 1; 
+    opacity: 1;
+    transform: rotate(360deg);
 }
 
 
