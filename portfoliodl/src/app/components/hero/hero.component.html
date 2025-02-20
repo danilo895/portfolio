@@ -16,10 +16,11 @@
 
         <div class="polaroid-cont">
             <h1>
-                <span *ngFor="let letter of 'FRONTEND'.split('')">
-                <span appHoverTransform>{{ letter }}</span>
+                <span *ngFor="let letter of 'Frontend'.split('')">
+                <span appHoverTransform [attr.data-alt]="letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase()">{{ letter }}</span>
                 </span>
             </h1>
+            
             <div class="image-wrapper">
                 <img src="/assets/img/hero/polaroid-frame.svg" alt="">
 
@@ -31,10 +32,9 @@
                 </div>
             </div>
         </div>
-        
         <h1>
-            <span *ngFor="let letter of 'DEVELOPER'.split('')">
-            <span appHoverTransform>{{ letter }}</span>
+            <span *ngFor="let letter of 'Developer'.split('')">
+            <span appHoverTransform [attr.data-alt]="letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase()">{{ letter }}</span>
             </span>
         </h1>
 
