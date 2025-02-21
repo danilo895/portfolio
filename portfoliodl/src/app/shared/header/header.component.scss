@@ -209,6 +209,36 @@ nav a {
     clip-path: inset(0 0 0 0);
 }
 
+.change-lang-en-cont {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.change-lang-en-cont span {
+    position: relative;
+    z-index: 1;
+}
+
+.change-lang-en-cont img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 140%;
+    max-width: 140px;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+    transition: clip-path 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.change-lang-en-cont:hover img {
+    transform: translate(-50%, -50%) scale(1);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+
+
+
 
 
 
