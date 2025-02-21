@@ -15,6 +15,10 @@
     position: relative;
 }
 
+.first-sec{
+    display: flex;
+}
+
 .techstack-content{
     position: absolute;
     left: 50%;
@@ -26,6 +30,8 @@
     align-items: center;
     justify-content: space-between;
     border: 1px solid white;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .left-techstack{
@@ -103,7 +109,26 @@ height: 140px;
     flex-direction: column;
 }
 
-.test{
-    font-size: 64px;
-    color: yellow;
+.techstack-icons-cont{
+display: flex;
+flex-direction: column;
+gap: 48px;
+}
+
+.techstack-icons-cont img{
+    width: 60px;
+    height: 60px;
+}
+.each-icon-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100px;
+}
+
+.first-row-icons, .second-row-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
 }
