@@ -1,0 +1,96 @@
+.about-main{
+    display: flex;
+    width: 100vw;
+    min-height: 600px;
+    background-color: green;
+    position: relative;
+}
+
+.about-inner-main{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.about-facts {
+    display: flex;
+    flex-direction: column;
+}
+
+.fact-container {
+    position: relative;
+    width: 700px; 
+}
+
+.fact-container:nth-child(1) {
+    transform: rotate(6deg);
+    z-index: 2;
+}
+
+
+.fact-container:nth-child(2) {
+    margin-top: -80px;
+}
+
+.fact-container:nth-child(3) {
+    margin-top: -50px;
+}
+
+.fact-container img {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.fact-container:nth-child(1) .overlay {
+    transform: translate(-50%, -70%);
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Bricolage Grotesque';
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    transform: translate(-50%, -50%); 
+}
+
+.loc-cont, .move-cont, .remote-cont {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.loc-cont, .move-cont, .remote-cont span {
+    white-space: nowrap;
+}
+
+.loc-icon, .move-icon, .remote-icon{
+    width: 40px;
+    height: 40px;
+}
+
+.about-me-description-cont{
+    display: flex;
+    justify-content: start;
+    gap: 8px;
+    flex-direction: column;
+}
+
