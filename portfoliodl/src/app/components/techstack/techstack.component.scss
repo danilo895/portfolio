@@ -39,7 +39,7 @@
 
 
 .center-techstack{
-    width: 65%;
+    width: 75%;
     display: flex;
     justify-content: center;
     text-align: start;
@@ -65,12 +65,6 @@ height: 140px;
     font-size: 1.5rem;
 }
 
-
-.right-techstack{
-    width: 10%;
-    display: flex;
-    background-color: green;
-}
 
 .skill-font{
     font-family:'Bricolage Grotesque';
@@ -98,3 +92,18 @@ height: 140px;
     width: 110%;
 }
 
+
+.techstack-columns{
+    display: flex;
+    flex-direction: column;
+}
+
+.rows-techstack{
+    display: flex;
+    flex-direction: column;
+}
+
+.test{
+    font-size: 64px;
+    color: yellow;
+}
