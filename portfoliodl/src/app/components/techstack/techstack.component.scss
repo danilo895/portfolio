@@ -27,3 +27,52 @@
     justify-content: space-between;
     border: 1px solid white;
 }
+
+.left-techstack{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+
+.center-techstack{
+    width: 60%;
+    display: flex;
+    background-color: blue;
+}
+
+.right-techstack{
+    width: 20%;
+    display: flex;
+    background-color: green;
+}
+
+.skill-font{
+    font-family:'Bricolage Grotesque';
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.skill-intro {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-intro p {
+    position: relative;
+    z-index: 1; 
+}
+
+.skill-intro img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(-1);
+    width: 110%;
+}
+
