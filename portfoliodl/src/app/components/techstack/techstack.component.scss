@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     height: auto;
     min-height: 800px;
     background: url('/assets/img/techstack/techstackbg.png') no-repeat center bottom;
@@ -17,6 +17,7 @@
 
 .first-sec{
     display: flex;
+    width: 100%;
 }
 
 .techstack-content{
@@ -27,25 +28,25 @@
     width: 90%;
     max-width: 1440px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     border: 1px solid white;
-    flex-direction: column;
-    gap: 40px;
+    flex-direction: row;
 }
 
 .left-techstack{
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+display: flex;
+flex-direction: column;
+text-align: end;
 }
 
-
+.second-row-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    position: relative;
+}
 
 .center-techstack{
-    width: 75%;
     display: flex;
     justify-content: center;
     text-align: start;
