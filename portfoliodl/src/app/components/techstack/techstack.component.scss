@@ -28,7 +28,7 @@
     width: 90%;
     max-width: 1440px;
     display: flex;
-    border: 1px solid white;
+    border: 1px solid transparent;
     flex-direction: row;
 }
 
@@ -95,9 +95,45 @@ height: 140px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scaleX(-1);
+    transform: translate(-50%, -50%) scaleX(-1) rotate(-90deg);
     width: 110%;
+    clip-path: inset(0 100% 0 0);
+    animation: draw-image 0.09s ease-in-out forwards, rotate-back 0.2s ease-in-out forwards;
+    animation-delay: 0s;
+    overflow-y: hidden;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
 }
+
+@keyframes rotate-back {
+    0% {
+        transform: translate(-50%, -50%) scaleX(-1) rotate(30deg);
+    }
+    5% {
+        transform: translate(-50%, -50%) scaleX(-1) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) scaleX(-1) rotate(0deg);
+    }
+}
+
+@keyframes draw-image {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+    6% {
+        clip-path: inset(0 0 0 0);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+
+
+
+
+
 
 
 .techstack-columns{
@@ -116,20 +152,43 @@ flex-direction: column;
 gap: 48px;
 }
 
-.techstack-icons-cont img{
-    width: 60px;
-    height: 60px;
-}
 .each-icon-cont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    width: 100px;
+    max-width: 72px;
 }
+
+.each-icon-cont img {
+    width: 70px;
+    height: 70px;
+    filter: grayscale(100%);
+    transition: filter 0.2s ease-in-out;
+}
+
+.each-icon-cont img {
+    width: 70px;
+    height: 70px;
+    filter: grayscale(100%);
+    transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.each-icon-cont img:hover {
+    filter: grayscale(0%);
+    transform: scale(0.8);
+}
+
 
 .first-row-icons, .second-row-icons{
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 50px;
+}
+
+.third-component{
+    display: flex;
+    align-items: end;
+}
+
+.third-component img{
+    width: 260px;
+    height: 260px;
+    
 }
