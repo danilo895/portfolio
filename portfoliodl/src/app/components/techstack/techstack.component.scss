@@ -182,13 +182,59 @@ gap: 48px;
     gap: 50px;
 }
 
-.third-component{
+.third-component {
     display: flex;
     align-items: end;
 }
 
-.third-component img{
+.peeloff-cont {
+    position: relative;
+}
+
+.final-peeloff {
+    position: relative; 
+    display: inline-block;
+}
+
+.final-peeloff img {
     width: 260px;
     height: 260px;
-    
+    display: block;
 }
+
+.final-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    height: 95%;
+    background-color: rgba(0, 128, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 24px;
+}
+
+.each-icon-upcoming-learn{
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    align-items: center;
+}
+
+.techstack-to-learn-cont{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.each-icon-upcoming-learn img{
+    height: 40px;
+    width: 40px;
+}
+
