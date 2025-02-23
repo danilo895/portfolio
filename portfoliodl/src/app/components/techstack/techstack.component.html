@@ -78,8 +78,7 @@
 
 
             <section class="peeloff-cont">
-
-                <div class="final-peeloff">
+                <div #finalPeeloff class="final-peeloff">
                     <img src="/assets/img/techstack/peeloff/final.png" alt="">
                     <div class="final-overlay">
                         <div>Also, I'm interested in diving into:</div>
@@ -94,25 +93,26 @@
                             </div>
                         </div>
                     </div>
-                    
+                </div>
+            
 
+                <div #peeloffMiddle class="peeloff-middle">
+                    <img src="/assets/img/techstack/peeloff/trans.png" alt="">
+                </div>
+            
 
-                    <div class="peeloff-middle">
-                        <img src="/assets/img/techstack/peeloff/trans.png" alt="">
+                <div #peeloffCover class="peeloff-cover" (click)="peelOffInterests()">
+                    <img src="/assets/img/techstack/peeloff/default.png" alt="">
+                    <div class="peeloff-cover-overlay">
+                        <img class="arrow-peel" src="/assets/img/techstack/peeloff/arrow-peel.svg" alt="">
+                        <p class="handwritten-font">Pull to peel</p>
                     </div>
-
-
-                    <div class="peeloff-cover">
-                        <img src="/assets/img/techstack/peeloff/default.png" alt="">
-                        <div class="peeloff-cover-overlay">
-                            <img class="arrow-peel" src="/assets/img/techstack/peeloff/arrow-peel.svg" alt="">
-                            <p class="handwritten-font">Pull to peel</p>
-                        </div>
-                    </div>
-                    
-                    
-                    </div>
+                </div>
             </section>
+            
+
+
+
         </div>
 
 
