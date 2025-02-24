@@ -4,12 +4,20 @@
             <p class="craft-font">MY CRAFT</p>
             <p class="intro-project-headline">PROJECTS</p>
             <img class="drawn-line" src="/assets/img/projects/anim-line.svg" alt="">
-            <p class="intro-project-descr">Here you will find some of my recent projects, showcasing my skills in frontend development. My work revolves around creating interactive, responsive, and user-friendly web applications that provide seamless digital experiences</p>
+            <p class="intro-project-descr">
+                Here you will find some of my recent projects, showcasing my skills in frontend development. 
+                My work revolves around creating interactive, responsive, and user-friendly web applications 
+                that provide seamless digital experiences.
+            </p>
         </div>
     </div>
 
-    <div class="each-project-cont" *ngFor="let project of projects">
+    <!-- Dynamisches Rendering mit *ngFor -->
+    <div class="each-project-cont" *ngFor="let project of projects; let i = index">
         <div class="preview-pic">
+            <!-- ✅ Sticker wird NUR beim 2. Grid-Container (Index 1) angezeigt -->
+            <img *ngIf="i === 0" class="project-sticker" src="/assets/img/projects/featured-proj-sticker.png" alt="Sticker">
+
             <img [src]="project.image" [alt]="project.title">
             <div class="overlay">
                 <button class="get-in-touch-btn">{{ project.buttonText }}</button>
@@ -21,4 +29,3 @@
         </div>
     </div>
 </section>
-
