@@ -2,20 +2,21 @@
         display: flex;
         width: 100vw;
         position: relative;
-        min-height: 600px;
+        min-height: 1000px;
         position: relative;
+        justify-content: center;
 }
 
 .projects-main {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
     width: 90%;
     max-width: 1440px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5vw;
+    gap: 8px;
     margin-bottom: 160px;
     border: 1px solid red;
 }
