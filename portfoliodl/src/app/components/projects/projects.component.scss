@@ -1,0 +1,117 @@
+:host {
+        display: flex;
+        width: 100vw;
+        position: relative;
+        min-height: 600px;
+        position: relative;
+}
+
+.projects-main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5vw;
+    margin-bottom: 160px;
+    border: 1px solid red;
+}
+
+.each-project-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.preview-pic {
+    justify-content: center;
+    display: flex;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.preview-pic img {
+    width: 80%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.overlay {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: 100%;
+    border-radius: 12px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 60%);
+}
+
+.preview-pic:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.get-in-touch-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: clamp(30px, 2.5vw, 40px);
+    width: clamp(100px, 10vw, 150px);
+    padding: clamp(6px, 0.5vw, 10px);
+    border-radius: 50vw;
+    background-color: transparent;
+    border: clamp(1px, 0.1vw, 2px) solid white;
+    font-family: "Bricolage Grotesque";
+    color: white;
+    font-size: clamp(12px, 1vw, 16px);
+    box-shadow: clamp(1px, 0.3vw, 3px) clamp(1px, 0.3vw, 3px) rgba(255, 255, 255, 1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 2vw 2vw;
+}
+
+.get-in-touch-btn:hover {
+    transform: translate(0.3vw, 0.3vw);
+    box-shadow: none;
+    cursor: pointer;
+    background-color: #F87A55;
+}
+
+.project-short-infos-main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.project-title {
+    font-family: 'Bricolage Grotesque';
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+    text-align: left;
+}
+
+.project-description {
+    font-family: 'Bricolage Grotesque';
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    text-align: left;
+}
+
+
+

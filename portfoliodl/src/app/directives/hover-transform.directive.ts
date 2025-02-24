@@ -12,7 +12,7 @@ export class HoverTransformDirective {
     const target = this.el.nativeElement as HTMLElement;
     
     if (target) {
-      this.renderer.addClass(target, 'hover-active'); // 🔥 Klasse für die CSS-Animation setzen
+      this.renderer.addClass(target, 'hover-active');
     }
   }
 
@@ -21,7 +21,7 @@ export class HoverTransformDirective {
     const target = this.el.nativeElement as HTMLElement;
 
     if (target) {
-      this.renderer.removeClass(target, 'hover-active'); // 🔥 Zurücksetzen
+      this.renderer.removeClass(target, 'hover-active'); 
     }
   }
 }
