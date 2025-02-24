@@ -18,14 +18,17 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
     margin-bottom: 160px;
-    border: 1px solid red;
+    border: 1px solid transparent;
 }
 
 .each-project-cont{
     display: flex;
     flex-direction: column;
     gap: 8px;
+    justify-content: center;
 }
+
+
 
 .preview-pic {
     justify-content: center;
@@ -58,6 +61,11 @@
     transition: opacity 0.3s ease-in-out;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 60%);
 }
+
+.each-project-cont:nth-child(4) .overlay { 
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0) 60%);
+}
+
 
 .preview-pic:hover .overlay {
     opacity: 1;
@@ -114,5 +122,62 @@
     text-align: left;
 }
 
+.craft-font{
+    font-family: 'Bricolage Grotesque';
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    color: black;
+    text-align: left;
+}
+
+.intro-project-headline{
+    font-family: 'Bricolage Grotesque';
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 700;
+    color: black;
+    text-align: left;
+}
+
+
+
+.intro-project-descr{
+    font-family: 'Bricolage Grotesque';
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: black;
+    text-align: left;
+
+}
+
+.first-container-content{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.first-container-content img {
+    width: 100%;
+    height: auto;
+    clip-path: inset(0 100% 0 0);
+    animation: drawLine 0.3s ease-in-out forwards;
+    animation: drawLine 0.3s ease-in-out forwards infinite;
+    
+}
+
+@keyframes drawLine {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
 
 

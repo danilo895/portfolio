@@ -17,12 +17,6 @@ export class ProjectsComponent {
       buttonText: "Project details"
     },
     {
-      title: "Join",
-      description: "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
-      image: "/assets/img/projects/join.png",
-      buttonText: "Project details"
-    },
-    {
       title: "El Pollo Loco",
       description: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
       image: "/assets/img/projects/epl.png",
@@ -42,3 +36,4 @@ export class ProjectsComponent {
     }
   ];
 }
+

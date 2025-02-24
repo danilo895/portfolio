@@ -1,15 +1,24 @@
 <section class="projects-main">
-    <div class="each-project-cont" *ngFor="let project of projects">
-    <div class="preview-pic">
-        <img [src]="project.image" [alt]="project.title">
-        <div class="overlay">
-        <button class="get-in-touch-btn">{{ project.buttonText }}</button>
+    <div class="each-project-cont first-container">
+        <div class="first-container-content">
+            <p class="craft-font">MY CRAFT</p>
+            <p class="intro-project-headline">PROJECTS</p>
+            <img src="/assets/img/projects/anim-line.svg" alt="">
+            <p class="intro-project-descr">Here you will find some of my recent projects, showcasing my skills in frontend development. My work revolves around creating interactive, responsive, and user-friendly web applications that provide seamless digital experiences</p>
         </div>
     </div>
-    <div class="project-short-infos-main">
-        <p class="project-title">{{ project.title }}</p>
-        <p class="project-description">{{ project.description }}</p>
-    </div>
+
+    <div class="each-project-cont" *ngFor="let project of projects">
+        <div class="preview-pic">
+            <img [src]="project.image" [alt]="project.title">
+            <div class="overlay">
+                <button class="get-in-touch-btn">{{ project.buttonText }}</button>
+            </div>
+        </div>
+        <div class="project-short-infos-main">
+            <p class="project-title">{{ project.title }}</p>
+            <p class="project-description">{{ project.description }}</p>
+        </div>
     </div>
 </section>
 
