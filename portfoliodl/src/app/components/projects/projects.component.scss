@@ -19,31 +19,44 @@
     gap: 8px;
     margin-bottom: 160px;
     border: 1px solid transparent;
+    margin-top: 5vw;
 }
 
-.each-project-cont{
+.each-project-cont {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: stretch;
 }
 
-
-
 .preview-pic {
+    position: relative;
     justify-content: center;
     display: flex;
-    position: relative;
     border-radius: 12px;
     overflow: hidden;
-    width: 100%;
+    width: 80%;
     aspect-ratio: 16 / 9;
 }
 
+.preview-pic,
+.project-short-infos-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .preview-pic img {
-    width: 80%;
+    width: 100%;
     object-fit: cover;
     border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.preview-pic:hover img {
+    transform: scale(1.1); 
 }
 
 .overlay {
@@ -53,7 +66,7 @@
     position: absolute;
     top: 0;
     left: 50%;
-    width: 80%;
+    width: 100%;
     height: 100%;
     border-radius: 12px;
     transform: translateX(-50%);
@@ -62,14 +75,13 @@
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 60%);
 }
 
-.each-project-cont:nth-child(4) .overlay { 
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0) 60%);
-}
-
-
 .preview-pic:hover .overlay {
     opacity: 1;
     cursor: pointer;
+}
+
+.each-project-cont:nth-child(4) .overlay { 
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0) 60%);
 }
 
 .get-in-touch-btn {
@@ -99,8 +111,6 @@
 
 .project-short-infos-main {
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -140,8 +150,6 @@
     text-align: left;
 }
 
-
-
 .intro-project-descr{
     font-family: 'Bricolage Grotesque';
     font-size: 18px;
@@ -149,35 +157,44 @@
     font-weight: 400;
     color: black;
     text-align: left;
-
+    margin-top: 20px;
 }
 
 .first-container-content{
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+
     display: flex;
     flex-direction: column;
     position: relative;
     overflow: hidden;
 }
 
+.drawn-line{
+    width:  320px !important;
+}
+
 .first-container-content img {
     width: 100%;
     height: auto;
     clip-path: inset(0 100% 0 0);
-    animation: drawLine 0.3s ease-in-out forwards;
-    animation: drawLine 0.3s ease-in-out forwards infinite;
-    
+    animation: drawLine 5s ease-in-out infinite;
+    gap: 4px;
 }
 
 @keyframes drawLine {
     0% {
         clip-path: inset(0 100% 0 0);
     }
-    100% {
+    10% {
         clip-path: inset(0 0 0 0);
     }
+    90% {
+        clip-path: inset(0 0 0 0);
+    }
+    100% {
+        clip-path: inset(0 100% 0 0);
+    }
 }
+
 
 
