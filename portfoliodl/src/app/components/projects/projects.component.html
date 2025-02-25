@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div class="each-project-cont" *ngFor="let project of projects; let i = index">
+    <div class="each-project-cont" *ngFor="let project of projects; let i = index" (click)="openProject(project)">
         <div class="preview-pic">
             <img *ngIf="i === 0" class="project-sticker" src="/assets/img/projects/featured-proj-sticker.png" alt="Sticker">
 
@@ -27,3 +27,8 @@
         </div>
     </div>
 </section>
+
+
+<ng-container *ngIf="showProjectDetail">
+    <app-project-detail [project]="selectedProject" (closeDialog)="toggleProjectDetail()"></app-project-detail>
+</ng-container>

@@ -1,19 +1,19 @@
 <div class="project-detail-container">
     <div class="overlay-card">
         <div class="overlay-card-content">
-            <app-header class="header-overlay" [isOverlayMode]="true"></app-header>
+            
 
 
             <section class="project-section">
                 <div class="project-text">
 
-                    <div class="arrow-back">
+                    <div class="arrow-back" (click)="closeProjectDetail()">
                         <img src="/assets/img/project-detail/arrow-back.svg" alt="">
                         <p>Go Back</p>
                     </div>
 
                     <div class="top-section">
-                        <h4>EL POLLO LOCO</h4>
+                        <h4>{{project?.title}}</h4>
                         <img class="animated-line" src="/assets/img/project-detail/hr-blue-line.svg" alt="">
                     </div>
 
