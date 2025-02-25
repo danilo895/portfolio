@@ -9,6 +9,7 @@
 
 .overlay-card {
     width: 100%;
+    max-width: 1900px;
     height: 70vh;
     background-color: #1D1D1D;
     background-image: url('/assets/img/project-detail/project-detail-bg.png');
@@ -54,12 +55,16 @@
     }
 }
 
+.arrow-back:hover{
+    color: #F87A55;
+    cursor: pointer;
+}
+
 .arrow-forward {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 6px;
-    width: 100%;
     max-width: 1440px;
     padding-right: 16px;
     color: white;
@@ -72,7 +77,10 @@
     }
 }
 
-
+.arrow-forward:hover{
+    color: #F7C518;
+    cursor: pointer;
+}
 
 
 .project-section {
