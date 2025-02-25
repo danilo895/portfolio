@@ -31,8 +31,160 @@
 }
 
 .header-overlay {
+    height: 100px;
     width: 100%;
     max-width: 1440px;
     z-index: 20;
-    padding: 10px 0;
 }
+
+.arrow-back {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    padding-left: 10%;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Bricolage Grotesque';
+    > img { 
+        width: 32px;
+        height: auto;
+    }
+}
+
+
+
+
+.project-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20%;
+    border: 1px solid white;
+    max-width: 1440px;
+    width: 90%;
+}
+
+
+
+.project-text {
+    color: black;
+    font-family: "Bricolage Grotesque";
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2vw;
+}
+
+.impl-section, .descr-section{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.top-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sub-headline{
+    font-family: 'Bricolage Grotesque';
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+}
+
+.text-description{
+    font-family: 'Bricolage Grotesque';
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+}
+
+.tech-icons {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.tech-icons img{
+    height: 48px;
+}
+
+.animated-line {
+    width: 90%;
+    max-width: 460px;
+    margin-top: -24px;
+    height: auto;
+    clip-path: inset(0 100% 0 0);
+    animation: drawLine 8s ease-in-out infinite;
+}
+
+@keyframes drawLine {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+    10% {
+        clip-path: inset(0 0 0 0); 
+    }
+    90% {
+        clip-path: inset(0 0 0 0); 
+    }
+    100% {
+        clip-path: inset(0 100% 0 0);
+    }
+}
+
+.duration-text{
+    font-family: 'Bricolage Grotesque';
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+
+.project-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid red;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 20px;
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .github-btn {
+            background: black;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .live-test-btn {
+            background: white;
+            color: black;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+

@@ -14,6 +14,14 @@ header {
     background: transparent;
 }
 
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Bricolage Grotesque';
+    
+}
+
 
 nav {
     display: flex;
@@ -22,13 +30,18 @@ nav {
     align-items: center;
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-family: 'Bricolage Grotesque';
+.header-overlay-mode .nav-about-cont a,
+.header-overlay-mode .nav-skills-cont a {
+    color: black !important;
+    -webkit-text-stroke: 1px solid white;
 }
 
+.header-overlay-mode, nav{
+    display: flex;
+    flex: 25 !important;
+    justify-content: space-around;
+    align-items: center;
+}
 
 .my-logo {
     flex: 1;
