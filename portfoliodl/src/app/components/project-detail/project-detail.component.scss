@@ -42,8 +42,27 @@
     align-items: center;
     gap: 6px;
     width: 100%;
-    padding-left: 10%;
     color: black;
+    padding-left: 16px;
+    max-width: 1440px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Bricolage Grotesque';
+    > img { 
+        width: 32px;
+        height: auto;
+    }
+}
+
+.arrow-forward {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    width: 100%;
+    max-width: 1440px;
+    padding-right: 16px;
+    color: white;
     font-size: 18px;
     font-weight: 700;
     font-family: 'Bricolage Grotesque';
