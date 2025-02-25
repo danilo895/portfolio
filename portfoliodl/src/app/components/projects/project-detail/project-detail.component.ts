@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
-
+import { Project } from '../../../interfaces/project.model';
 
 @Component({
   selector: 'app-project-detail',
@@ -13,8 +13,13 @@ import { CommonModule, NgFor } from '@angular/common';
   styleUrl: './project-detail.component.scss'
 })
 export class ProjectDetailComponent {
-@Input() project: any;
-@Output() closeDialog= new EventEmitter<void>();
+
+  @Input() project: Project = {} as Project;
+  @Output() closeDialog= new EventEmitter<void>();
+
+
+
+
 
   public closeProjectDetail() {
     this.closeDialog.emit();

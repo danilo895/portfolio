@@ -13,13 +13,13 @@
                     </div>
 
                     <div class="top-section">
-                        <h4>{{project?.title}}</h4>
+                        <h4>{{project.title}}</h4>
                         <img class="animated-line" src="/assets/img/project-detail/hr-blue-line.svg" alt="">
                     </div>
 
                     <div class="descr-section">
                         <p class="sub-headline">Description</p>
-                        <span class="text-description">This App is a Slack Clone App. It revolutionizes team communication...</span>
+                        <span class="text-description">{{project.description}}</span>
                     </div>
 
                     <div class="impl-section">
@@ -37,7 +37,7 @@
                 </div>
             
                 <div class="project-media">
-                    <img src="/assets/img/projects/epl.png" alt="El Pollo Loco Picture">
+                    <img src="{{project.image}}" alt="El Pollo Loco Picture">
                     
                     <div class="buttons">
                         <button class="github-btn">GitHub</button>
