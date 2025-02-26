@@ -1,0 +1,59 @@
+.testimonial-container {
+    width: 90%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 40px 0;
+    
+    .testimonial-top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        gap: 10px;
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            img {
+                width: 100px;
+                height: auto;
+                clip-path: inset(0 100% 0 0);
+                animation: drawLine 5s ease-in-out infinite; 
+            }
+
+            span {
+                font-family: 'Bricolage Grotesque';
+                font-size: 18px;
+                font-weight: 400;
+                color: black;
+            }
+        }
+
+        .testimonial-title {
+            font-family: 'Bricolage Grotesque';
+            font-size: 64px;
+            font-weight: 700;
+            color: black;
+        }
+    }
+}
+
+
+@keyframes drawLine {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+    10% {
+        clip-path: inset(0 0 0 0);
+    }
+    90% {
+        clip-path: inset(0 0 0 0);
+    }
+    100% {
+        clip-path: inset(0 100% 0 0);
+    }
+}
