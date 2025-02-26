@@ -95,27 +95,7 @@
     z-index: 1;
 }
 
-.testimonial-overlay {
-    position: absolute;
-    border-radius: 24px;
-    width: 97%;
-    height: 97%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-image 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Bricolage Grotesque';
-    font-size: 24px;
-    font-weight: 700;
-    color: black;
-    z-index: 2;
-}
+
 
 
 .testimonial-image-wrapper:hover .testimonial-overlay {
@@ -142,4 +122,103 @@
 .testimonial-image-wrapper:hover {
     z-index: 3;
     transform: rotate(0deg); 
+}
+
+.testimonial-overlay {
+    position: absolute;
+    border-radius: 24px;
+    width: 97%;
+    height: 97%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Bricolage Grotesque';
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    z-index: 2;
+}
+
+
+.zitat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.colleague-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6px;
+
+}
+
+.colleague-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.colleague-name {
+    font-family: 'Bricolage Grotesque';
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.colleague-job {
+    font-family: 'Bricolage Grotesque';
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+}
+
+
+.linkedin-profile {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+}
+
+.linkedin-profile img {
+    width: 18px;
+    height: 18px;
+}
+
+.linkedin-profile span {
+    font-family: 'Bricolage Grotesque';
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+
+
+.colleague-info:hover {
+    color: white;
+}
+
+.colleague-info:hover .colleague-name,
+.colleague-info:hover .colleague-job {
+    color: white;
+}
+
+
+.linkedin-profile:hover img {
+    content: url("/assets/img/testimonials/linkedin-white.svg");
+}
+
+.linkedin-profile:hover span {
+    color: white;
 }
