@@ -2,11 +2,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../../interfaces/project.model';
 import { projects } from '../../../projects.data';
+import { HeaderComponent } from '../../../shared/header/header.component'; // ✅ Header importieren
 
 @Component({
   selector: 'app-project-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent], // ✅ Header registrieren
   templateUrl: './project-detail.component.html',
   styleUrl: './project-detail.component.scss'
 })
@@ -14,6 +15,7 @@ export class ProjectDetailComponent {
   @Input() project: Project = {} as Project;
   @Output() closeDialog = new EventEmitter<void>();
   @Output() projectChange = new EventEmitter<Project>();
+
   public closeProjectDetail() {
     this.closeDialog.emit();
   }

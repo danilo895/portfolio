@@ -1,12 +1,11 @@
 <div class="project-detail-container">
     <div class="overlay-card">
+        <app-header class="overlay-header" [isOverlayMode]="true"></app-header>
+
+
         <div class="overlay-card-content">
-            
-
-
             <section class="project-section">
                 <div class="project-text">
-
                     <div class="arrow-back" (click)="closeProjectDetail()">
                         <img src="/assets/img/project-detail/arrow-back.svg" alt="">
                         <p>Go Back</p>
@@ -28,14 +27,14 @@
                     </div>
 
                     <p class="duration-text"><b>Duration:</b> 3 weeks</p>
-            
+                
                     <div class="tech-icons">
                         <img src="/assets/img/project-detail/html-detail.svg" alt="HTML">
                         <img src="/assets/img/project-detail/css-detail.svg" alt="CSS">
                         <img src="/assets/img/project-detail/js-detail.svg" alt="CSS">
                     </div>
                 </div>
-            
+
                 <div class="project-media">
                     <img src="{{project.image}}" alt="El Pollo Loco Picture">
                     
@@ -48,7 +47,6 @@
                         <p>Next Project</p>
                         <img src="/assets/img/project-detail/forward.svg" alt="">
                     </div>
-                    
                 </div>
             </section>
         </div>

@@ -2,10 +2,9 @@ export const projects = [
     {
         id: 1,
         title: "Join",
-        description: "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
-        descriptionLong: "Join ist ein leistungsstarkes Tool zur Teamkommunikation, das Echtzeit-Chats, Datei-Freigabe und integrierte Task-Management-Funktionen bietet. Entwickelt mit modernsten Web-Technologien, bietet es eine nahtlose Benutzererfahrung für Unternehmen jeder Größe.",
-        implementationDetails: "Join wurde mit einer modernen Angular-Architektur entwickelt, wobei Firebase als Backend für Echtzeit-Kommunikation dient. Material Design wurde für das UI-Framework genutzt.",
-        duration: "3 weeks",
+        description: "A task manager inspired by the Kanban system. Users can create tasks, move them via drag & drop, assign contacts, and categorize them.",
+        implementationDetails: "This was a team project with four members. I was responsible for designing and implementing the registration and login logic, as well as developing the drag & drop functionality for the board, including its UI. Additionally, I styled and coded the task detail view.",
+        duration: "6 weeks",
         used_tech: ["HTML", "CSS", "JavaScript"],
         image: "/assets/img/projects/join.png",
         animatedLineImage: "/assets/img/project-detail/hr-blue-line.svg",
@@ -14,17 +13,15 @@ export const projects = [
             "/assets/img/project-detail/css-detail.svg",
             "/assets/img/project-detail/js-detail.svg"
         ],
-        repoLink: "https://github.com/your-repo/join",
-        liveDemo: "https://your-live-demo.com/join",
-        nextProjectId: 2
+        repoLink: "https://github.com/danilo895/join",
+        liveDemo: "🔴 [TODO: Add Live Demo URL later]"
     },
     {
         id: 2,
         title: "El Pollo Loco",
-        description: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-        descriptionLong: "El Pollo Loco ist ein lustiges Jump'n'Run-Spiel, bei dem der Spieler Münzen und Tabasco sammeln muss, um gegen das verrückte Huhn zu kämpfen. Das Spiel wurde mit objektorientiertem Programmieren in JavaScript entwickelt.",
-        implementationDetails: "Das Spiel basiert auf einer OOP-Struktur in JavaScript. Es verwendet eine Canvas-Rendering-Technik, um Animationen und Spielmechaniken zu realisieren.",
-        duration: "4 weeks",
+        description: "A fun jump & run game written in JavaScript. Help Pepe find coins and tabasco salsa to fight against the crazy hen.",
+        implementationDetails: "Developed using object-oriented programming in JavaScript. The game mechanics, animations, and enemy behavior were created with a custom-built game engine based on the HTML5 canvas.",
+        duration: "3 weeks",
         used_tech: ["HTML", "CSS", "JavaScript"],
         image: "/assets/img/projects/epl.png",
         animatedLineImage: "/assets/img/project-detail/hr-blue-line.svg",
@@ -33,18 +30,16 @@ export const projects = [
             "/assets/img/project-detail/css-detail.svg",
             "/assets/img/project-detail/js-detail.svg"
         ],
-        repoLink: "https://github.com/your-repo/epl",
-        liveDemo: "https://your-live-demo.com/epl",
-        nextProjectId: 3
+        repoLink: "https://github.com/danilo895/El-Pollo-Loco",
+        liveDemo: "TODO: Add Live Demo URL later]"
     },
     {
         id: 3,
         title: "Portfolio",
-        description: "This is my personal portfolio website, built with Angular and TypeScript, showcasing my projects, skills, and experience as a frontend developer.",
-        descriptionLong: "Mein Portfolio wurde entwickelt, um meine Fähigkeiten und Projekte im Bereich Frontend-Entwicklung vorzustellen. Die Website nutzt eine moderne Architektur mit Angular und ist vollständig responsiv.",
-        implementationDetails: "Die Portfolio-Website wurde mit Angular und TypeScript erstellt und nutzt eine modulare Architektur. SCSS wurde für das Styling verwendet, um eine konsistente und skalierbare UI zu gewährleisten.",
+        description: "My personal portfolio website showcasing my Angular and TypeScript skills.",
+        implementationDetails: "Built using Angular and TypeScript with a modular architecture, ensuring high scalability. The UI was designed with SCSS for a modern and responsive experience. The website follows best practices, including lazy loading, reusable components, and state management to optimize performance and maintainability.",
         duration: "2 weeks",
-        used_tech: ["TypeScript", "Angular", "CSS"],
+        used_tech: ["TypeScript", "Angular", "SCSS"],
         image: "/assets/img/projects/portfolio.png",
         animatedLineImage: "/assets/img/project-detail/hr-blue-line.svg",
         techIcons: [
@@ -52,8 +47,7 @@ export const projects = [
             "/assets/img/project-detail/angular-detail.svg",
             "/assets/img/project-detail/css-detail.svg"
         ],
-        repoLink: "https://github.com/your-repo/portfolio",
-        liveDemo: "https://your-live-demo.com/portfolio",
-        nextProjectId: 1
+        repoLink: "https://github.com/danilo895/portfolio/tree/main/portfoliodl",
+        liveDemo: "[TODO: Add Live Demo URL later]"
     }
 ];

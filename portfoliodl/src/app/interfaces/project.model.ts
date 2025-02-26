@@ -2,7 +2,6 @@ export interface Project {
     id: number;
     title: string;
     description: string;
-    descriptionLong: string;
     implementationDetails: string;
     duration: string;
     used_tech: string[];
@@ -11,5 +10,4 @@ export interface Project {
     techIcons: string[];
     repoLink: string;
     liveDemo: string;
-    nextProjectId: number;
 }

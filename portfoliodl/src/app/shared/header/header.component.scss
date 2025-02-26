@@ -1,3 +1,4 @@
+
 header {
     position: absolute;
     top: 0;
@@ -13,6 +14,22 @@ header {
     z-index: 10;
     background: transparent;
 }
+
+.overlay-mode nav {
+    display: flex;
+    flex: 25 !important;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.overlay-mode nav {
+    .nav-about-cont a,
+    .nav-skills-cont a {
+        color: black !important; 
+    }
+}
+
 
 nav a {
     text-decoration: none;
@@ -30,18 +47,7 @@ nav {
     align-items: center;
 }
 
-.header-overlay-mode .nav-about-cont a,
-.header-overlay-mode .nav-skills-cont a {
-    color: black !important;
-    -webkit-text-stroke: 1px solid white;
-}
 
-.header-overlay-mode, nav{
-    display: flex;
-    flex: 25 !important;
-    justify-content: space-around;
-    align-items: center;
-}
 
 .my-logo {
     flex: 1;
