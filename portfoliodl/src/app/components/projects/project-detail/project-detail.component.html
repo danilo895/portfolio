@@ -33,12 +33,15 @@
                 </div>
 
                 <div class="project-media">
+
+
                     <img [src]="project.image" [alt]="project.title">
                     
                     <div class="buttons">
                         <a class="github-btn" [href]="project.repoLink" target="_blank">GitHub</a>
                         <a class="live-test-btn" [href]="project.liveDemo" target="_blank">Live Test</a>
                     </div>
+
 
                     <div class="arrow-forward" (click)="nextProject()">
                         <p>Next Project</p>
