@@ -36,8 +36,8 @@ export const projects = [
     {
         id: 3,
         title: "Portfolio",
-        description: "My personal portfolio website showcasing my Angular and TypeScript skills.",
-        implementationDetails: "Built using Angular and TypeScript with a modular architecture, ensuring high scalability. The UI was designed with SCSS for a modern and responsive experience. The website follows best practices, including lazy loading, reusable components, and state management to optimize performance and maintainability.",
+        description: "A modern, fully responsive portfolio website built with Angular and TypeScript to showcase my frontend development skills and projects.",
+        implementationDetails: "Built using Angular and TypeScript with a modular and standalone component architecture, ensuring easy scalability and maintainability. The project structure enables component reusability, and the navigation is dynamically managed through Angular’s event-driven model.",
         duration: "2 weeks",
         used_tech: ["TypeScript", "Angular", "SCSS"],
         image: "/assets/img/projects/portfolio.png",
@@ -50,4 +50,6 @@ export const projects = [
         repoLink: "https://github.com/danilo895/portfolio/tree/main/portfoliodl",
         liveDemo: "[TODO: Add Live Demo URL later]"
     }
+    
+    
 ];

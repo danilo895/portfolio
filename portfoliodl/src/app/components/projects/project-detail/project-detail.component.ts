@@ -7,7 +7,7 @@ import { HeaderComponent } from '../../../shared/header/header.component'; // âœ
 @Component({
   selector: 'app-project-detail',
   standalone: true,
-  imports: [CommonModule, HeaderComponent], // âœ… Header registrieren
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './project-detail.component.html',
   styleUrl: './project-detail.component.scss'
 })
