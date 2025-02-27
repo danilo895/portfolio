@@ -6,6 +6,7 @@ import { AboutComponent } from './components/about/about.component';
 import { TechstackComponent } from './components/techstack/techstack.component'; 
 import { ProjectsComponent } from './components/projects/projects.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component'; // ✅ Import der neuen Komponente
+import { ContactComponent } from './components/contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
     AboutComponent,
     TechstackComponent,
     ProjectsComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    ContactComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

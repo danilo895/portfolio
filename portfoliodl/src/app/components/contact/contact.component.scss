@@ -1,0 +1,243 @@
+.contact-container {
+    width: 100%;
+    background-image: url('/assets/img/contact-bg.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    width: 90%;
+    height: 100%;
+    max-width: 1440px;
+    padding: 10% 0;
+    gap: 5%;
+}
+
+
+.contact-content section {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-intro-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.contact-me {
+    font-family: 'Bricolage Grotesque';
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+}
+
+.ready-to-work{
+    font-family: 'Bricolage Grotesque';
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+
+
+.contact-headline{
+    font-family: "Bricolage Grotesque";
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.contact-intro-info p {
+    font-family: 'Bricolage Grotesque';
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    max-width: 500px;
+    margin-top: 12px;
+}
+
+.contact-intro-info .arrow-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.contact-intro-info .arrow-container img {
+    width: 280px;
+    height: auto;
+    clip-path: inset(0 100% 0 0);
+    animation: drawLine 5s ease-in-out infinite;
+}
+
+
+
+@keyframes drawLine {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+    10% {
+        clip-path: inset(0 0 0 0);
+    }
+    90% {
+        clip-path: inset(0 0 0 0);
+    }
+    100% {
+        clip-path: inset(0 100% 0 0);
+    }
+}
+
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    gap: 16px;
+    width: 100%;
+    max-width: 600px;
+}
+
+
+.contact-form .sticker {
+    width: 180px;
+    height: auto;
+}
+
+
+
+.contact-form hr {
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-color: white;
+    margin: 0;
+}
+
+
+.contact-form label {
+    font-family: "Bricolage Grotesque";
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    display: flex;
+    gap: 4px;
+    margin-bottom: 6px;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Bricolage Grotesque';
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    padding: 8px 0;
+}
+
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+
+.contact-form .form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.checkbox-container input[type="checkbox"] {
+    display: none;
+}
+
+
+.checkbox-container .checkbox-wrapper {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+.checkbox-container .checkbox-image {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease-in-out;
+}
+
+
+.checkbox-container .checkmark {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+
+.checkbox-container input:checked + label .checkmark {
+    opacity: 1;
+}
+
+
+.checkbox-container .checkbox-wrapper:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #3355FF;
+}
+
+
+.checkbox-container label span {
+    font-family: "Bricolage Grotesque";
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.4;
+    display: inline;
+}
+
+
+.privacy-link {
+    color: #3355FF;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+
+.privacy-link:hover {
+    color: #F7C518;
+    cursor: pointer;
+}
+
