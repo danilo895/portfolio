@@ -240,10 +240,18 @@
 }
 
 
-.contact-form hr {
+.hr-2, .hr-3, .hr-4 {
     width: 100%;
     border: none;
     height: 2px;
-    background-color: white;
+    background-color: #F7C518;
+    margin: 0;
+}
+
+.hr-1{
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-color: transparent;
     margin: 0;
 }
