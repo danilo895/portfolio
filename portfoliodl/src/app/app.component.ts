@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
@@ -7,6 +7,7 @@ import { TechstackComponent } from './components/techstack/techstack.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -26,4 +27,5 @@ import { ContactComponent } from './components/contact/contact.component';
 })
 export class AppComponent {
   title = 'portfoliodl';
+
 }

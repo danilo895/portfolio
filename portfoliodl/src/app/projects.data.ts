@@ -2,7 +2,7 @@ export const projects = [
     {
         id: 1,
         title: "Join",
-        description: "A task manager inspired by the Kanban system. Users can create tasks, move them via drag & drop, assign contacts, and categorize them.",
+        description: "Home.Projects.Join.Description",
         implementationDetails: "This was a team project with four members. I was responsible for designing and implementing the registration and login logic, as well as developing the drag & drop functionality for the board, including its UI. Additionally, I styled and coded the task detail view.",
         duration: "6 weeks",
         used_tech: ["HTML", "CSS", "JavaScript"],

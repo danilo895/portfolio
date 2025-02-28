@@ -10,6 +10,9 @@
 
         },
         "Projects":{
+            "Join":{
+                "Description": "A task manager inspired by the Kanban system. Users can create tasks, move them via drag & drop, assign contacts, and categorize them."
+            }
             
         },
         "Contact":{

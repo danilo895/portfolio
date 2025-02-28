@@ -9,6 +9,8 @@ export class AppTranslateService {
 
   constructor() {
     this.initTranslation();
+    console.log('AppTranslateService initialized', "currentLanguage: ", this.currentLanguage);
+
   }
 
   private initTranslation() {
@@ -20,7 +22,7 @@ export class AppTranslateService {
     this.translate.use(browserLang);
   }
 
-  switchLanguage(lang: string) {
+  public switchLanguage(lang: string) {
     this.translate.use(lang);
   }
 

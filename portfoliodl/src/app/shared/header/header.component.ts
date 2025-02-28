@@ -14,8 +14,13 @@ export class HeaderComponent {
   @Input() isOverlayMode: boolean = false; 
   @Output() closeOverlay = new EventEmitter<void>();
 
-  constructor(public translateService: AppTranslateService) {}
+  constructor(public translateService: AppTranslateService) {
 
+  }
+
+  public changeLanguage(lang: string) {
+    this.translateService.switchLanguage(lang);
+  }
 
   handleAboutClick() {
     if (this.isOverlayMode) {
