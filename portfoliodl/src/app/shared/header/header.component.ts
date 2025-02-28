@@ -1,16 +1,21 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AppTranslateService } from '../../services/translate.service';
+import { TranslateModule} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule], 
+  imports: [CommonModule, TranslateModule], 
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   @Input() isOverlayMode: boolean = false; 
   @Output() closeOverlay = new EventEmitter<void>();
+
+  constructor(public translateService: AppTranslateService) {}
+
 
   handleAboutClick() {
     if (this.isOverlayMode) {

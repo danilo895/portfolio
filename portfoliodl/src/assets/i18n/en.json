@@ -1,0 +1,29 @@
+{
+    "Home": {
+        "Hero":{
+
+        },
+        "AboutMe":{
+
+        },
+        "Skills":{
+
+        },
+        "Projects":{
+            
+        },
+        "Contact":{
+
+        }
+    },
+    "Privacy": {
+        
+    },
+    "Utility": {
+        "Header": {
+            "AboutMe": "About Me"
+        },
+        "Footer": {
+        }
+    }
+}
