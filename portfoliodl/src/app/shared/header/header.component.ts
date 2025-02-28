@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,5 +9,25 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @Input() isOverlayMode: boolean = false;
+  @Input() isOverlayMode: boolean = false; 
+  @Output() closeOverlay = new EventEmitter<void>();
+
+
+  handleAboutClick() {
+    if (this.isOverlayMode) {
+      this.closeOverlay.emit();
+      setTimeout(() => {
+        this.scrollToAbout();
+      }, 100);
+    } else {
+      this.scrollToAbout();
+    }
+  }
+
+  private scrollToAbout() {
+    const aboutSection = document.getElementById('aboutSection');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }
