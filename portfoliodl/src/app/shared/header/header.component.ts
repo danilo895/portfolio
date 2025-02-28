@@ -12,22 +12,54 @@ export class HeaderComponent {
   @Input() isOverlayMode: boolean = false; 
   @Output() closeOverlay = new EventEmitter<void>();
 
-
   handleAboutClick() {
     if (this.isOverlayMode) {
       this.closeOverlay.emit();
       setTimeout(() => {
-        this.scrollToAbout();
+        this.scrollToSection('aboutSection');
       }, 100);
     } else {
-      this.scrollToAbout();
+      this.scrollToSection('aboutSection');
     }
   }
 
-  private scrollToAbout() {
-    const aboutSection = document.getElementById('aboutSection');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  handleSkillsClick() {
+    if (this.isOverlayMode) {
+      this.closeOverlay.emit();
+      setTimeout(() => {
+        this.scrollToSection('techstackSection');
+      }, 100);
+    } else {
+      this.scrollToSection('techstackSection');
+    }
+  }
+
+  handleProjectsClick() {
+    if (this.isOverlayMode) {
+      this.closeOverlay.emit();
+      setTimeout(() => {
+        this.scrollToSection('projectsSection');
+      }, 100);
+    } else {
+      this.scrollToSection('projectsSection');
+    }
+  }
+
+  handleContactClick() {
+    if (this.isOverlayMode) {
+      this.closeOverlay.emit();
+      setTimeout(() => {
+        this.scrollToSection('contactSection');
+      }, 100);
+    } else {
+      this.scrollToSection('contactSection');
+    }
+  }
+
+  private scrollToSection(sectionId: string) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 }
