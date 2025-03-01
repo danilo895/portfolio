@@ -14,17 +14,19 @@ export class AppTranslateService {
   }
 
   private initTranslation() {
-    const defaultLang = 'en';
-    //const browserLang = this.translate.getBrowserLang() || defaultLang;
-    const browserLang = defaultLang;
-
-    this.translate.setDefaultLang(defaultLang);
-    this.translate.use(browserLang);
+    const savedLang = localStorage.getItem('language') || 'en';
+    this.translate.setDefaultLang(savedLang);
+    this.translate.use(savedLang);
+    document.documentElement.setAttribute('lang', savedLang);
   }
+  
 
   public switchLanguage(lang: string) {
     this.translate.use(lang);
+    localStorage.setItem('language', lang);
+    document.documentElement.setAttribute('lang', lang); // Fügt das `lang`-Attribut zu <html> hinzu
   }
+  
 
   get currentLanguage(): string {
     return this.translate.currentLang;

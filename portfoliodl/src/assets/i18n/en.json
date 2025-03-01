@@ -24,7 +24,10 @@
     },
     "Utility": {
         "Header": {
-            "AboutMe": "About Me"
+            "AboutMe": "About Me",
+            "Skills": "Skills",
+            "Projects": "Projects",
+            "Contact": "Contact"
         },
         "Footer": {
         }

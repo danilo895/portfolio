@@ -21,7 +21,10 @@
     },
     "Utility": {
         "Header": {
-            "AboutMe": "Test Deutsch"
+            "AboutMe": "Über Mich",
+            "Skills": "Skills",
+            "Projects": "Projekte",
+            "Contact": "Kontakt"
         },
         "Footer": {
         }
