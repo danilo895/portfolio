@@ -1,7 +1,10 @@
 {
     "Home": {
         "Hero":{
-
+            "WelcomeBtn": "Hello World",
+            "IntroName": "I AM DANIEL LÖFFLER",
+            "JobName": "DEVELOPER",
+            "GetInTouch": "Get In Touch"
         },
         "AboutMe":{
 

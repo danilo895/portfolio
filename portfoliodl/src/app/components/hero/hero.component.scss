@@ -238,7 +238,14 @@ background-color: rgba(255, 255, 255, 0.499);
     justify-content: end;
 }
 
+:host-context(html[lang="de"]) h1 {
+    font-size: 110px !important;
+    letter-spacing: 3px;
+}
 
+:host-context(html[lang="en"]) h1 {
+    font-size: 128px !important;
+}
 
 
 

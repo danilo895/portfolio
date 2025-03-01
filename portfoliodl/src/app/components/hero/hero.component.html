@@ -8,8 +8,8 @@
         <div class="btn-and-frntend">
             <button class="long-welcome-btn">
                 <img src="/assets/img/hero/welcome-hand.svg" alt="Hand" class="welcome-hand">
-                <span class="btn-text default-text">Hello World</span>
-                <span class="btn-text hover-text">I AM DANIEL LÖFFLER</span>
+                <span class="btn-text default-text">{{'Home.Hero.WelcomeBtn' | translate}}</span>
+                <span class="btn-text hover-text">{{'Home.Hero.IntroName' | translate}}</span>
             </button>
         <h1>
             <span *ngFor="let letter of 'Frontend'.split('')">
@@ -24,13 +24,15 @@
 
     <section class="secondInfosHero">
         <h1>
-            <span *ngFor="let letter of 'DEVELOPER'.split('')">
-            <span appHoverTransform [attr.data-alt]="letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase()">{{ letter }}</span>
+            <span *ngFor="let letter of ((translatedJobName | async) ?? '').split('')">
+                <span appHoverTransform [attr.data-alt]="letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase()">
+                {{ letter }}
+                </span>
             </span>
         </h1>
 
         <div class="get-in-touch-btn-cont">
-            <button class="get-in-touch-btn">Get In Touch</button>
+            <button class="get-in-touch-btn">{{'Home.Hero.GetInTouch' | translate}}</button>
         </div>
 
 
