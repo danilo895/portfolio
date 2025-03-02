@@ -26,7 +26,7 @@ export class ProjectDetailComponent implements OnChanges {
       this.loadTranslatedDetails();
     }
 
-    // Falls sich die Sprache ändert, aktualisiere `ImplementationDetails`
+
     this.translate.onLangChange.subscribe(() => {
       this.loadTranslatedDetails();
     });
@@ -34,13 +34,11 @@ export class ProjectDetailComponent implements OnChanges {
 
   private loadTranslatedDetails() {
     if (this.project?.title) {
-      const projectKey = this.project.title.replace(/\s+/g, ""); // Entfernt Leerzeichen für JSON-Schlüssel
+      const projectKey = this.project.title.replace(/\s+/g, "");
       const translationKey = `Home.Projects.ProjectCollection.${projectKey}.ImplementationDetails`;
-  
-      console.log("🔍 Übersetzungs-Key:", translationKey); // Debugging: Zeigt den Key an
+
   
       this.translate.get(translationKey).subscribe((translation: string) => {
-        console.log("🎯 Gefundene Übersetzung:", translation); // Debugging: Zeigt den Wert an
         if (translation !== translationKey) {
           this.translatedImplementationDetails = translation;
         } else {
@@ -61,8 +59,6 @@ export class ProjectDetailComponent implements OnChanges {
     const nextIndex = (currentIndex + 1) % projects.length;
     this.project = projects[nextIndex]; 
     this.projectChange.emit(this.project);
-
-    // Aktualisiere `ImplementationDetails` für das neue Projekt
     this.loadTranslatedDetails();
   }
 }
