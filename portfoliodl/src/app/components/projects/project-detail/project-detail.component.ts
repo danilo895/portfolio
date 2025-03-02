@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../../interfaces/project.model';
 import { projects } from '../../../projects.data';
-import { HeaderComponent } from '../../../shared/header/header.component'; // ✅ Header importieren
+import { HeaderComponent } from '../../../shared/header/header.component'; 
 
 @Component({
   selector: 'app-project-detail',

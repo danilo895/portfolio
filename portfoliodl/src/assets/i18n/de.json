@@ -24,8 +24,32 @@
                 "Headline": "PROJEKTE",
                 "Description": "Hier findest du einige meiner neuesten Projekte, die meine Fähigkeiten im Frontend-Development zeigen. Mein Fokus liegt auf interaktiven, responsiven und benutzerfreundlichen Webanwendungen, die ein nahtloses digitales Erlebnis bieten.",
                 "ProjectDetails": "Projektdetails"
+            },
+            "ProjectCollection": {
+                "Join": {
+                    "Id": "1",
+                    "Title": "Join",
+                    "Description": "Ein Kanban-Board-Gruppenprojekt, das Aufgabenmanagement wie in Trello ermöglicht. Mit Funktionen zum Erstellen von Aufgaben, Zuweisen von Kontakten und mehr.",
+                    "implemetationDetails": "Ich war verantwortlich für die Registrierung und Login-Logik, die Drag-&-Drop-Funktion des Boards (inkl. UI) sowie das Styling und die Umsetzung der Aufgaben-Detailansicht.",
+                    "Image": "/assets/img/projects/join.png"
+                },
+                "El Pollo Loco": {
+                    "Id": "2",
+                    "Title": "El Pollo Loco",
+                    "Description": "Ein unterhaltsames Jump-&-Run-Spiel, programmiert mit JavaScript (OOP). Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das Bosshuhn zu kämpfen.",
+                    "ImplemetationDetails": "test deutsch EPL",
+                    "Image": "/assets/img/projects/epl.png"
+                },
+                "Portfolio": {
+                    "Id": "3",
+                    "Title": "Portfolio",
+                    "Description": "Eine moderne Portfolio-Website entwickelt mit Angular 19, TypeScript und Standalone Components. Zeigt meine Projekte und Fähigkeiten in einer performanten und skalierbaren Webanwendung.",
+                    "ImplemetationDetails": "test deutsch Portfolio",
+                    "Image": "/assets/img/projects/portfolio.png"
+                }
             }
         }
+        
         
         ,
         "Contact":{

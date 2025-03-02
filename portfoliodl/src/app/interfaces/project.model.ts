@@ -5,7 +5,7 @@ export interface Project {
     implementationDetails: string;
     duration: string;
     used_tech: string[];
-    image: string;
+    image?: string;
     animatedLineImage: string;
     techIcons: string[];
     repoLink: string;

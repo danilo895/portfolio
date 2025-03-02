@@ -26,30 +26,32 @@
                 "ProjectDetails": "Project Details"
             },
             "ProjectCollection": {
-                "Join":{
-                    "id": "1",
+                "Join": {
+                    "Id": "1",
                     "Title": "Join",
-                    "Description": "A task manager inspired by the Kanban system. Users can create tasks, move them via drag & drop, assign contacts, and categorize them.",
-                    "ImplementationDetails": "This was a team project with four members. I was responsible for designing and implementing the registration and login logic, as well as developing the drag & drop functionality for the board, including its UI. Additionally, I styled and coded the task detail view.",
-                    "Duration": "6 weeks",
-                    "UsedTech": ["HTML", "CSS", "JavaScript"],
-                    "Image": "/assets/img/projects/join.png",
-                    "AnimatedLineImage": "/assets/img/project-detail/hr-blue-line.svg",
-                    "TechIcons": [
-                        "/assets/img/project-detail/html-detail.svg",
-                        "/assets/img/project-detail/css-detail.svg",
-                        "/assets/img/project-detail/js-detail.svg"
-                    ],
-                    "RepoLink": "https://github.com/danilo895/join",
-                    "LiveDemo": "[TODO: Add Live Demo URL later]"
+                    "Description": "A Kanban board group project that enables task management like Trello, with features for creating tasks, assigning contacts, and more.",
+                    "implemetationDetails": "This was a team project with four members. I was responsible for designing and implementing the registration and login logic, as well as developing the drag & drop functionality for the board, including its UI. Additionally, I styled and coded the task detail view.",
+                    "Image": "/assets/img/projects/join.png"
                 },
-                "El Pollo Loco":{
-                    
+                "El Pollo Loco": {
+                    "Id": "2",
+                    "Title": "El Pollo Loco",
+                    "Description": "A fun jump & run game written in JavaScript. Help Pepe find coins and tabasco salsa to fight against the crazy hen.",
+                    "ImplemetationDetails": "test english EPL",
+                    "Image": "/assets/img/projects/epl.png"
+                },
+                "Portfolio": {
+                    "Id": "3",
+                    "Title": "Portfolio",
+                    "Description": "A modern portfolio website built with Angular 19, TypeScript, and Standalone Components. Showcasing my projects and skills in a high-performance and scalable web application.",
+                    "ImplemetationDetails": "test english Portfolio",
+                    "Image": "/assets/img/projects/portfolio.png"
                 }
-                
-
             }
         }
+        
+
+
         ,
         "Contact":{
 

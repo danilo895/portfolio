@@ -16,13 +16,15 @@
             <img *ngIf="i === 0" class="project-sticker" src="/assets/img/projects/featured-proj-sticker.png" alt="Sticker">
 
             <img [src]="project.image" [alt]="project.title">
+
             <div class="overlay">
                 <button class="get-in-touch-btn">{{ 'Home.Projects.MainInfo.ProjectDetails' | translate }}</button>
             </div>
         </div>
         <div class="project-short-infos-main">
             <p class="project-title">{{ project.title }}</p>
-            <p class="project-description">{{ 'Home.Projects.Join.Description' | translate }}</p>
+            <p class="project-description">{{ project.description }}</p>
+            
         </div>
     </div>
 </section>
