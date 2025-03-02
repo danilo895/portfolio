@@ -7,14 +7,27 @@
             "GetInTouch": "Erreich' Mich"
         },
         "AboutMe":{
-
+            "FirsBulletPoint": "in Augsburg Zuhause",
+            "SecondBulletPoint": "Offen, vor Ort zu Arbeiten",
+            "ThirdBulletPoint": "Offen, remote zu Arbeiten",
+            "WhoAmI": "WER IST DANIEL?",
+            "ShortDescription": "Mit fünf Jahren Berufserfahrung im eCommerce habe ich ein tiefes Verständnis für digitale Prozesse und nutzerzentrierte Lösungen entwickelt. Meine Begeisterung für Technologie und Innovation hat mich dazu bewegt, mich als Frontend-Entwickler weiterzuqualifizieren. Mein Anspruch ist es, intuitive und performante digitale Produkte zu gestalten, die Unternehmen und Nutzer gleichermaßen begeistern.",
+            "AboutMe":"Über Mich",
+            "LetsTalk": "Lass uns reden"
         },
         "Skills":{
 
         },
-        "Projects":{
-            
-        },
+        "Projects": {
+            "MainInfo": {
+                "Craft": "MEIN HANDWERK",
+                "Headline": "PROJEKTE",
+                "Description": "Hier findest du einige meiner neuesten Projekte, die meine Fähigkeiten im Frontend-Development zeigen. Mein Fokus liegt auf interaktiven, responsiven und benutzerfreundlichen Webanwendungen, die ein nahtloses digitales Erlebnis bieten.",
+                "ProjectDetails": "Projektdetails"
+            }
+        }
+        
+        ,
         "Contact":{
 
         }

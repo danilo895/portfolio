@@ -9,6 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
   selector: 'app-projects',
   standalone: true,
   imports: [CommonModule, ProjectDetailComponent, TranslateModule],
+
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })

@@ -2,14 +2,12 @@
 
     <div class="each-project-cont first-container">
         <div class="first-container-content">
-            <p class="craft-font">MY CRAFT</p>
-            <p class="intro-project-headline">PROJECTS</p>
+            <p class="craft-font">{{ 'Home.Projects.MainInfo.Craft' | translate }}</p>
+            <p class="craft-font"></p>
+            <p class="intro-project-headline">{{ 'Home.Projects.MainInfo.Headline' | translate }}</p>
             <img class="drawn-line" src="/assets/img/projects/anim-line.svg" alt="">
-            <p class="intro-project-descr">
-                Here you will find some of my recent projects, showcasing my skills in frontend development. 
-                My work revolves around creating interactive, responsive, and user-friendly web applications 
-                that provide seamless digital experiences.
-            </p>
+            <p class="intro-project-descr">{{ 'Home.Projects.MainInfo.Description' | translate }}</p>
+
         </div>
     </div>
 
@@ -19,7 +17,7 @@
 
             <img [src]="project.image" [alt]="project.title">
             <div class="overlay">
-                <button class="get-in-touch-btn">Project Details</button>
+                <button class="get-in-touch-btn">{{ 'Home.Projects.MainInfo.ProjectDetails' | translate }}</button>
             </div>
         </div>
         <div class="project-short-infos-main">

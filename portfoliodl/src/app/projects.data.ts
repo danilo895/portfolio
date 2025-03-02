@@ -2,7 +2,7 @@ export const projects = [
     {
         id: 1,
         title: "Join",
-        description: "Home.Projects.Join.Description",
+        description: "test",
         implementationDetails: "This was a team project with four members. I was responsible for designing and implementing the registration and login logic, as well as developing the drag & drop functionality for the board, including its UI. Additionally, I styled and coded the task detail view.",
         duration: "6 weeks",
         used_tech: ["HTML", "CSS", "JavaScript"],

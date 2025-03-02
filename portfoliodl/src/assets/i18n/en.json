@@ -7,17 +7,50 @@
             "GetInTouch": "Get In Touch"
         },
         "AboutMe":{
-
+            "FirsBulletPoint": "Based in Augsburg",
+            "SecondBulletPoint": "Open to working on-site",
+            "ThirdBulletPoint": "Open to working remote",
+            "WhoAmI": "WHO'S DANIEL?",
+            "ShortDescription": "With five years of experience in eCommerce, I have developed a deep understanding of digital processes and user-centric solutions. My passion for technology and innovation has driven me to further qualify as a frontend developer. My goal is to create intuitive and high-performance digital products that inspire both businesses and users alike.",
+            "AboutMe":"About Me",
+            "LetsTalk": "Let's Talk"
         },
         "Skills":{
 
         },
-        "Projects":{
-            "Join":{
-                "Description": "A task manager inspired by the Kanban system. Users can create tasks, move them via drag & drop, assign contacts, and categorize them."
+        "Projects": {
+            "MainInfo": {
+                "Craft": "MY CRAFT",
+                "Headline": "PROJECTS",
+                "Description": "Here you will find some of my recent projects, showcasing my skills in frontend development. My work revolves around creating interactive, responsive, and user-friendly web applications that provide seamless digital experiences.",
+                "ProjectDetails": "Project Details"
+            },
+            "ProjectCollection": {
+                "Join":{
+                    "id": "1",
+                    "Title": "Join",
+                    "Description": "A task manager inspired by the Kanban system. Users can create tasks, move them via drag & drop, assign contacts, and categorize them.",
+                    "ImplementationDetails": "This was a team project with four members. I was responsible for designing and implementing the registration and login logic, as well as developing the drag & drop functionality for the board, including its UI. Additionally, I styled and coded the task detail view.",
+                    "Duration": "6 weeks",
+                    "UsedTech": ["HTML", "CSS", "JavaScript"],
+                    "Image": "/assets/img/projects/join.png",
+                    "AnimatedLineImage": "/assets/img/project-detail/hr-blue-line.svg",
+                    "TechIcons": [
+                        "/assets/img/project-detail/html-detail.svg",
+                        "/assets/img/project-detail/css-detail.svg",
+                        "/assets/img/project-detail/js-detail.svg"
+                    ],
+                    "RepoLink": "https://github.com/danilo895/join",
+                    "LiveDemo": "[TODO: Add Live Demo URL later]"
+                },
+                "El Pollo Loco":{
+                    
+                }
+                
+
             }
-            
-        },
+        }
+        ,
         "Contact":{
 
         }
