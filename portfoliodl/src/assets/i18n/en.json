@@ -30,21 +30,22 @@
                     "Id": "1",
                     "Title": "Join",
                     "Description": "A Kanban board group project that enables task management like Trello, with features for creating tasks, assigning contacts, and more.",
-                    "implemetationDetails": "This was a team project with four members. I was responsible for designing and implementing the registration and login logic, as well as developing the drag & drop functionality for the board, including its UI. Additionally, I styled and coded the task detail view.",
+                    "ImplementationDetails": "This was a team project with four members. I was responsible for designing and implementing the registration and login logic.",
                     "Image": "/assets/img/projects/join.png"
                 },
-                "El Pollo Loco": {
+                "ElPolloLoco": {
                     "Id": "2",
                     "Title": "El Pollo Loco",
                     "Description": "A fun jump & run game written in JavaScript. Help Pepe find coins and tabasco salsa to fight against the crazy hen.",
-                    "ImplemetationDetails": "test english EPL",
+                    "ImplementationDetails": "test english EPL",
                     "Image": "/assets/img/projects/epl.png"
-                },
+                }
+                ,
                 "Portfolio": {
                     "Id": "3",
                     "Title": "Portfolio",
                     "Description": "A modern portfolio website built with Angular 19, TypeScript, and Standalone Components. Showcasing my projects and skills in a high-performance and scalable web application.",
-                    "ImplemetationDetails": "test english Portfolio",
+                    "ImplementationDetails": "test english Portfolio",
                     "Image": "/assets/img/projects/portfolio.png"
                 }
             }
