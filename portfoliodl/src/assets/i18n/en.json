@@ -89,8 +89,34 @@
                     "Duration": "3 weeks"
                 }
             }
-        }
+        },
+
         
+        "Testimonials":{
+            "Header": "IN THEIR WORDS",
+            "Title": "Colleagues Thoughts",
+            "Profiles": {
+                "LeonDorsch": {
+                    "Name": "Leon Dorsch",
+                    "Job": "Frontend Developer",
+                    "Quote": "Working with Daniel on our group project was an absolute pleasure. I truly admire his determination and passion for fixing bugs—he never gave up until every issue was resolved. His dedication and enthusiasm made collaboration effortless, and our teamwork was so strong that it even turned into a great friendship.",
+                    "LinkedIn": "https://www.linkedin.com/in/example"
+                },
+                "EnesHadzic": {
+                    "Name": "Enes Hadzic",
+                    "Job": "Graphic Designer & Frontend Developer",
+                    "Quote": "Daniel has an incredible eye for detail and refuses to settle for solutions that aren’t dynamic and visually appealing. His persistence and patience are truly remarkable—he keeps refining every element until it's absolutely perfect. His ability to stay focused and push for excellence is what sets him apart.",
+                    "LinkedIn": "https://www.linkedin.com/in/"
+                },
+                "SebastianHarhammer": {
+                    "Name": "Sebastian Harhammer",
+                    "Job": "Frontend Developer",
+                    "Quote": "Working with Daniel on the Join project was a fantastic experience. Our coordination was seamless, and through pair programming, we found great solutions at the intersection of our tasks. He was always open to my suggestions while also bringing his own valuable ideas to the table. His ability to collaborate and adapt made him an essential part of our team.",
+                    "LinkedIn": "https://www.linkedin.com/in/"
+                },
+                "ProfileLabel": "Profile"
+            }
+        }
 
 
         ,
