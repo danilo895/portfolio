@@ -25,6 +25,32 @@
                 "Description": "Hier findest du einige meiner neuesten Projekte, die meine Fähigkeiten im Frontend-Development zeigen. Mein Fokus liegt auf interaktiven, responsiven und benutzerfreundlichen Webanwendungen, die ein nahtloses digitales Erlebnis bieten.",
                 "ProjectDetails": "Projektdetails"
             },
+            "TechStack": {
+                "HTML": {
+                    "name": "HTML",
+                    "icon": "/assets/img/project-detail/html-detail.svg"
+                },
+                "CSS": {
+                    "name": "CSS",
+                    "icon": "/assets/img/project-detail/css-detail.svg"
+                },
+                "JavaScript": {
+                    "name": "JavaScript",
+                    "icon": "/assets/img/project-detail/js-detail.svg"
+                },
+                "TypeScript": {
+                    "name": "TypeScript",
+                    "icon": "/assets/img/project-detail/typescript-detail.svg"
+                },
+                "Angular": {
+                    "name": "Angular",
+                    "icon": "/assets/img/project-detail/angular-detail.svg"
+                },
+                "SCSS": {
+                    "name": "SCSS",
+                    "icon": "/assets/img/project-detail/css-detail.svg"
+                }
+            },
             "Details":{
                 "GoBack": "Zurück",
                 "Description": "Beschreibung",

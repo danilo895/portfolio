@@ -21,6 +21,8 @@ export class ProjectDetailComponent implements OnChanges {
   public translatedDescription: string = '';
   public translatedTitle: string = '';
   public translatedDuration: string = '';
+  public translatedTechStack: { name: string; icon: string }[] = [];
+
 
 
 
@@ -47,27 +49,41 @@ export class ProjectDetailComponent implements OnChanges {
         const implementationDetailsKey = `Home.Projects.ProjectCollection.${projectKey}.ImplementationDetails`;
         const durationKey = `Home.Projects.ProjectCollection.${projectKey}.Duration`;
 
-        // Übersetzung für den Titel laden
+        // Titel laden
         this.translate.get(titleKey).subscribe((translation: string) => {
             this.translatedTitle = translation !== titleKey ? translation : "Translation missing";
         });
 
-        // Übersetzung für die Beschreibung laden
+        // Beschreibung laden
         this.translate.get(descriptionKey).subscribe((translation: string) => {
             this.translatedDescription = translation !== descriptionKey ? translation : "Translation missing";
         });
 
-        // Übersetzung für ImplementationDetails laden
+        // Implementierungsdetails laden
         this.translate.get(implementationDetailsKey).subscribe((translation: string) => {
             this.translatedImplementationDetails = translation !== implementationDetailsKey ? translation : "Translation missing";
         });
 
-        // Übersetzung für Duration laden
+        // Dauer laden
         this.translate.get(durationKey).subscribe((translation: string) => {
             this.translatedDuration = translation !== durationKey ? translation : "Translation missing";
         });
+
+        // 🔹 Tech-Stack laden
+        this.translatedTechStack = [];
+        this.translate.get('Home.Projects.TechStack').subscribe((techStack: any) => {
+            this.project.used_tech.forEach(tech => {
+                if (techStack[tech]) {
+                    this.translatedTechStack.push({
+                        name: techStack[tech].name,
+                        icon: techStack[tech].icon
+                    });
+                }
+            });
+        });
     }
 }
+
 
 
 

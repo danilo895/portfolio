@@ -33,8 +33,13 @@
 
                 
                     <div class="tech-icons">
-                        <img *ngFor="let icon of project.techIcons" [src]="icon" alt="Technology Icon">
+                        <div *ngFor="let tech of translatedTechStack" class="tech-item">
+                            <img [src]="tech.icon" [alt]="tech.name">
+                            <span>{{ tech.name }}</span>
+                        </div>
                     </div>
+                    
+
                 </div>
 
                 <div class="project-media">
