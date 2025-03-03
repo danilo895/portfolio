@@ -21,6 +21,8 @@
 }
 
 
+
+
 .contact-content section {
     display: flex;
     flex-direction: column;
@@ -226,16 +228,16 @@
 
 
 .privacy-link {
-    color: #3355FF;
+    color: #3355FF !important;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
-
 .privacy-link:hover {
-    color: #F7C518;
-    cursor: pointer;
+    color: #F7C518 !important; 
+    text-decoration: underline;
 }
+
 
 .form-data{
     width: 100%;

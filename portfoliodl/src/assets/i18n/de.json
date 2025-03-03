@@ -119,8 +119,20 @@
 
         
         ,
-        "Contact":{
-
+        "Contact": {
+            "Header": "Kontaktiere mich",
+            "SubHeader": "Bereit für eine Zusammenarbeit?",
+            "MotivationText": "Hier wird später ein Text stehen, der die Leute dazu motiviert, mir zu schreiben.",
+            "Form": {
+                "NameLabel": "Wie ist dein Name?",
+                "NamePlaceholder": "Dein Name hier",
+                "EmailLabel": "Wie lautet deine E-Mail?",
+                "EmailPlaceholder": "deineemail@email.com",
+                "MessageLabel": "Wie kann ich dir helfen?",
+                "MessagePlaceholder": "Schreibe deine Nachricht hier",
+                "PrivacyText": "Ich habe die <a href='#' class='privacy-link'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+                "SendButton": "Senden"
+            }
         }
     },
     "Privacy": {

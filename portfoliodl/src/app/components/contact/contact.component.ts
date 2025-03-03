@@ -1,15 +1,16 @@
-import { Component, ElementRef, Renderer2, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, Renderer2, AfterViewInit, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrl: './contact.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class ContactComponent implements AfterViewInit {
-
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngAfterViewInit() {
@@ -21,7 +22,6 @@ export class ContactComponent implements AfterViewInit {
     this.setupEffectsForField('.form-group-email', ['.hr-2', '.hr-3'], '#3355FF');
     this.setupEffectsForField('.form-group-message', ['.hr-3', '.hr-4'], '#3355FF');
   }
-
 
   private setupEffectsForField(triggerSelector: string, targetSelectors: string[], color: string) {
     const triggerElement = this.el.nativeElement.querySelector(triggerSelector);

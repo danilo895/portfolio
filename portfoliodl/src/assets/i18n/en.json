@@ -91,7 +91,7 @@
             }
         },
 
-        
+
         "Testimonials":{
             "Header": "IN THEIR WORDS",
             "Title": "Colleagues Thoughts",
@@ -116,13 +116,22 @@
                 },
                 "ProfileLabel": "Profile"
             }
+        },
+    "Contact": {
+        "Header": "Contact Me",
+        "SubHeader": "Ready to work together?",
+        "MotivationText": "Here will be a text that motivates people to write to me.",
+        "Form": {
+            "NameLabel": "What's your name?",
+            "NamePlaceholder": "Your name goes here",
+            "EmailLabel": "What's your mail?",
+            "EmailPlaceholder": "youremail@email.com",
+            "MessageLabel": "How can I help you?",
+            "MessagePlaceholder": "Write your message here",
+            "PrivacyText": "I've read the <a href='#' class='privacy-link'>privacy policy</a> and agree to the processing of my data as outlined.",
+            "SendButton": "Send"
         }
-
-
-        ,
-        "Contact":{
-
-        }
+    }
     },
     "Privacy": {
         

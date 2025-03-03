@@ -2,13 +2,9 @@
 
     <div class="contact-content">
         <section class="contact-intro-info">
-            <span class="contact-me">Contact Me</span>
-            <span class="ready-to-work">Ready to work together?</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
-            </p>
+            <span class="contact-me">{{ 'Home.Contact.Header' | translate }}</span>
+            <span class="ready-to-work">{{ 'Home.Contact.SubHeader' | translate }}</span>
+            <p>{{ 'Home.Contact.MotivationText' | translate }}</p>
             
             <div class="arrow-container">
                 <img src="/assets/img/contact/yellow-arrow-contact.svg" alt="Arrow">
@@ -36,22 +32,22 @@
 
             <hr class="hr-1">
             <div class="form-group form-group-name">
-                <label for="name">What's your name?</label>
-                <input type="text" id="name" placeholder="Your name goes here">
+                <label for="name">{{ 'Home.Contact.Form.NameLabel' | translate }}</label>
+                <input type="text" id="name" [placeholder]="'Home.Contact.Form.NamePlaceholder' | translate">
             </div>
 
             <hr class="hr-2">
             
             <div class="form-group form-group-email">
-                <label for="email">What's your mail?</label>
-                <input type="email" id="email" placeholder="youremail@email.com">
+                <label for="email">{{ 'Home.Contact.Form.EmailLabel' | translate }}</label>
+                <input type="email" id="email" [placeholder]="'Home.Contact.Form.EmailPlaceholder' | translate">
             </div>
             
             <hr class="hr-3">
             
             <div class="form-group form-group-message">
-                <label for="message">How can I help you?</label>
-                <textarea id="message" placeholder="Write your message here"></textarea>
+                <label for="message">{{ 'Home.Contact.Form.MessageLabel' | translate }}</label>
+                <textarea id="message" [placeholder]="'Home.Contact.Form.MessagePlaceholder' | translate"></textarea>
             </div>
             
             <hr class="hr-4">
@@ -67,16 +63,12 @@
                         <img class="checkmark" src="/assets/img/contact/check.svg" alt="Check">
                     </div>
                     <div>
-                    <span>
-                        I've read the 
-                        <a href="#" class="privacy-link">privacy policy</a> 
-                        and agree to the processing of my data as outlined.
-                    </span>
+                        <span class="privacyLink" [innerHTML]="'Home.Contact.Form.PrivacyText' | translate"></span>
                     </div>
                 </label>
             </div>
 
-            <button class="send-contactform-btn">Send</button>
+            <button class="send-contactform-btn">{{ 'Home.Contact.Form.SendButton' | translate }}</button>
             
             
         </section>
