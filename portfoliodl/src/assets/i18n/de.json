@@ -16,7 +16,11 @@
             "LetsTalk": "Lass uns reden"
         },
         "Skills":{
-
+            "MyStack": "MEIN STACK",
+            "SkillSet": "Skill Set",
+            "TechDescription": "E-Commerce-Manager, jetzt mit Fokus auf Frontend-Entwicklung. Erfahren in der Erstellung und Gestaltung von Webanwendungen mit tiefem Verständnis für digitales Business und agile Workflows.",
+            "PullToPeel": "Zieh' es auf :)",
+            "InterestedIn": "Außerdem interessiere ich mich für"
         },
         "Projects": {
             "MainInfo": {

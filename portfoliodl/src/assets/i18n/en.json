@@ -16,7 +16,11 @@
             "LetsTalk": "Let's Talk"
         },
         "Skills":{
-
+            "MyStack": "MY STACK",
+            "SkillSet": "Skill set",
+            "TechDescription": "E-Commerce Manager, now expanding into Frontend Development. Skilled in building and designing web applications, with a strong understanding of digital business and agile workflows.",
+            "PullToPeel": "Pull to peel",
+            "InterestedIn": "Also, I'm interested in diving into"
         },
         "Projects": {
             "MainInfo": {

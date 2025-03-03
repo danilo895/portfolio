@@ -1,10 +1,11 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core'; // Import hinzugefügt!
 
 @Component({
   selector: 'app-techstack',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule], // TranslateModule hier hinzufügen!
   templateUrl: './techstack.component.html',
   styleUrl: './techstack.component.scss'
 })
@@ -24,9 +25,6 @@ export class TechstackComponent {
           this.peeloffMiddle.nativeElement.classList.remove('show');
         }, 25);
       }, 25);
-    },25);
+    }, 25);
   }
-  
-  
-  
 }
