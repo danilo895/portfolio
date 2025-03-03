@@ -25,28 +25,64 @@
                 "Description": "Here you will find some of my recent projects, showcasing my skills in frontend development. My work revolves around creating interactive, responsive, and user-friendly web applications that provide seamless digital experiences.",
                 "ProjectDetails": "Project Details"
             },
+            "TechStack":{
+                "HTML": {
+                    "name": "HTML",
+                    "icon": "/assets/img/project-detail/html-detail.svg"
+                },
+                "CSS": {
+                    "name": "CSS",
+                    "icon": "/assets/img/project-detail/css-detail.svg"
+                },
+                "JavaScript": {
+                    "name": "JavaScript",
+                    "icon": "/assets/img/project-detail/js-detail.svg"
+                },
+                "TypeScript": {
+                    "name": "TypeScript",
+                    "icon": "/assets/img/project-detail/typescript-detail.svg"
+                },
+                "Angular": {
+                    "name": "Angular",
+                    "icon": "/assets/img/project-detail/angular-detail.svg"
+                },
+                "SCSS": {
+                    "name": "SCSS",
+                    "icon": "/assets/img/project-detail/css-detail.svg"
+                }
+            },
+            "Details":{
+                "GoBack": "Go Back",
+                "Description": "Description",
+                "ImplementationDetails": "Implementation Details",
+                "Duration": "Duration:",
+                "NextProject": "Next Project"
+            },
             "ProjectCollection": {
                 "Join": {
                     "Id": "1",
                     "Title": "Join",
                     "Description": "A Kanban board group project that enables task management like Trello, with features for creating tasks, assigning contacts, and more.",
                     "ImplementationDetails": "This was a team project with four members. I was responsible for designing and implementing the registration and login logic.",
-                    "Image": "/assets/img/projects/join.png"
+                    "Image": "/assets/img/projects/join.png",
+                    "Duration": "6 weeks"
                 },
                 "ElPolloLoco": {
                     "Id": "2",
                     "Title": "El Pollo Loco",
                     "Description": "A fun jump & run game written in JavaScript. Help Pepe find coins and tabasco salsa to fight against the crazy hen.",
-                    "ImplementationDetails": "test english EPL",
-                    "Image": "/assets/img/projects/epl.png"
+                    "ImplementationDetails": "The game is built using object-oriented programming in JavaScript and rendered on a canvas. Movements and collisions are handled with timed loops",
+                    "Image": "/assets/img/projects/epl.png",
+                    "Duration": "3 weeks"
                 }
                 ,
                 "Portfolio": {
                     "Id": "3",
                     "Title": "Portfolio",
-                    "Description": "A modern portfolio website built with Angular 19, TypeScript, and Standalone Components. Showcasing my projects and skills in a high-performance and scalable web application.",
-                    "ImplementationDetails": "test english Portfolio",
-                    "Image": "/assets/img/projects/portfolio.png"
+                    "Description": "A high-performance and responsive portfolio showcasing my projects and skills as a developer.",
+                    "ImplementationDetails": "Multilingual with ngx-translate, dynamic data management, and a component-based structure for scalability.",
+                    "Image": "/assets/img/projects/portfolio.png",
+                    "Duration": "3 weeks"
                 }
             }
         }

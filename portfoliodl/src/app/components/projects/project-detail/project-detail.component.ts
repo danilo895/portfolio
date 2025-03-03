@@ -18,6 +18,11 @@ export class ProjectDetailComponent implements OnChanges {
   @Output() projectChange = new EventEmitter<Project>();
 
   public translatedImplementationDetails: string = '';
+  public translatedDescription: string = '';
+  public translatedTitle: string = '';
+  public translatedDuration: string = '';
+
+
 
   constructor(private translate: TranslateService) {}
 
@@ -34,20 +39,38 @@ export class ProjectDetailComponent implements OnChanges {
 
   private loadTranslatedDetails() {
     if (this.project?.title) {
-      const projectKey = this.project.title.replace(/\s+/g, "");
-      const translationKey = `Home.Projects.ProjectCollection.${projectKey}.ImplementationDetails`;
+        const projectKey = this.project.title.replace(/\s+/g, "");
 
-  
-      this.translate.get(translationKey).subscribe((translation: string) => {
-        if (translation !== translationKey) {
-          this.translatedImplementationDetails = translation;
-        } else {
-          this.translatedImplementationDetails = "Translation missing";
-          console.warn(`⚠️ Übersetzung nicht gefunden für: ${translationKey}`);
-        }
-      });
+        // Keys für die Übersetzung
+        const titleKey = `Home.Projects.ProjectCollection.${projectKey}.Title`;
+        const descriptionKey = `Home.Projects.ProjectCollection.${projectKey}.Description`;
+        const implementationDetailsKey = `Home.Projects.ProjectCollection.${projectKey}.ImplementationDetails`;
+        const durationKey = `Home.Projects.ProjectCollection.${projectKey}.Duration`;
+
+        // Übersetzung für den Titel laden
+        this.translate.get(titleKey).subscribe((translation: string) => {
+            this.translatedTitle = translation !== titleKey ? translation : "Translation missing";
+        });
+
+        // Übersetzung für die Beschreibung laden
+        this.translate.get(descriptionKey).subscribe((translation: string) => {
+            this.translatedDescription = translation !== descriptionKey ? translation : "Translation missing";
+        });
+
+        // Übersetzung für ImplementationDetails laden
+        this.translate.get(implementationDetailsKey).subscribe((translation: string) => {
+            this.translatedImplementationDetails = translation !== implementationDetailsKey ? translation : "Translation missing";
+        });
+
+        // Übersetzung für Duration laden
+        this.translate.get(durationKey).subscribe((translation: string) => {
+            this.translatedDuration = translation !== durationKey ? translation : "Translation missing";
+        });
     }
-  }
+}
+
+
+
   
 
   public closeProjectDetail() {

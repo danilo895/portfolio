@@ -25,28 +25,38 @@
                 "Description": "Hier findest du einige meiner neuesten Projekte, die meine Fähigkeiten im Frontend-Development zeigen. Mein Fokus liegt auf interaktiven, responsiven und benutzerfreundlichen Webanwendungen, die ein nahtloses digitales Erlebnis bieten.",
                 "ProjectDetails": "Projektdetails"
             },
+            "Details":{
+                "GoBack": "Zurück",
+                "Description": "Beschreibung",
+                "ImplementationDetails": "Implementierungs-Details",
+                "Duration": "Dauer:",
+                "NextProject": "Nächstes Projekt"
+            },
             "ProjectCollection": {
                 "Join": {
                     "Id": "1",
                     "Title": "Join",
-                    "Description": "Ein Kanban-Board-Gruppenprojekt, das Aufgabenmanagement wie in Trello ermöglicht. Mit Funktionen zum Erstellen von Aufgaben, Zuweisen von Kontakten und mehr.",
-                    "ImplementationDetails":"Ich war verantwortlich für die Registrierung und Login-Logik, die Drag-&-Drop-Funktion des Boards (inkl. UI) sowie das Styling und die Umsetzung der Aufgaben-Detailansicht.",
-                    "Image": "/assets/img/projects/join.png"
+                    "Description": "Ein Kanban-Board-Gruppenprojekt, das Taskmanagement wie in Trello ermöglicht. Mit Funktionen zum Erstellen von Aufgaben, Zuweisen von Kontakten und mehr.",
+                    "ImplementationDetails":"Ich war verantwortlich für die Registrierung und Login-Logik, die Drag-&-Drop-Funktion des Boards, sowie die Umsetzung der Aufgaben-Detailansicht.",
+                    "Image": "/assets/img/projects/join.png",
+                    "Duration": "6 Wochen"
                 },
                 "ElPolloLoco": {
                     "Id": "2",
                     "Title": "El Pollo Loco",
                     "Description": "Ein unterhaltsames Jump-&-Run-Spiel, programmiert mit JavaScript (OOP). Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das Bosshuhn zu kämpfen.",
-                    "ImplementationDetails": "test deutsch EPL",
-                    "Image": "/assets/img/projects/epl.png"
+                    "ImplementationDetails": "Basierend auf objektorientierter Programmierung in JavaScript und nutzt canvas für das Rendering.",
+                    "Image": "/assets/img/projects/epl.png",
+                    "Duration": "3 Wochen"
                 }
                 ,
                 "Portfolio": {
                     "Id": "3",
                     "Title": "Portfolio",
-                    "Description": "Eine moderne Portfolio-Website entwickelt mit Angular 19, TypeScript und Standalone Components. Zeigt meine Projekte und Fähigkeiten in einer performanten und skalierbaren Webanwendung.",
-                    "ImplementationDetails": "test deutsch Portfolio",
-                    "Image": "/assets/img/projects/portfolio.png"
+                    "Description": "Ein leistungsstarkes und responsives Portfolio zur Präsentation meiner Projekte und Fähigkeiten als Entwickler",
+                    "ImplementationDetails": "Mehrsprachig mit ngx-translate, dynamische Datenverwaltung und komponentenbasierte Struktur für Skalierbarkeit.",
+                    "Image": "/assets/img/projects/portfolio.png",
+                    "Duration": "3 Wochen"
                 }
             }
         }

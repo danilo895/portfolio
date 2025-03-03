@@ -11,7 +11,7 @@
                 <div class="project-text">
                     <div class="arrow-back" (click)="closeProjectDetail()">
                         <img src="/assets/img/project-detail/arrow-back.svg" alt="">
-                        <p>Go Back</p>
+                        <p>{{ 'Home.Projects.Details.GoBack' | translate }}</p>
                     </div>
 
                     <div class="top-section">
@@ -20,20 +20,17 @@
                     </div>
 
                     <div class="descr-section">
-                        <p class="sub-headline">Description</p>
-                        <span class="text-description">{{ project.description }}</span>
+                        <p class="sub-headline">{{ 'Home.Projects.Details.Description' | translate }}</p>
+                        <span class="text-description">{{ translatedDescription }}</span>
                     </div>
 
                     <div class="impl-section">
-                        <p class="sub-headline">Implementation Details</p>
+                        <p class="sub-headline">{{ 'Home.Projects.Details.ImplementationDetails' | translate }}</p>
                         <span class="text-description">{{ translatedImplementationDetails }}</span>
-
-
-
-
                     </div>
 
-                    <p class="duration-text"><b>Duration:</b> {{ project.duration }}</p>
+                    <p class="duration-text"><b>{{ 'Home.Projects.Details.Duration' | translate }}</b> {{ translatedDuration }}</p>
+
                 
                     <div class="tech-icons">
                         <img *ngFor="let icon of project.techIcons" [src]="icon" alt="Technology Icon">
@@ -52,7 +49,7 @@
 
 
                     <div class="arrow-forward" (click)="nextProject()">
-                        <p>Next Project</p>
+                        <p>{{ 'Home.Projects.Details.NextProject' | translate }}</p>
                         <img src="/assets/img/project-detail/forward.svg" alt="Next Project">
                     </div>
                 </div>
