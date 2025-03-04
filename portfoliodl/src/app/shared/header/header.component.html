@@ -1,6 +1,4 @@
-<header [ngClass]="{ 'overlay-mode': isOverlayMode }">
-    
-
+<header [ngClass]="{ 'overlay-mode': isOverlayMode }" *ngIf="!isMobileView">
     <div class="my-logo">
         <div class="logo-circle">
             <p>DL</p>
@@ -11,7 +9,6 @@
             <a href="#">{{'Utility.Header.AboutMe' | translate}}</a>
             <img src="/assets/img/header/hoveraboutme.svg" alt="">
         </div>
-        
 
         <div class="nav-skills-cont" (click)="handleSkillsClick()">
             <a href="#">{{'Utility.Header.Skills' | translate}}</a>
@@ -20,31 +17,123 @@
 
         <div class="nav-projects-cont" (click)="handleProjectsClick()">
             <a href="#">{{'Utility.Header.Projects' | translate}}</a>
-            <img src="/assets/img/header/hovercontact.svg" alt="">
+            <img src="/assets/img/header/hoverprojects.svg" alt="">
         </div>
-        
 
         <div class="nav-contact-cont" (click)="handleContactClick()">
             <a href="#">{{'Utility.Header.Contact' | translate}}</a>
-            <img src="/assets/img/header/hoverprojects.svg" alt="">
+            <img src="/assets/img/header/hovercontact.svg" alt="">
         </div>
-        
     </nav>
-    <div class="change-lang">
 
+
+    <div class="change-lang">
         <div class="change-lang-en-cont" (click)="changeLanguage('en')">
             <span>EN</span>
             <img src="/assets/img/header/toggle.svg" alt="">
         </div>
+    
+        <div class="toggle-lang">
+            <div class="blue-dot" [ngClass]="{ 'move-right': language === 'de' }"></div>
+            <div class="orange-line"></div>
+        </div>
+    
+        <div class="change-lang-en-cont" (click)="changeLanguage('de')">
+            <span>DE</span>
+            <img src="/assets/img/header/toggle.svg" alt="">
+        </div>
+    </div>
+    
+    
+</header>
+
+
+<header *ngIf="isMobileView" class="mobile-header">
+    <div class="header-container">
+        <div class="my-logo-overlay">
+            <div class="logo-circle">
+                <p>DL</p>
+            </div>
+            <div class="burger-menu" (click)="toggleMenu()">
+                <img src="/assets/img/header-responsive/burger-menu.svg" alt="Menu">
+            </div>
+        </div>
+
+    </div>
+</header>
+
+
+<div *ngIf="menuOpen" class="mobile-overlay">
+    <div class="overlay-content">
+        <div class="overlay-header">
+            <div class="my-logo-overlay">
+                <div class="logo-circle">
+                    <p>DL</p>
+                </div>
+                <div class="close-menu" (click)="toggleMenu()">
+                    <img src="/assets/img/header-responsive/close.svg" alt="Close">
+                </div>
+            </div>
+        </div>
+
+
+        <nav class="mobile-nav">
+            <div class="nav-about-cont" (click)="toggleNavEffect('aboutSection')">
+                <a>{{'Utility.Header.AboutMe' | translate}}</a>
+                <img src="/assets/img/header/hoveraboutme.svg" alt=""
+                    [class.show]="activeNavItem === 'aboutSection'">
+            </div>
+        
+            <div class="nav-skills-cont" (click)="toggleNavEffect('techstackSection')">
+                <a>{{'Utility.Header.Skills' | translate}}</a>
+                <img src="/assets/img/header/hoverskills.svg" alt=""
+                    [class.show]="activeNavItem === 'techstackSection'">
+            </div>
+        
+            <div class="nav-projects-cont" (click)="toggleNavEffect('projectsSection')">
+                <a>{{'Utility.Header.Projects' | translate}}</a>
+                <img src="/assets/img/header/hoverprojects.svg" alt=""
+                    [class.show]="activeNavItem === 'projectsSection'">
+            </div>
+        
+            <div class="nav-contact-cont" (click)="toggleNavEffect('contactSection')">
+                <a>{{'Utility.Header.Contact' | translate}}</a>
+                <img src="/assets/img/header/hovercontact.svg" alt=""
+                    [class.show]="activeNavItem === 'contactSection'">
+            </div>
+        </nav>
+        
+
+
+
+        <div class="change-lang-respo">
+
+
+
+            <div class="change-lang-en-cont" (click)="changeLanguage('en')">
+                <span>EN</span>
+                <img src="/assets/img/header/toggle.svg" alt="">
+            </div>
+
 
             <div class="toggle-lang">
-                <img src="/assets/img/header/bluedot.svg" alt="">
-                <img src="/assets/img/header/orangeline.svg" alt="">
+                <div class="blue-dot" [ngClass]="{ 'move-right': language === 'de' }"></div>
+                <div class="orange-line"></div>
             </div>
+
 
             <div class="change-lang-en-cont" (click)="changeLanguage('de')">
                 <span>DE</span>
                 <img src="/assets/img/header/toggle.svg" alt="">
             </div>
+
+
+        </div>
+
+
+
+
+
+
     </div>
-</header>
+</div>

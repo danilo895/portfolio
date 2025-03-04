@@ -5,6 +5,7 @@ import { Project } from '../../../interfaces/project.model';
 import { projects } from '../../../projects.data';
 import { HeaderComponent } from '../../../shared/header/header.component';
 
+
 @Component({
   selector: 'app-project-detail',
   standalone: true,
@@ -42,34 +43,32 @@ export class ProjectDetailComponent implements OnChanges {
   private loadTranslatedDetails() {
     if (this.project?.title) {
         const projectKey = this.project.title.replace(/\s+/g, "");
-
-        // Keys für die Übersetzung
         const titleKey = `Home.Projects.ProjectCollection.${projectKey}.Title`;
         const descriptionKey = `Home.Projects.ProjectCollection.${projectKey}.Description`;
         const implementationDetailsKey = `Home.Projects.ProjectCollection.${projectKey}.ImplementationDetails`;
         const durationKey = `Home.Projects.ProjectCollection.${projectKey}.Duration`;
 
-        // Titel laden
+
         this.translate.get(titleKey).subscribe((translation: string) => {
             this.translatedTitle = translation !== titleKey ? translation : "Translation missing";
         });
 
-        // Beschreibung laden
+
         this.translate.get(descriptionKey).subscribe((translation: string) => {
             this.translatedDescription = translation !== descriptionKey ? translation : "Translation missing";
         });
 
-        // Implementierungsdetails laden
+  
         this.translate.get(implementationDetailsKey).subscribe((translation: string) => {
             this.translatedImplementationDetails = translation !== implementationDetailsKey ? translation : "Translation missing";
         });
 
-        // Dauer laden
+
         this.translate.get(durationKey).subscribe((translation: string) => {
             this.translatedDuration = translation !== durationKey ? translation : "Translation missing";
         });
 
-        // 🔹 Tech-Stack laden
+
         this.translatedTechStack = [];
         this.translate.get('Home.Projects.TechStack').subscribe((techStack: any) => {
             this.project.used_tech.forEach(tech => {
@@ -84,10 +83,6 @@ export class ProjectDetailComponent implements OnChanges {
     }
 }
 
-
-
-
-  
 
   public closeProjectDetail() {
     this.closeDialog.emit();
