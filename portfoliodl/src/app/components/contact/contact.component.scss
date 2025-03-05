@@ -28,6 +28,22 @@
     flex-direction: column;
 }
 
+
+.contact-form input:-webkit-autofill,
+.contact-form input:-webkit-autofill:hover,
+.contact-form input:-webkit-autofill:focus,
+.contact-form textarea:-webkit-autofill,
+.contact-form textarea:-webkit-autofill:hover,
+.contact-form textarea:-webkit-autofill:focus {
+    background-color: transparent !important;
+    -webkit-text-fill-color: white !important;
+    box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+
 .contact-intro-info {
     display: flex;
     flex-direction: column;
@@ -362,4 +378,77 @@
     box-shadow: none;
     cursor: pointer;
     background-color: #F87A55;
+}
+
+.error-text {
+    display: block;
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+
+.error-text {
+    font-family: 'Bricolage Grotesque';
+    font-size: 14px;
+    font-weight: 400;
+    color: red;
+    margin-top: 4px;
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.error-checkbox {
+    font-family: 'Bricolage Grotesque';
+    font-size: 14px;
+    font-weight: 400;
+    color: red;
+    margin-top: 4px;
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+    height: 32px;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.validate-checkbox{
+    width: 100%;
+    height: 32px;
+}
+
+
+.send-contactform-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    border: 1px solid gray;
+    background-color: transparent;
+
+}
+
+
+.send-contactform-btn:disabled:hover::after {
+    content: "Please fill out all required fields";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }

@@ -11,7 +11,92 @@ import { TranslateModule } from '@ngx-translate/core';
   encapsulation: ViewEncapsulation.None
 })
 export class ContactComponent implements AfterViewInit {
+  nameError: string = '';
+  emailError: string = '';
+  messageError: string = '';
+  checkboxError: string = '';
+  isCheckboxChecked: boolean = false;
+  isButtonDisabled: boolean = true;
+  isFormTouched: boolean = false;
+
+
+
   constructor(private el: ElementRef, private renderer: Renderer2) {}
+
+  validateName(event: Event) {
+    this.isFormTouched = true;
+    const input = (event.target as HTMLInputElement).value;
+    const nameRegex = /^[A-Za-zÄÖÜäöüß\s]+$/;
+
+    if (input.trim() === '') {
+        this.nameError = "Ooops! It seems your name is missing";
+    } else if (!nameRegex.test(input)) {
+        this.nameError = "Invalid characters detected! Only letters allowed";
+    } else {
+        this.nameError = '';
+    }
+    this.validateCheckbox();
+}
+
+validateEmail(event: Event) {
+  this.isFormTouched = true;
+  const input = (event.target as HTMLInputElement).value;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (input.trim() === '') {
+      this.emailError = "Hoppla! Your email is required";
+  } else if (!emailRegex.test(input)) {
+      this.emailError = "Invalid email format";
+  } else {
+      this.emailError = '';
+  }
+  this.validateCheckbox();
+}
+
+validateMessage(event: Event) {
+  this.isFormTouched = true;
+  const input = (event.target as HTMLTextAreaElement).value.trim();
+
+  if (input === '') {
+      this.messageError = "What do you need to develop?";
+  } else if (input.length < 10) {
+      this.messageError = "Please provide at least 10 characters";
+  } else {
+      this.messageError = '';
+  }
+  this.validateCheckbox();
+}
+
+
+
+isFormValid(): boolean {
+  return !this.nameError && !this.emailError && !this.messageError;
+}
+
+isFormCompletelyValid(): boolean {
+  return !this.nameError && !this.emailError && !this.messageError && this.isCheckboxChecked;
+}
+
+
+validateCheckbox() {
+  const allFieldsValid = !this.nameError && !this.emailError && !this.messageError;
+
+  if (allFieldsValid && !this.isCheckboxChecked) {
+      this.checkboxError = "Please accept the privacy policy";
+  } else {
+      this.checkboxError = "";
+  }
+  this.isButtonDisabled = !(allFieldsValid && this.isCheckboxChecked && this.isFormTouched);
+}
+
+
+onCheckboxChange(event: Event) {
+  const checkbox = event.target as HTMLInputElement;
+  this.isCheckboxChecked = checkbox.checked;
+  if (this.isFormTouched) {
+      this.validateCheckbox();
+  }
+}
+
 
   ngAfterViewInit() {
     this.initializeEffects();

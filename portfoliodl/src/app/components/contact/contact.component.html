@@ -33,22 +33,42 @@
             <hr class="hr-1">
             <div class="form-group form-group-name">
                 <label for="name">{{ 'Home.Contact.Form.NameLabel' | translate }}</label>
-                <input type="text" id="name" [placeholder]="'Home.Contact.Form.NamePlaceholder' | translate">
+                <input 
+                    type="text" 
+                    id="name" 
+                    [placeholder]="'Home.Contact.Form.NamePlaceholder' | translate" 
+                    (input)="validateName($event)"
+                    (focus)="validateName($event)">
+                <span *ngIf="nameError" class="error-text">{{ nameError }}</span>
             </div>
+            
 
             <hr class="hr-2">
             
             <div class="form-group form-group-email">
                 <label for="email">{{ 'Home.Contact.Form.EmailLabel' | translate }}</label>
-                <input type="email" id="email" [placeholder]="'Home.Contact.Form.EmailPlaceholder' | translate">
+                <input 
+                    type="email" 
+                    id="email" 
+                    [placeholder]="'Home.Contact.Form.EmailPlaceholder' | translate" 
+                    (input)="validateEmail($event)"
+                    (focus)="validateEmail($event)">
+                <span *ngIf="emailError" class="error-text">{{ emailError }}</span>
             </div>
+            
             
             <hr class="hr-3">
             
             <div class="form-group form-group-message">
                 <label for="message">{{ 'Home.Contact.Form.MessageLabel' | translate }}</label>
-                <textarea id="message" [placeholder]="'Home.Contact.Form.MessagePlaceholder' | translate"></textarea>
+                <textarea 
+                    id="message" 
+                    [placeholder]="'Home.Contact.Form.MessagePlaceholder' | translate"
+                    (input)="validateMessage($event)"
+                    (focus)="validateMessage($event)"></textarea>
+                <span *ngIf="messageError" class="error-text">{{ messageError }}</span>
             </div>
+            
             
             <hr class="hr-4">
             
@@ -56,7 +76,11 @@
 
 
             <div class="checkbox-container">
-                <input type="checkbox" id="privacy-checkbox">
+                <input 
+                    type="checkbox" 
+                    id="privacy-checkbox"
+                    (change)="onCheckboxChange($event)" 
+                >
                 <label for="privacy-checkbox">
                     <div class="checkbox-wrapper">
                         <img class="checkbox-image" src="/assets/img/contact/checkbox.svg" alt="Checkbox">
@@ -67,8 +91,22 @@
                     </div>
                 </label>
             </div>
+            
 
-            <button class="send-contactform-btn">{{ 'Home.Contact.Form.SendButton' | translate }}</button>
+            <div class="validate-checkbox">
+                <span *ngIf="checkboxError" class="error-checkbox">{{ checkboxError }}</span>
+            </div>
+
+            <button 
+            class="send-contactform-btn" 
+            [disabled]="isButtonDisabled"
+            matTooltip="Please fill out all required fields"
+            matTooltipPosition="above">
+            {{ 'Home.Contact.Form.SendButton' | translate }}
+            </button>
+
+        
+
             
             
         </section>
