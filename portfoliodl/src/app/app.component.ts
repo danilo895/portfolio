@@ -8,6 +8,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { TranslateService } from '@ngx-translate/core';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,8 @@ import { TranslateService } from '@ngx-translate/core';
     TechstackComponent,
     ProjectsComponent,
     TestimonialsComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
