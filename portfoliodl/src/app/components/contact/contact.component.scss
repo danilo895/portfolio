@@ -280,7 +280,8 @@
     border: none;
     height: 2px;
     background-color: #F7C518;
-    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 .hr-1{
@@ -292,7 +293,7 @@
 }
 
 .sticker-container {
-    position: relative; /* Relativ für absolute Positionierung der Kinder */
+    position: relative;
     display: inline-block;
     width: 180px;
     height: 180px;

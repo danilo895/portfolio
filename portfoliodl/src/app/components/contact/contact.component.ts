@@ -1,11 +1,18 @@
 import { Component, ElementRef, Renderer2, AfterViewInit, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule, NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { inject } from '@angular/core';
+
+
+
+
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, FormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
   encapsulation: ViewEncapsulation.None
@@ -18,10 +25,38 @@ export class ContactComponent implements AfterViewInit {
   isCheckboxChecked: boolean = false;
   isButtonDisabled: boolean = true;
   isFormTouched: boolean = false;
+  private http = inject(HttpClient);
 
-
+  contactData = {
+    name: '',
+    email: '',
+    message: ''
+  };
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.valid && ngForm.submitted) {
+      console.log("Formular ist gültig! Simulierte Datenübertragung...", this.contactData);
+
+      setTimeout(() => {
+        console.log("Simulierter Server-Antwort erhalten:", {
+          status: "success",
+          message: "Formulardaten erfolgreich verarbeitet",
+          receivedData: this.contactData
+        });
+  
+        console.info("Simulierter Test abgeschlossen");
+      }, 2000);
+    } else {
+      console.warn("Formular ist ungültig, wird nicht gesendet.");
+    }
+  }
+  
+  
+  
+  
+  
 
   validateName(event: Event) {
     this.isFormTouched = true;

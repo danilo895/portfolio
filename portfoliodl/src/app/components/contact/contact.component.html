@@ -13,102 +13,98 @@
         
         
         <section class="contact-form">
-
-
-            <div class="sticker-container">
-                <img class="sticker" src="/assets/img/contact/sticker-orange.png" alt="Sticker">
-                <div class="sticker-overlay">DL</div>
-                <svg width="180" height="180" class="sticker-text">
-                    <path id="curve" d="M 15 90 A 75 75 0 1 1 15 92"></path>
-                    <text class="stickertext">
-                        <textPath href="#curve">
-                            -- Daniel Löffler -- Frontend Developer -- Daniel Löffler -- Frontend Developer
-                        </textPath>
-                    </text>
-                </svg>
-            </div>
-            
-            
-
-            <hr class="hr-1">
-            <div class="form-group form-group-name">
-                <label for="name">{{ 'Home.Contact.Form.NameLabel' | translate }}</label>
-                <input 
-                    type="text" 
-                    id="name" 
-                    [placeholder]="'Home.Contact.Form.NamePlaceholder' | translate" 
-                    (input)="validateName($event)"
-                    (focus)="validateName($event)">
-                <span *ngIf="nameError" class="error-text">{{ nameError }}</span>
-            </div>
-            
-
-            <hr class="hr-2">
-            
-            <div class="form-group form-group-email">
-                <label for="email">{{ 'Home.Contact.Form.EmailLabel' | translate }}</label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    [placeholder]="'Home.Contact.Form.EmailPlaceholder' | translate" 
-                    (input)="validateEmail($event)"
-                    (focus)="validateEmail($event)">
-                <span *ngIf="emailError" class="error-text">{{ emailError }}</span>
-            </div>
-            
-            
-            <hr class="hr-3">
-            
-            <div class="form-group form-group-message">
-                <label for="message">{{ 'Home.Contact.Form.MessageLabel' | translate }}</label>
-                <textarea 
-                    id="message" 
-                    [placeholder]="'Home.Contact.Form.MessagePlaceholder' | translate"
-                    (input)="validateMessage($event)"
-                    (focus)="validateMessage($event)"></textarea>
-                <span *ngIf="messageError" class="error-text">{{ messageError }}</span>
-            </div>
-            
-            
-            <hr class="hr-4">
-            
-            
-
-
-            <div class="checkbox-container">
-                <input 
-                    type="checkbox" 
-                    id="privacy-checkbox"
-                    (change)="onCheckboxChange($event)" 
-                >
-                <label for="privacy-checkbox">
-                    <div class="checkbox-wrapper">
-                        <img class="checkbox-image" src="/assets/img/contact/checkbox.svg" alt="Checkbox">
-                        <img class="checkmark" src="/assets/img/contact/check.svg" alt="Check">
-                    </div>
-                    <div>
-                        <span class="privacyLink" [innerHTML]="'Home.Contact.Form.PrivacyText' | translate"></span>
-                    </div>
-                </label>
-            </div>
-            
-
-            <div class="validate-checkbox">
-                <span *ngIf="checkboxError" class="error-checkbox">{{ checkboxError }}</span>
-            </div>
-
-            <button 
-            class="send-contactform-btn" 
-            [disabled]="isButtonDisabled"
-            matTooltip="Please fill out all required fields"
-            matTooltipPosition="above">
-            {{ 'Home.Contact.Form.SendButton' | translate }}
-            </button>
-
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                
+                <div class="sticker-container">
+                    <img class="sticker" src="/assets/img/contact/sticker-orange.png" alt="Sticker">
+                    <div class="sticker-overlay">DL</div>
+                    <svg width="180" height="180" class="sticker-text">
+                        <path id="curve" d="M 15 90 A 75 75 0 1 1 15 92"></path>
+                        <text class="stickertext">
+                            <textPath href="#curve">
+                                -- Daniel Löffler -- Frontend Developer -- Daniel Löffler -- Frontend Developer
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
         
-
-            
-            
+                <hr class="hr-1">
+                <div class="form-group form-group-name">
+                    <label for="name">{{ 'Home.Contact.Form.NameLabel' | translate }}</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        [(ngModel)]="contactData.name" 
+                        name="name"
+                        [placeholder]="'Home.Contact.Form.NamePlaceholder' | translate" 
+                        (input)="validateName($event)"
+                        (focus)="validateName($event)"
+                        required>
+                    <span *ngIf="nameError" class="error-text">{{ nameError }}</span>
+                </div>
+        
+                <hr class="hr-2">
+                <div class="form-group form-group-email">
+                    <label for="email">{{ 'Home.Contact.Form.EmailLabel' | translate }}</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        [(ngModel)]="contactData.email" 
+                        name="email"
+                        [placeholder]="'Home.Contact.Form.EmailPlaceholder' | translate" 
+                        (input)="validateEmail($event)"
+                        (focus)="validateEmail($event)"
+                        required>
+                    <span *ngIf="emailError" class="error-text">{{ emailError }}</span>
+                </div>
+        
+                <hr class="hr-3">
+                <div class="form-group form-group-message">
+                    <label for="message">{{ 'Home.Contact.Form.MessageLabel' | translate }}</label>
+                    <textarea 
+                        id="message" 
+                        [(ngModel)]="contactData.message" 
+                        name="message"
+                        [placeholder]="'Home.Contact.Form.MessagePlaceholder' | translate"
+                        (input)="validateMessage($event)"
+                        (focus)="validateMessage($event)"
+                        required></textarea>
+                    <span *ngIf="messageError" class="error-text">{{ messageError }}</span>
+                </div>
+        
+                <hr class="hr-4">
+                
+                <div class="checkbox-container">
+                    <input 
+                        type="checkbox" 
+                        id="privacy-checkbox"
+                        (change)="onCheckboxChange($event)" 
+                        required>
+                    <label for="privacy-checkbox">
+                        <div class="checkbox-wrapper">
+                            <img class="checkbox-image" src="/assets/img/contact/checkbox.svg" alt="Checkbox">
+                            <img class="checkmark" src="/assets/img/contact/check.svg" alt="Check">
+                        </div>
+                        <div>
+                            <span class="privacyLink" [innerHTML]="'Home.Contact.Form.PrivacyText' | translate"></span>
+                        </div>
+                    </label>
+                </div>
+        
+                <div class="validate-checkbox">
+                    <span *ngIf="checkboxError" class="error-checkbox">{{ checkboxError }}</span>
+                </div>
+        
+                <button 
+                    class="send-contactform-btn" 
+                    type="submit"
+                    [disabled]="isButtonDisabled"
+                    matTooltip="Please fill out all required fields"
+                    matTooltipPosition="above">
+                    {{ 'Home.Contact.Form.SendButton' | translate }}
+                </button>
+        
+            </form>
         </section>
         
     </div>
