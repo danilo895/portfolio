@@ -4,6 +4,9 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { inject } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+
+
 
 
 
@@ -33,7 +36,12 @@ export class ContactComponent implements AfterViewInit {
     message: ''
   };
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+    private translate: TranslateService
+) {}
+
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid && ngForm.submitted) {
@@ -64,23 +72,25 @@ export class ContactComponent implements AfterViewInit {
     const nameRegex = /^[A-Za-zÄÖÜäöüß\s]+$/;
 
     if (input.trim() === '') {
-        this.nameError = "Ooops! It seems your name is missing";
+        this.nameError = this.translate.instant('Home.Contact.Form.NameRequired');
     } else if (!nameRegex.test(input)) {
-        this.nameError = "Invalid characters detected! Only letters allowed";
+        this.nameError = this.translate.instant('Home.Contact.Form.NameInvalid');
     } else {
         this.nameError = '';
     }
     this.validateCheckbox();
 }
 
+
 validateEmail(event: Event) {
   this.isFormTouched = true;
   const input = (event.target as HTMLInputElement).value;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   if (input.trim() === '') {
-      this.emailError = "Hoppla! Your email is required";
+      this.emailError = this.translate.instant('Home.Contact.Form.EmailRequired');
   } else if (!emailRegex.test(input)) {
-      this.emailError = "Invalid email format";
+      this.emailError = this.translate.instant('Home.Contact.Form.EmailInvalid');
   } else {
       this.emailError = '';
   }
@@ -92,15 +102,14 @@ validateMessage(event: Event) {
   const input = (event.target as HTMLTextAreaElement).value.trim();
 
   if (input === '') {
-      this.messageError = "What do you need to develop?";
+      this.messageError = this.translate.instant('Home.Contact.Form.MessageRequired');
   } else if (input.length < 10) {
-      this.messageError = "Please provide at least 10 characters";
+      this.messageError = this.translate.instant('Home.Contact.Form.MessageTooShort');
   } else {
       this.messageError = '';
   }
   this.validateCheckbox();
 }
-
 
 
 isFormValid(): boolean {
@@ -116,7 +125,7 @@ validateCheckbox() {
   const allFieldsValid = !this.nameError && !this.emailError && !this.messageError;
 
   if (allFieldsValid && !this.isCheckboxChecked) {
-      this.checkboxError = "Please accept the privacy policy";
+      this.checkboxError = this.translate.instant('Home.Contact.Form.PrivacyError');
   } else {
       this.checkboxError = "";
   }

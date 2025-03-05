@@ -129,7 +129,14 @@
             "MessageLabel": "How can I help you?",
             "MessagePlaceholder": "Write your message here",
             "PrivacyText": "I've read the <a href='#' class='privacy-link'>privacy policy</a> and agree to the processing of my data as outlined.",
-            "SendButton": "Send"
+            "SendButton": "Send",
+            "EmailRequired": "Oops! Your email is required",
+            "EmailInvalid": "Invalid email format",
+            "MessageRequired": "What do you need to develop?",
+            "MessageTooShort": "Please provide at least 10 characters",
+            "PrivacyError": "Please accept the privacy policy",
+            "NameRequired": "Ooops! It seems your name is missing",
+            "NameInvalid": "Invalid characters detected! Only letters allowed"
         }
     }
     },

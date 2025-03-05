@@ -15,6 +15,8 @@
         <section class="contact-form">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 
+
+                <section class="frontend-sticker">
                 <div class="sticker-container">
                     <img class="sticker" src="/assets/img/contact/sticker-orange.png" alt="Sticker">
                     <div class="sticker-overlay">DL</div>
@@ -27,7 +29,9 @@
                         </text>
                     </svg>
                 </div>
-        
+            </section>
+            
+            
                 <hr class="hr-1">
                 <div class="form-group form-group-name">
                     <label for="name">{{ 'Home.Contact.Form.NameLabel' | translate }}</label>
@@ -40,7 +44,9 @@
                         (input)="validateName($event)"
                         (focus)="validateName($event)"
                         required>
-                    <span *ngIf="nameError" class="error-text">{{ nameError }}</span>
+                        <div class="error-container">
+                            <span *ngIf="nameError" class="error-text">{{ nameError }}</span>
+                        </div>
                 </div>
         
                 <hr class="hr-2">
@@ -55,7 +61,9 @@
                         (input)="validateEmail($event)"
                         (focus)="validateEmail($event)"
                         required>
-                    <span *ngIf="emailError" class="error-text">{{ emailError }}</span>
+                        <div class="error-container">
+                            <span *ngIf="emailError" class="error-text">{{ emailError }}</span>
+                        </div>
                 </div>
         
                 <hr class="hr-3">
@@ -69,7 +77,9 @@
                         (input)="validateMessage($event)"
                         (focus)="validateMessage($event)"
                         required></textarea>
-                    <span *ngIf="messageError" class="error-text">{{ messageError }}</span>
+                        <div class="error-container">
+                            <span *ngIf="messageError" class="error-text">{{ messageError }}</span>
+                        </div>
                 </div>
         
                 <hr class="hr-4">
@@ -91,8 +101,8 @@
                     </label>
                 </div>
         
-                <div class="validate-checkbox">
-                    <span *ngIf="checkboxError" class="error-checkbox">{{ checkboxError }}</span>
+                <div class="error-container">
+                    <span *ngIf="checkboxError" class="error-text">{{ checkboxError }}</span>
                 </div>
         
                 <button 
@@ -108,4 +118,8 @@
         </section>
         
     </div>
+    
 </div>
+
+
+

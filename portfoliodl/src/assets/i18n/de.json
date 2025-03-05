@@ -131,7 +131,14 @@
                 "MessageLabel": "Wie kann ich dir helfen?",
                 "MessagePlaceholder": "Schreibe deine Nachricht hier",
                 "PrivacyText": "Ich habe die <a href='#' class='privacy-link'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
-                "SendButton": "Senden"
+                "SendButton": "Senden",
+                "EmailRequired": "Hoppla! Deine E-Mail wird benötigt",
+                "EmailInvalid": "Ungültiges E-Mail-Format",
+                "MessageRequired": "Was möchtest du entwickeln?",
+                "MessageTooShort": "Bitte mindestens 10 Zeichen eingeben",
+                "PrivacyError": "Bitte akzeptiere die Datenschutbestimmungen",
+                "NameRequired": "Ooops! Es scheint, als fehlt dein Name",
+                "NameInvalid": "Ungültige Zeichen! Nur Buchstaben erlaubt"
             }
         }
     },

@@ -157,10 +157,11 @@
     border: none;
     outline: none;
     font-family: 'Bricolage Grotesque';
-    font-size: 18px;
+    font-size: 21px;
     font-weight: 400;
     color: white;
-    padding: 8px 0;
+    padding-top: 8px;
+    padding-bottom: 0;
 }
 
 
@@ -289,7 +290,8 @@
     border: none;
     height: 2px;
     background-color: transparent;
-    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .sticker-container {
@@ -297,6 +299,7 @@
     display: inline-block;
     width: 180px;
     height: 180px;
+    margin-bottom: -12%;
 }
 
 .sticker {
@@ -361,6 +364,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 12px;
     height: 40px;
     width: 120px;
     padding: 8px;
@@ -381,25 +385,59 @@
     background-color: #F87A55;
 }
 
-.error-text {
-    display: block;
-    color: red;
-    font-size: 14px;
+
+.error-container {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 4px;
     margin-top: 4px;
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
+.frontend-sticker{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
 
 .error-text {
     font-family: 'Bricolage Grotesque';
     font-size: 14px;
     font-weight: 400;
     color: red;
-    margin-top: 4px;
-    display: block;
-    animation: fadeIn 0.3s ease-in-out;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
+
+
+.error-text:not(:empty) {
+    opacity: 1;
+}
+
+.error-checkbox {
+    font-family: 'Bricolage Grotesque';
+    font-size: 14px;
+    font-weight: 400;
+    color: red;
+    margin-top: 4px;
+    height: 18px; 
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+span.error-text:empty {
+    opacity: 0;
+}
+
+span.error-text:not(:empty) {
+    opacity: 1;
+}
+
 
 .error-checkbox {
     font-family: 'Bricolage Grotesque';
