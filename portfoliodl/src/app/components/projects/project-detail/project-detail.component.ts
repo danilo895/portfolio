@@ -91,8 +91,14 @@ export class ProjectDetailComponent implements OnChanges {
   public nextProject() {
     const currentIndex = projects.findIndex(p => p.id === this.project.id);
     const nextIndex = (currentIndex + 1) % projects.length;
-    this.project = projects[nextIndex]; 
+    this.project = projects[nextIndex];
+    const projectKey = this.project.title.replace(/\s+/g, "");
+    const titleKey = `Home.Projects.ProjectCollection.${projectKey}.Title`;
+    this.translate.get(titleKey).subscribe((translation: string) => {
+        this.translatedTitle = translation !== titleKey ? translation : this.project.title;
+        this.project = { ...this.project, title: this.translatedTitle };
+    });
     this.projectChange.emit(this.project);
-    this.loadTranslatedDetails();
-  }
+}
+
 }
