@@ -3,7 +3,7 @@
 header("Access-Control-Allow-Origin: *"); // Erlaubt Anfragen von überall (zum Testen)
 header("Access-Control-Allow-Methods: POST, OPTIONS"); // Erlaubt POST- und OPTIONS-Anfragen
 header("Access-Control-Allow-Headers: Content-Type, X-Requested-With"); // Erlaubt Content-Type-Header
-header("Access-Control-Allow-Credentials: true"); // Falls Cookies oder Authentifizierung genutzt werden
+header("Access-Control-Allow-Credentials: true"); 
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 
 $json = file_get_contents('php://input');
-error_log("📩 Anfrage erhalten: " . $json);
+error_log("Anfrage erhalten: " . $json);
 
 $params = json_decode($json);
 
