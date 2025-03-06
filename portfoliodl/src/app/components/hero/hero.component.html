@@ -32,8 +32,11 @@
         </h1>
 
         <div class="get-in-touch-btn-cont">
-            <button class="get-in-touch-btn">{{'Home.Hero.GetInTouch' | translate}}</button>
+            <button class="get-in-touch-btn" (click)="scrollToContact()">
+                {{ 'Home.Hero.GetInTouch' | translate }}
+            </button>
         </div>
+        
 
 
     </section>

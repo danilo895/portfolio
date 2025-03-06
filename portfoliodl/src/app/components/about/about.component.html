@@ -42,8 +42,11 @@
                 <span class="about-me-text">{{ 'Home.AboutMe.ShortDescription' | translate }}</span>
             </div>
             <div class="lets-talk-cont">
-                <button class="lets-talk-btn">{{ 'Home.AboutMe.LetsTalk' | translate }}</button>
+                <button class="lets-talk-btn" (click)="scrollToContact()">
+                    {{ 'Home.AboutMe.LetsTalk' | translate }}
+                </button>
             </div>
+            
         </div>
     </div>
 </div>

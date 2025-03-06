@@ -28,7 +28,17 @@ export class HeroComponent implements OnDestroy {
     this.translatedJobName = this.translate.get('Home.Hero.JobName');
   }
 
+  public scrollToContact() {
+    const contactSection = document.getElementById('contactSection');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+  
+
   ngOnDestroy(): void {
     this.langChangeSub.unsubscribe();
   }
 }
+
+

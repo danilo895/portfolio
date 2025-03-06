@@ -12,4 +12,13 @@ import { AppTranslateService } from '../../services/translate.service';
 })
 export class AboutComponent {
   constructor(public translateService: AppTranslateService, private translate: TranslateService) {}
+
+
+  public scrollToContact() {
+    const contactSection = document.getElementById('contactSection');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+  
 }
