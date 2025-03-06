@@ -18,7 +18,7 @@ export const projects = [
     },
     {
         id: 2,
-        title: "El Pollo Loco",
+        title: "ElPolloLoco",
         description: "A fun jump & run game written in JavaScript. Help Pepe find coins and tabasco salsa to fight against the crazy hen.",
         implementationDetails: "Developed using object-oriented programming in JavaScript. The game mechanics, animations, and enemy behavior were created with a custom-built game engine based on the HTML5 canvas.",
         duration: "3 weeks",
