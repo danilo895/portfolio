@@ -93,31 +93,28 @@
         "Testimonials":{
             "Header": "IHRE WORTE",
             "Title": "Gedanken der Kollegen",
+            "ProfileLabel": "Profil",
             "Profiles": {
                 "LeonDorsch": {
                     "Name": "Leon Dorsch",
                     "Job": "Frontend-Entwickler",
-                    "Quote": "Mit Daniel an unserem Gruppenprojekt zu arbeiten, war eine absolute Freude. Ich bewundere wirklich seine Entschlossenheit und Leidenschaft beim Debuggen – er gab nie auf, bis jedes Problem gelöst war. Seine Hingabe und Begeisterung machten die Zusammenarbeit mühelos, und unsere Teamarbeit war so stark, dass daraus sogar eine großartige Freundschaft entstand.",
+                    "Quote": "Mit Daniel an unserem Gruppenprojekt zu arbeiten, war eine absolute Freude. Ich bewundere wirklich seine Leidenschaft beim Debuggen. Seine Hingabe machte die Zusammenarbeit einfach. Unsere Teamarbeit war so stark, dass daraus sogar eine Freundschaft entstand.",
                     "LinkedIn": "https://www.linkedin.com/in/example"
                 },
                 "EnesHadzic": {
                     "Name": "Enes Hadzic",
                     "Job": "Grafikdesigner & Frontend-Entwickler",
-                    "Quote": "Daniel hat ein unglaubliches Auge für Details und gibt sich nicht mit Lösungen zufrieden, die nicht dynamisch und visuell ansprechend sind. Seine Beharrlichkeit und Geduld sind wirklich bemerkenswert – er verfeinert jedes Element, bis es absolut perfekt ist. Seine Fähigkeit, fokussiert zu bleiben und nach Exzellenz zu streben, macht ihn besonders.",
+                    "Quote": "Daniel hat ein sehr gutes Auge für Details. Seine Fähigkeit, fokussiert zu bleiben und nach Exzellenz zu streben, macht ihn besonders.",
                     "LinkedIn": "https://www.linkedin.com/in/"
                 },
                 "SebastianHarhammer": {
                     "Name": "Sebastian Harhammer",
                     "Job": "Frontend-Entwickler",
-                    "Quote": "Mit Daniel am Join-Projekt zu arbeiten, war eine fantastische Erfahrung. Unsere Koordination verlief reibungslos, und durch Pair-Programming fanden wir großartige Lösungen an den Schnittstellen unserer Aufgaben. Er war immer offen für meine Vorschläge und brachte gleichzeitig seine eigenen wertvollen Ideen ein. Seine Fähigkeit zur Zusammenarbeit und Anpassung machte ihn zu einem unverzichtbaren Teil unseres Teams.",
+                    "Quote": "Mit Daniel am Join-Projekt zu arbeiten, war eine fantastische Erfahrung. Durch Pair-Programming fanden wir dynamische Lösungen an den Schnittstellen unserer Aufgaben. Seine Fähigkeit zur Zusammenarbeit und Anpassung machte ihn zu einem unverzichtbaren Teil unseres Teams.",
                     "LinkedIn": "https://www.linkedin.com/in/"
                 }
-            },
-            "ProfileLabel": "Profil"
+            }
         } 
-
-
-        
         ,
         "Contact": {
             "Header": "Kontaktiere mich",
