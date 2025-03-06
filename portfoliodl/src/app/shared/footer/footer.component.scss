@@ -95,7 +95,7 @@
 }
 
 
-.github-container, .linkedin-container {
+.github-container, .linkedin-container, .email-container {
     position: relative;
 }
 
@@ -131,6 +131,18 @@
     transition: transform 0.5s ease-in-out, left 0.5s ease-in-out;
 }
 
+.email-icon {
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-220deg);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.5s ease-in-out, left 0.5s ease-in-out;
+}
+
 .linkedin-container:hover .linkedin-icon {
     opacity: 1 !important;
     visibility: visible;
@@ -139,3 +151,43 @@
     transition-delay: 0s;
 }
 
+.email-container:hover .email-icon {
+    opacity: 1 !important;
+    visibility: visible;
+    left: 70%;
+    transform: rotate(0deg);
+    transition-delay: 0s;
+}
+
+.nav-projects-cont {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.nav-projects-cont a {
+    position: relative; 
+    z-index: 2;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-projects-cont img {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 120px;
+    z-index: 3;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.3s ease-in-out;
+    pointer-events: none;
+    
+}
+
+.nav-projects-cont:hover img {
+    clip-path: inset(0 0 0 0);
+}

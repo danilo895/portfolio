@@ -68,7 +68,7 @@
                     "Title": "Join",
                     "Description": "Ein Kanban-Board-Gruppenprojekt, das Taskmanagement wie in Trello ermöglicht. Mit Funktionen zum Erstellen von Aufgaben, Zuweisen von Kontakten und mehr.",
                     "ImplementationDetails":"Ich war verantwortlich für die Registrierung und Login-Logik, die Drag-&-Drop-Funktion des Boards, sowie die Umsetzung der Aufgaben-Detailansicht.",
-                    "Image": "/assets/img/projects/join.png",
+                    "Image": "/assets/img/projects/join1.png",
                     "Duration": "6 Wochen"
                 },
                 "ElPolloLoco": {
@@ -76,7 +76,7 @@
                     "Title": "El Pollo Loco",
                     "Description": "Ein unterhaltsames Jump-&-Run-Spiel, programmiert mit JavaScript (OOP). Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das Bosshuhn zu kämpfen.",
                     "ImplementationDetails": "Basierend auf objektorientierter Programmierung in JavaScript und nutzt canvas für das Rendering.",
-                    "Image": "/assets/img/projects/epl.png",
+                    "Image": "/assets/img/projects/epl1.png",
                     "Duration": "3 Wochen"
                 }
                 ,
@@ -85,7 +85,7 @@
                     "Title": "Portfolio",
                     "Description": "Ein leistungsstarkes und responsives Portfolio zur Präsentation meiner Projekte und Fähigkeiten als Entwickler",
                     "ImplementationDetails": "Mehrsprachig mit ngx-translate, dynamische Datenverwaltung und komponentenbasierte Struktur für Skalierbarkeit.",
-                    "Image": "/assets/img/projects/portfolio.png",
+                    "Image": "/assets/img/projects/portfolio1.png",
                     "Duration": "3 Wochen"
                 }
             }
@@ -122,7 +122,7 @@
         "Contact": {
             "Header": "Kontaktiere mich",
             "SubHeader": "Bereit für eine Zusammenarbeit?",
-            "MotivationText": "Hier wird später ein Text stehen, der die Leute dazu motiviert, mir zu schreiben.",
+            "MotivationText": "Lass uns gemeinsam dein nächstes digitales Projekt verwirklichen! Ob neue Ideen oder Optimierungen – ich freue mich auf deine Nachricht. Schreib mir einfach und wir finden die beste Lösung für dich!",
             "Form": {
                 "NameLabel": "Wie ist dein Name?",
                 "NamePlaceholder": "Dein Name hier",

@@ -68,7 +68,7 @@
                     "Title": "Join",
                     "Description": "A Kanban board group project that enables task management like Trello, with features for creating tasks, assigning contacts, and more.",
                     "ImplementationDetails": "This was a team project with four members. I was responsible for designing and implementing the registration and login logic.",
-                    "Image": "/assets/img/projects/join.png",
+                    "Image": "/assets/img/projects/join1.png",
                     "Duration": "6 weeks"
                 },
                 "ElPolloLoco": {
@@ -76,7 +76,7 @@
                     "Title": "El Pollo Loco",
                     "Description": "A fun jump & run game written in JavaScript. Help Pepe find coins and tabasco salsa to fight against the crazy hen.",
                     "ImplementationDetails": "The game is built using object-oriented programming in JavaScript and rendered on a canvas. Movements and collisions are handled with timed loops",
-                    "Image": "/assets/img/projects/epl.png",
+                    "Image": "/assets/img/projects/epl1.png",
                     "Duration": "3 weeks"
                 }
                 ,
@@ -85,7 +85,7 @@
                     "Title": "Portfolio",
                     "Description": "A high-performance and responsive portfolio showcasing my projects and skills as a developer.",
                     "ImplementationDetails": "Multilingual with ngx-translate, dynamic data management, and a component-based structure for scalability.",
-                    "Image": "/assets/img/projects/portfolio.png",
+                    "Image": "/assets/img/projects/portfolio1.png",
                     "Duration": "3 weeks"
                 }
             }
@@ -120,7 +120,7 @@
     "Contact": {
         "Header": "Contact Me",
         "SubHeader": "Ready to work together?",
-        "MotivationText": "Here will be a text that motivates people to write to me.",
+        "MotivationText": "Let's bring your next digital project to life together! Whether it's new ideas or improvements – I'm looking forward to your message. Just reach out, and we'll find the best solution for you!",
         "Form": {
             "NameLabel": "What's your name?",
             "NamePlaceholder": "Your name goes here",
