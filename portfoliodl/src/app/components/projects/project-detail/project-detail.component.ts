@@ -92,6 +92,7 @@ export class ProjectDetailComponent implements OnChanges {
     const currentIndex = projects.findIndex(p => p.id === this.project.id);
     const nextIndex = (currentIndex + 1) % projects.length;
     this.project = projects[nextIndex];
+    this.loadTranslatedDetails();
     const projectKey = this.project.title.replace(/\s+/g, "");
     const titleKey = `Home.Projects.ProjectCollection.${projectKey}.Title`;
     this.translate.get(titleKey).subscribe((translation: string) => {
@@ -100,5 +101,6 @@ export class ProjectDetailComponent implements OnChanges {
     });
     this.projectChange.emit(this.project);
 }
+
 
 }
