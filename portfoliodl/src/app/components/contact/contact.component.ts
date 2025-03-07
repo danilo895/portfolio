@@ -5,6 +5,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,7 +16,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, TranslateModule, FormsModule],
+  imports: [CommonModule, TranslateModule, FormsModule, RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
   encapsulation: ViewEncapsulation.None
