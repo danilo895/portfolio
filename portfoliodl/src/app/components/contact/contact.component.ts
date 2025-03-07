@@ -5,8 +5,8 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { RouterModule } from '@angular/router';
-
+import { RouterModule, Router } from '@angular/router';
+ 
 
 
 
@@ -40,9 +40,14 @@ export class ContactComponent implements AfterViewInit {
   constructor(
     private el: ElementRef,
     private renderer: Renderer2,
-    private translate: TranslateService
-) {}
+    private translate: TranslateService,
+    private router: Router 
+  ) {}
 
+  navigateToPrivacy() {
+    this.router.navigate(['/privacy-policy']);
+  }
+  
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid && ngForm.submitted) {

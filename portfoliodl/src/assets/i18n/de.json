@@ -127,7 +127,7 @@
                 "EmailPlaceholder": "deineemail@email.com",
                 "MessageLabel": "Wie kann ich dir helfen?",
                 "MessagePlaceholder": "Schreibe deine Nachricht hier",
-                "PrivacyText": "Ich habe die <a href='#' class='privacy-link'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+                "PrivacyText": "Ich habe die <a class='privacy-link' style='cursor:pointer;' (click)='navigateToPrivacy()'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
                 "SendButton": "Senden",
                 "EmailRequired": "Hoppla! Deine E-Mail wird benötigt",
                 "EmailInvalid": "Ungültiges E-Mail-Format",

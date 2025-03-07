@@ -16,10 +16,17 @@
     width: 90%;
     height: 100%;
     max-width: 1440px;
-    
     gap: 5%;
     margin-bottom: 200px;
     margin-top: 200px;
+}
+
+.privacy-text{
+    font-size: 14px;
+}
+
+.privacy-text:hover{
+    cursor: pointer;
 }
 
 

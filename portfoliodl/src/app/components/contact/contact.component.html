@@ -96,8 +96,9 @@
                             <img class="checkmark" src="/assets/img/contact/check.svg" alt="Check">
                         </div>
                         <div>
-                            <span class="privacyLink" [innerHTML]="'Home.Contact.Form.PrivacyText' | translate"></span>
-                            <a routerLink="/privacy-policy">Hier geht's zur Datenschutzerklärung</a>
+                            <div class="privacy-text" [innerHTML]="'Home.Contact.Form.PrivacyText' | translate" (click)="navigateToPrivacy()"></div>
+
+
 
                         </div>
                     </label>

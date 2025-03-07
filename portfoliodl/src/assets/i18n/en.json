@@ -126,7 +126,7 @@
             "EmailPlaceholder": "youremail@email.com",
             "MessageLabel": "How can I help you?",
             "MessagePlaceholder": "Write your message here",
-            "PrivacyText": "I've read the <a href='#' class='privacy-link'>privacy policy</a> and agree to the processing of my data as outlined.",
+            "PrivacyText": "I've read the <a class='privacy-link' style='cursor:pointer;' (click)='navigateToPrivacy()'>privacy policy</a> and agree to the processing of my data as outlined.",
             "SendButton": "Send",
             "EmailRequired": "Oops! Your email is required",
             "EmailInvalid": "Invalid email format",
