@@ -2,6 +2,7 @@ import { Component, Input, EventEmitter, Output, HostListener } from '@angular/c
 import { CommonModule } from '@angular/common';
 import { AppTranslateService } from '../../services/translate.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-header',
@@ -18,7 +19,8 @@ export class HeaderComponent {
   menuOpen: boolean = false;
   language: string = 'en';
   activeNavItem: string | null = null;
-  constructor(public translateService: AppTranslateService) {}
+  constructor(public translateService: AppTranslateService, private router: Router) {}
+
   
 
 
@@ -54,52 +56,63 @@ export class HeaderComponent {
 
 
   handleAboutClick() {
+    const scrollCallback = () => setTimeout(() => this.scrollToSection('aboutSection'), 100);
+  
     if (this.isOverlayMode || this.menuOpen) {
       this.closeOverlay.emit();
       this.toggleMenu();
-      setTimeout(() => {
-        this.scrollToSection('aboutSection');
-      }, 100);
+    }
+  
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(scrollCallback);
     } else {
-      this.scrollToSection('aboutSection');
+      scrollCallback();
     }
   }
-
+  
   handleSkillsClick() {
+    const scrollCallback = () => setTimeout(() => this.scrollToSection('techstackSection'), 100);
+  
     if (this.isOverlayMode || this.menuOpen) {
       this.closeOverlay.emit();
       this.toggleMenu();
-      setTimeout(() => {
-        this.scrollToSection('techstackSection');
-      }, 100);
+    }
+  
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(scrollCallback);
     } else {
-      this.scrollToSection('techstackSection');
+      scrollCallback();
     }
   }
-
+  
   handleProjectsClick() {
+    const scrollCallback = () => setTimeout(() => this.scrollToSection('projectsSection'), 100);
+  
     if (this.isOverlayMode || this.menuOpen) {
       this.closeOverlay.emit();
       this.toggleMenu();
-      setTimeout(() => {
-        this.scrollToSection('projectsSection');
-      }, 100);
+    }
+  
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(scrollCallback);
     } else {
-      this.scrollToSection('projectsSection');
+      scrollCallback();
     }
   }
-
+  
   handleContactClick() {
+    const scrollCallback = () => setTimeout(() => this.scrollToSection('contactSection'), 100);
     if (this.isOverlayMode || this.menuOpen) {
       this.closeOverlay.emit();
       this.toggleMenu();
-      setTimeout(() => {
-        this.scrollToSection('contactSection');
-      }, 100);
+    }
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(scrollCallback);
     } else {
-      this.scrollToSection('contactSection');
+      scrollCallback();
     }
   }
+  
 
 
   private scrollToSection(sectionId: string) {
