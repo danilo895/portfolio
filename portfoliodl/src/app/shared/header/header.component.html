@@ -83,24 +83,25 @@
                 <img src="/assets/img/header/hoveraboutme.svg" alt=""
                     [class.show]="activeNavItem === 'aboutSection'">
             </div>
-        
+            
             <div class="nav-skills-cont" (click)="toggleNavEffect('techstackSection')">
                 <a>{{'Utility.Header.Skills' | translate}}</a>
                 <img src="/assets/img/header/hoverskills.svg" alt=""
                     [class.show]="activeNavItem === 'techstackSection'">
             </div>
-        
+            
             <div class="nav-projects-cont" (click)="toggleNavEffect('projectsSection')">
                 <a>{{'Utility.Header.Projects' | translate}}</a>
                 <img src="/assets/img/header/hoverprojects.svg" alt=""
                     [class.show]="activeNavItem === 'projectsSection'">
             </div>
-        
+            
             <div class="nav-contact-cont" (click)="toggleNavEffect('contactSection')">
                 <a>{{'Utility.Header.Contact' | translate}}</a>
                 <img src="/assets/img/header/hovercontact.svg" alt=""
                     [class.show]="activeNavItem === 'contactSection'">
             </div>
+            
         </nav>
         
 

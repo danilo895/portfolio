@@ -21,32 +21,37 @@ export class HeaderComponent {
   activeNavItem: string | null = null;
   constructor(public translateService: AppTranslateService, private router: Router) {}
 
-  
-
 
   @HostListener('window:resize', [])
   onResize() {
     this.isMobileView = window.innerWidth < 900;
   }
-
   toggleNavEffect(item: string) {
-    this.activeNavItem = item;
+    const scrollCallback = () => setTimeout(() => this.scrollToSection(item), 100);
+    if (this.isOverlayMode) {
+      this.closeOverlay.emit();
+    }
+    if (this.menuOpen) {
+      this.toggleMenu();
+    }
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(scrollCallback);
+    } else {
+      scrollCallback();
+    }
     setTimeout(() => {
-        this.scrollToSection(item);
-        this.menuOpen = false;
-
-
-        setTimeout(() => {
-            this.activeNavItem = null;
-        }, 300); 
-    }, 300);
-}
+      this.activeNavItem = null;
+    }, 100);
+  }
+  
+  
 
 
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
+  
 
 
   public changeLanguage(lang: string) {
@@ -87,12 +92,10 @@ export class HeaderComponent {
   
   handleProjectsClick() {
     const scrollCallback = () => setTimeout(() => this.scrollToSection('projectsSection'), 100);
-  
     if (this.isOverlayMode || this.menuOpen) {
       this.closeOverlay.emit();
       this.toggleMenu();
     }
-  
     if (this.router.url !== '/') {
       this.router.navigate(['/']).then(scrollCallback);
     } else {
