@@ -90,8 +90,6 @@
                 }
             }
         },
-
-
         "Testimonials":{
             "Header": "IN THEIR WORDS",
             "Title": "Colleagues Thoughts",
@@ -143,6 +141,28 @@
     "Privacy": {
         
     },
+    "Imprint": {
+        "LegalNotice": "Legal Notice",
+        "Information": "Information pursuant to § 5 TMG",
+        "Name": "Daniel Löffler",
+        "JobTitle": "Web Developer",
+        "Location": "Nordendorf, Germany",
+        "Contact": "Contact",
+        "Phone": "Phone: +49 151 52139875",
+        "Email": "E-Mail: loefflerdaniel@web.de",
+        "Disclaimer": "Disclaimer",
+        "LiabilityContent": "Liability for content",
+        "LiabilityContentText": "As a service provider, we are responsible for our own content on these pages in accordance with § 7 Abs.1 of the German Telemedia Act (TMG). However, according to §§ 8 to 10 TMG, we as service providers are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.",
+        "LiabilityContentText2": "Obligations to remove or block the use of information according to general laws remain unaffected. However, liability in this regard is only possible from the point in time at which knowledge of a specific infringement is obtained. Upon becoming aware of such legal violations, we will remove the content immediately.",
+        "LiabilityLinks": "Liability for links",
+        "LiabilityLinksText": "Our offer contains links to external websites of third parties, the contents of which we have no influence on. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the sites is always responsible for the contents of the linked sites. The linked sites were checked for possible legal violations at the time of linking. No unlawful content was discernible at the time of linking.",
+        "LiabilityLinksText2": "A permanent control of the content of the linked sites is, however, not reasonable without specific indications of a legal violation. Upon becoming aware of legal violations, we will remove such links immediately.",
+        "Copyright": "Copyright",
+        "CopyrightText": "The contents and works on these pages created by the site operators are subject to German copyright law. The duplication, processing, distribution, and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of these pages are only permitted for private, non-commercial use.",
+        "CopyrightText2": "Insofar as the contents on this site were not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of legal violations, we will remove such content immediately.",
+        "BackToHome": "Back to Home"
+    }
+    ,    
     "Utility": {
         "Header": {
             "AboutMe": "About Me",
