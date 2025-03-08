@@ -17,7 +17,7 @@ export class HeaderComponent {
 
   isMobileView: boolean = window.innerWidth < 900;
   menuOpen: boolean = false;
-  language: string = 'en';
+  language: string = localStorage.getItem('language') || 'en';
   activeNavItem: string | null = null;
   constructor(public translateService: AppTranslateService, private router: Router) {}
 
@@ -53,11 +53,13 @@ export class HeaderComponent {
   }
   
 
-
   public changeLanguage(lang: string) {
-    this.language = lang;
+    this.language = lang;  
     this.translateService.switchLanguage(lang);
-  }
+    localStorage.setItem('language', lang);
+}
+
+  
 
 
   handleAboutClick() {

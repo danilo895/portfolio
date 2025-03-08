@@ -29,7 +29,7 @@
 
     <div class="change-lang">
         <div class="change-lang-en-cont" (click)="changeLanguage('en')">
-            <span>EN</span>
+            <span [ngClass]="{ 'active-lang': language === 'en' }">EN</span>
             <img src="/assets/img/header/toggle.svg" alt="">
         </div>
     
@@ -39,10 +39,11 @@
         </div>
     
         <div class="change-lang-en-cont" (click)="changeLanguage('de')">
-            <span>DE</span>
+            <span [ngClass]="{ 'active-lang': language === 'de' }">DE</span>
             <img src="/assets/img/header/toggle.svg" alt="">
         </div>
     </div>
+    
     
     
 </header>

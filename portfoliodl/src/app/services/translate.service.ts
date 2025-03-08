@@ -10,21 +10,22 @@ export class AppTranslateService {
   constructor() {
     this.initTranslation();
     console.log('AppTranslateService initialized', "currentLanguage: ", this.currentLanguage);
-
   }
 
   private initTranslation() {
-    const savedLang = localStorage.getItem('language') || 'en';
-    this.translate.setDefaultLang(savedLang);
-    this.translate.use(savedLang);
-    document.documentElement.setAttribute('lang', savedLang);
+    const savedLang = localStorage.getItem('language');
+    const defaultLang = savedLang || 'en';
+    
+    this.translate.setDefaultLang('en');
+    this.translate.use(defaultLang); 
+
+    document.documentElement.setAttribute('lang', defaultLang);
   }
   
-
   public switchLanguage(lang: string) {
     this.translate.use(lang);
     localStorage.setItem('language', lang);
-    document.documentElement.setAttribute('lang', lang); // Fügt das `lang`-Attribut zu <html> hinzu
+    document.documentElement.setAttribute('lang', lang);
   }
   
 
