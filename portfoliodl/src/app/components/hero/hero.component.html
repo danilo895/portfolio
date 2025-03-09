@@ -5,22 +5,26 @@
 
 
         <section class="firstInfosHero">
-        <div class="btn-and-frntend">
             <button class="long-welcome-btn">
                 <img src="/assets/img/hero/welcome-hand.svg" alt="Hand" class="welcome-hand">
                 <span class="btn-text default-text">{{'Home.Hero.WelcomeBtn' | translate}}</span>
                 <span class="btn-text hover-text">{{'Home.Hero.IntroName' | translate}}</span>
             </button>
+
         <h1>
             <span *ngFor="let letter of 'Frontend'.split('')">
             <span appHoverTransform [attr.data-alt]="letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase()">{{ letter }}</span>
             </span>
         </h1>
-        </div>
+        
+
+
         <div class="polaroid-cont">
                 <img src="/assets/img/hero/polaroid-frame.svg" alt="">
         </div>
-    </section>
+
+
+        </section>
 
     <section class="secondInfosHero">
         <h1>

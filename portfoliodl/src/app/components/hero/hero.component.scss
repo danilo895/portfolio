@@ -25,7 +25,6 @@
 
 
 
-
 .hover-job-title{
     font-family: 'Bricolage Grotesque';
     font-size:128px;
@@ -257,7 +256,21 @@ background-color: rgba(255, 255, 255, 0.499);
 
 
 
+@media(max-width: 1000px){
 
+    h1{
+        width: 600px;
+    }
+
+    :host-context(html[lang="de"]) h1 {
+        font-size: 95px !important;
+        letter-spacing: 3px;
+    }
+    
+    :host-context(html[lang="en"]) h1 {
+        font-size: 100px !important;
+    }
+}
 
 
 
