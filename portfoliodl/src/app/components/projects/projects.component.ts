@@ -43,7 +43,15 @@ export class ProjectsComponent {
   public toggleProjectDetail() {
     this.showProjectDetail = !this.showProjectDetail;
     console.log('showProjectDetail', this.showProjectDetail);
+  
+    if (this.showProjectDetail) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
   }
+  
+  
 
   public openProject(project: Project) {
     this.selectedProject = project;

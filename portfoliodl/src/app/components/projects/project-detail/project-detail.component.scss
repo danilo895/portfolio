@@ -52,6 +52,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    
 }
 
 .overlay-card-content {
@@ -218,7 +219,7 @@
     border: 1px solid transparent;
 
     img {
-        max-width: 120%;
+        max-width: 110%;
         height: auto;
         border-radius: 10px;
     }
@@ -229,9 +230,6 @@
         margin-bottom: 15%;
     }
 }
-
-
-
 
 
 .live-test-btn, .github-btn {
@@ -260,3 +258,176 @@
     background-color: #F87A55;
 }
 
+
+
+
+@media(max-width: 894px){
+    .overlay-card {
+        width: 100%;
+        height: 80vh;
+        background-image: url('/assets/img/project-detail/project-detail-bg-s.webp');
+        background-size: cover; /* Bild füllt den Bereich optimal aus */
+        background-repeat: no-repeat;
+        overflow: auto;
+        position: relative;
+    }
+    
+    
+
+    .project-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 0;
+    }
+
+    .project-media{
+        align-items: start;
+    }
+
+    .project-media img{
+        max-width: 80%;
+    }
+
+    .arrow-forward{
+        right: 5%;
+    }
+
+    .arrow-back{
+        left: 5%;
+        color: white;
+    }
+
+    .arrow-forward, .arrow-back {
+        position: fixed;
+        bottom: calc(4dvh + env(safe-area-inset-bottom)); // Fügt den Safe-Area-Rand hinzu
+    }
+    
+
+    .overlay-card-content{
+    width: 100%;
+    height: 80vh;
+    padding-top: 60px;
+    }
+
+    .project-media .buttons{
+        margin-bottom: 32px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .project-text{
+        gap: 4px;
+    }
+
+    .tech-icons{
+
+        margin-top: 32px;
+        }
+
+    .tech-item{
+        background: hsl(0deg 0% 100% / 50%);
+    }
+
+    .previewPic{
+        align-self: center;
+    }
+}
+
+@media(max-height: 840px){
+    .project-text{
+        background: hsl(0deg 0% 100% / 50%);
+        padding: 8px;
+        border-radius: 16px;
+    }
+}
+
+@media(max-width: 700px){
+    .top-section h4{
+        font-size: 48px !important;
+    }
+
+    .sub-headline{
+        font-size: 20px;
+    }
+
+    .text-description{
+        font-size: 16px;
+    }
+
+    .tech-item{
+        padding: 4px;
+    }
+
+    .tech-item img{
+        width: 32px;
+        height: 32px;
+    }
+
+    .tech-icons{
+    justify-content: space-between;
+    margin-top: 32px;
+    gap: 0;
+    }
+
+.previewPic{
+    min-width: 350px !important;
+}
+}
+
+@media(max-width: 500px){
+    .top-section h4{
+        font-size: 32px !important;
+    }
+
+    .sub-headline{
+        font-size: 18px;
+    }
+
+    .text-description{
+        font-size: 14px;
+    }
+
+    .tech-item{
+        padding: 4px;
+    }
+
+    .tech-item img{
+        width: 32px;
+        height: 32px;
+    }
+
+    .tech-icons{
+    justify-content: space-between;
+    margin-top: 32px;
+    gap: 0;
+    }
+
+    .project-media img{
+        max-width: 100%;
+    }
+
+    .previewPic{
+        min-width: 300px !important;
+    }
+
+}
+
+@media(max-width: 400px){
+    .project-text{
+        margin-right: 4px;
+    }
+
+    .tech-item img{
+        width: 28px;
+        height: 28px;
+    }
+
+    .tech-item span{
+        font-size: 12px;}
+}
+
+@media(max-width: 350px){
+    .project-text{
+        margin-right: 6px;
+    }
+}
