@@ -142,3 +142,89 @@
     background-color: #F87A55;
     color: white;
 }
+
+
+@media(max-width: 1200px){
+
+    .fact-container {
+        width: 450px;
+    }
+
+    .about-facts{
+        gap: 24px;
+    }
+
+    h3{
+        font-size: 18px !important;
+    }
+
+    h4{
+        font-size: 52px !important;
+    }
+
+    .about-me-text{
+        font-size: 20px;
+    }
+
+    .overlay{
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width: 900px){
+
+.about-inner-main {
+    flex-direction: column-reverse;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.lets-talk-btn {
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+}
+
+}
+
+@media(max-width: 500px){
+
+    .fact-container {
+        width: 400px;
+    }
+
+    .about-facts{
+        gap: 32px;
+    }
+
+    .fact-container:nth-child(2){
+        margin-top: -62px;
+    }
+
+}
+
+@media(max-width: 500px){
+
+    .fact-container {
+        width: 300px;
+    }
+
+    .about-facts{
+        gap: 32px;
+    }
+
+    .fact-container:nth-child(2){
+        margin-top: -62px;
+    }
+
+    .overlay{
+        font-size: 14px;
+    }
+
+    .loc-icon, .move-icon, .remote-icon{
+        width: 32px;
+        height: 32px;
+    }
+}
