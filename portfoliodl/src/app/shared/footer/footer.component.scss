@@ -15,7 +15,7 @@
 .footer-content {
     width: 100%;
     display: flex;
-    flex-direction: column;
+
     gap: 16px;
 }
 
@@ -24,6 +24,8 @@
     flex-direction: column;
     align-items: flex-start; 
     gap: 8px;
+    width: 25%;
+    padding-bottom: 5px;
 }
 
 .logo-circle {
@@ -38,17 +40,28 @@
     }
 }
 
+p{
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+}
+
+a{
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+}
 .copyright {
     font-weight: 700;
     color: white;
     font-size: 18px;
     font-family: 'Bricolage Grotesque';
+    margin-bottom: 16px;
 }
 
 .footer-nav {
     display: flex;
     justify-content: space-between; 
-    align-items: center;
+    align-items: flex-end;
+    width: 75%;
 }
 
 .footer-nav a {
@@ -189,4 +202,49 @@
 
 .nav-projects-cont:hover img {
     clip-path: inset(0 0 0 0);
+}
+
+.legalnotice{
+    padding: 6px 12px;
+    font-size: 18px;
+}
+
+
+@media (max-width: 520px) {
+
+    .footer{
+        margin: -240px auto 0 auto;
+        height: 240px;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .footer-nav{
+        width: 100%;
+    }
+
+    .footer-left{
+        padding-bottom: 28px;
+    }
+
+    .legalnotice{
+        padding: 0;
+    }
+
+    .footer-nav a{
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .footer-nav a{
+        font-weight: 500;
+        font-size: 14px;
+    }
 }

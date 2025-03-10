@@ -547,9 +547,15 @@ span.error-text:not(:empty) {
     .contact-content{
         margin-bottom: 280px;
     }
+
+    .ready-to-work{
+        font-size: 48px;
+    }
 }
 
 
-@media(max-width: 750px){
-
+@media(max-width: 700px){
+    .contact-content {
+        margin-bottom: 400px;
+    }
 }
