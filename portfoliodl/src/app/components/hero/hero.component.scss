@@ -324,12 +324,12 @@ background-color: rgba(255, 255, 255, 0.499);
 @media(max-width: 690px){
 
     :host-context(html[lang="de"]) h1 {
-        font-size: 60px !important;
+        font-size: 90px !important;
         letter-spacing: 3px;
     }
     
     :host-context(html[lang="en"]) h1 {
-        font-size: 65px !important;
+        font-size: 90px !important;
     }
 
 h1{
@@ -355,8 +355,41 @@ h1{
         top: 110%;
     }
 
+
+}
+
+
+
+@media(max-width: 620px){
+
     :host-context(html[lang="de"]) h1 {
-        font-size: 50px !important;
+        font-size: 80px !important;
+        letter-spacing: 3px;
+    }
+    
+    :host-context(html[lang="en"]) h1 {
+        font-size: 80px !important;
+    }
+}
+
+
+@media(max-width: 550px){
+
+    :host-context(html[lang="de"]) h1 {
+        font-size: 70px !important;
+        letter-spacing: 3px;
+    }
+    
+    :host-context(html[lang="en"]) h1 {
+        font-size: 70px !important;
+    }
+}
+
+
+@media(max-width: 520px){
+
+    :host-context(html[lang="de"]) h1 {
+        font-size: 55px !important;
         letter-spacing: 3px;
     }
     
@@ -365,7 +398,14 @@ h1{
     }
 }
 
+@media(max-width: 450px){
 
-
-
-
+    :host-context(html[lang="de"]) h1 {
+        font-size: 40px !important;
+        letter-spacing: 3px;
+    }
+    
+    :host-context(html[lang="en"]) h1 {
+        font-size: 40px !important;
+    }
+}

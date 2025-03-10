@@ -559,3 +559,9 @@ span.error-text:not(:empty) {
         margin-bottom: 400px;
     }
 }
+
+@media(max-width: 500px){
+    .ready-to-work {
+        font-size: 38px;
+    }
+}
