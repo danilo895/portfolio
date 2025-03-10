@@ -19,6 +19,7 @@
     gap: 5%;
     margin-bottom: 200px;
     margin-top: 200px;
+    position: relative;
 }
 
 .privacy-text{
@@ -303,13 +304,16 @@
     margin-bottom: 8px;
 }
 
-.sticker-container {
-    position: relative;
-    display: inline-block;
-    width: 180px;
-    height: 180px;
-    margin-bottom: -12%;
-}
+
+    .sticker-container {
+        position: absolute;
+        display: inline-block;
+        width: 180px;
+        height: 180px;
+        right: 0;
+        top: -90px;
+    }
+
 
 .sticker {
     width: 100%;
@@ -505,12 +509,46 @@ span.error-text:not(:empty) {
 
     .contact-content {
         flex-direction: column;
+        margin-top: 300px;
     }
 
+    .arrow-container{
+        height: 120px;
+    }
     .contact-intro-info .arrow-container {
         justify-content: flex-start;
+        margin-left: -40px;
+    }
+
+    .sticker-container{
+        top: -180px;
+    }
+
+    .contact-intro-info .arrow-container img {
+        width: 100px;
+        transform: rotate(90deg);
+    }
+
+    .contact-form {
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .contact-intro-info{
+        width: 100%;
+    }
+
+    .contact-content section {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contact-content{
+        margin-bottom: 280px;
     }
 }
+
 
 @media(max-width: 750px){
 
