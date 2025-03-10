@@ -500,3 +500,18 @@ span.error-text:not(:empty) {
     transform: translateX(-50%);
     white-space: nowrap;
 }
+
+@media(max-width: 950px){
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-intro-info .arrow-container {
+        justify-content: flex-start;
+    }
+}
+
+@media(max-width: 750px){
+
+}
