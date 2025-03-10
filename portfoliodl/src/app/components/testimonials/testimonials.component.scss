@@ -223,3 +223,76 @@
 .linkedin-profile:hover span {
     color: white;
 }
+
+
+@media (max-width: 950px) {
+    .testimonial-title {
+        font-size: 48px;
+    }
+
+    .testimonial-content {
+        flex-direction: column;
+    }
+
+    .testimonial-image-wrapper.first {
+        transform: rotate(6deg);
+    }
+    .testimonial-image-wrapper.first:hover {
+        transform: rotate(0deg);
+    }
+    
+    
+    .testimonial-image-wrapper.second {
+        z-index: 2;
+        transform: rotate(-8deg);
+    }
+    .testimonial-image-wrapper.second:hover {
+        z-index: 2;
+        transform: rotate(0deg);
+    }
+
+    
+    
+    .testimonial-image-wrapper.third {
+        transform: rotate(6deg);
+    }
+    .testimonial-image-wrapper.third:hover {
+        transform: rotate(0deg);
+    }
+
+    .testimonial-image-wrapper:not(:first-child) {
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 500px){
+    .testimonial-image-wrapper {
+        flex: 1;
+        max-width: 50%;
+        min-width: 350px;
+        position: relative;
+        transition: z-index 0.3s ease, transform 0.3s ease;
+    }
+
+    .zitat-container p{
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 420px){
+    .testimonial-image-wrapper {
+        min-width: 300px;
+    }
+
+    .colleague-data{
+        padding: 5px 7px;
+    }
+
+    .colleague-name {
+        font-size: 14px;
+    }
+
+    .colleague-job {
+        font-size: 12px;
+    }
+}
