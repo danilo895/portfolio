@@ -6,7 +6,7 @@
     width: 100vw;
     height: auto;
     min-height: 800px;
-    background: url('/assets/img/techstack/techstackbg.png') no-repeat center bottom;
+    background: url('/assets/img/techstack/skills-bg-s.webp') no-repeat center bottom;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -438,9 +438,10 @@ height: 140px;
     }
 
     .peeloff-cont {
-        transform: rotate(14deg) scale(0.7);
+        transform: rotate(14deg) scale(0.6);
         transform-origin: center;
-        margin-top: -125px;
+        margin-top: -160px;
+        margin-left: 40px;
     }
 }
 
