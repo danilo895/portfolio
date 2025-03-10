@@ -168,7 +168,7 @@
 }
 
 .drawn-line{
-    width:  320px !important;
+    max-width:  320px !important;
 }
 
 .first-container-content img {
@@ -205,3 +205,26 @@
 }
 
 
+@media (max-width: 900px) {
+
+.projects-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.each-project-cont {
+    align-items: center;
+}
+
+.intro-project-headline{
+    font-size: 48px;
+}
+
+.drawn-line{
+    max-width:  230px !important;
+}
+
+.projects-main{
+    gap: 120px;
+}
+}
