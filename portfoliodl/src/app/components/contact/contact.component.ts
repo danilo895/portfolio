@@ -23,6 +23,7 @@ export class ContactComponent implements AfterViewInit {
   isCheckboxChecked: boolean = false;
   isButtonDisabled: boolean = true;
   isFormTouched: boolean = false;
+  successMessage: string = '';
   private http = inject(HttpClient);
 
   contactData = {
@@ -53,17 +54,18 @@ export class ContactComponent implements AfterViewInit {
           message: "Formulardaten erfolgreich verarbeitet",
           receivedData: this.contactData
         });
-        this.contactData = {
-          name: '',
-          email: '',
-          message: ''
-        };
+        this.successMessage = "E-Mail successfully sent!";
+        this.contactData = { name: '', email: '', message: '' };
         ngForm.resetForm();
         this.isButtonDisabled = true;
         this.isCheckboxChecked = false;
         this.isFormTouched = false;
+        setTimeout(() => {
+          this.successMessage = '';
+        }, 3000);
+  
         console.info("Formular wurde zurückgesetzt.");
-      }, 1000);
+      }, 800);
     } else {
       console.warn("Formular ist ungültig, wird nicht gesendet.");
     }
