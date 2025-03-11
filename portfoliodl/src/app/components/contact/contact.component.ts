@@ -77,13 +77,6 @@ export class ContactComponent implements AfterViewInit {
     }
   }
   
-  
-  
-  
-  
-  
-  
-
   validateName(event: Event) {
     this.isFormTouched = true;
     const input = (event.target as HTMLInputElement).value;
