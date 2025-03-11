@@ -42,7 +42,7 @@
 .overlay-card {
     width: 100%;
     max-width: 1900px;
-    height: 70vh;
+    height: 70dvh;
     background-color: #1D1D1D;
     background-image: url('/assets/img/project-detail/project-detail-bg-desktop.webp');
     background-size: cover;
@@ -264,7 +264,7 @@
 @media(max-width: 894px){
     .overlay-card {
         width: 100%;
-        height: 80vh;
+        height: 80dvh;
         background-image: url('/assets/img/project-detail/project-detail-bg-s.webp');
         background-size: cover;
         background-repeat: no-repeat;
@@ -305,7 +305,7 @@
 
     .overlay-card-content{
     width: 100%;
-    height: 80vh;
+    height: 80dvh;
     padding-top: 60px;
     }
 
