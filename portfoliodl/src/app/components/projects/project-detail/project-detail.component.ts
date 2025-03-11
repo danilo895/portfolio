@@ -25,16 +25,12 @@ export class ProjectDetailComponent implements OnChanges {
   public translatedTechStack: { name: string; icon: string }[] = [];
 
 
-
-
   constructor(private translate: TranslateService) {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['project']?.currentValue) {
       this.loadTranslatedDetails();
     }
-
-
     this.translate.onLangChange.subscribe(() => {
       this.loadTranslatedDetails();
     });
@@ -43,34 +39,54 @@ export class ProjectDetailComponent implements OnChanges {
   private loadTranslatedDetails() {
     if (this.project?.title) {
         const projectKey = this.project.title.replace(/\s+/g, "");
-        const titleKey = `Home.Projects.ProjectCollection.${projectKey}.Title`;
-        const descriptionKey = `Home.Projects.ProjectCollection.${projectKey}.Description`;
-        const implementationDetailsKey = `Home.Projects.ProjectCollection.${projectKey}.ImplementationDetails`;
-        const durationKey = `Home.Projects.ProjectCollection.${projectKey}.Duration`;
-        this.translate.get(titleKey).subscribe((translation: string) => {
-            this.translatedTitle = translation !== titleKey ? translation : "Translation missing";
-        });
-        this.translate.get(descriptionKey).subscribe((translation: string) => {
-            this.translatedDescription = translation !== descriptionKey ? translation : "Translation missing";
-        });  
-        this.translate.get(implementationDetailsKey).subscribe((translation: string) => {
-            this.translatedImplementationDetails = translation !== implementationDetailsKey ? translation : "Translation missing";
-        });
-        this.translate.get(durationKey).subscribe((translation: string) => {
-            this.translatedDuration = translation !== durationKey ? translation : "Translation missing";
-        });
-        this.translatedTechStack = [];
-        this.translate.get('Home.Projects.TechStack').subscribe((techStack: any) => {
-            this.project.used_tech.forEach(tech => {
-                if (techStack[tech]) {
-                    this.translatedTechStack.push({
-                        name: techStack[tech].name,
-                        icon: techStack[tech].icon
-                    });
-                }
-            });
-        });
+        this.loadTranslatedTitle(projectKey);
+        this.loadTranslatedDescription(projectKey);
+        this.loadTranslatedImplementationDetails(projectKey);
+        this.loadTranslatedDuration(projectKey);
+        this.loadTranslatedTechStack();
     }
+}
+
+private loadTranslatedTitle(projectKey: string) {
+    const titleKey = `Home.Projects.ProjectCollection.${projectKey}.Title`;
+    this.translate.get(titleKey).subscribe((translation: string) => {
+        this.translatedTitle = translation !== titleKey ? translation : "Translation missing";
+    });
+}
+
+private loadTranslatedDescription(projectKey: string) {
+    const descriptionKey = `Home.Projects.ProjectCollection.${projectKey}.Description`;
+    this.translate.get(descriptionKey).subscribe((translation: string) => {
+        this.translatedDescription = translation !== descriptionKey ? translation : "Translation missing";
+    });
+}
+
+private loadTranslatedImplementationDetails(projectKey: string) {
+    const implementationDetailsKey = `Home.Projects.ProjectCollection.${projectKey}.ImplementationDetails`;
+    this.translate.get(implementationDetailsKey).subscribe((translation: string) => {
+        this.translatedImplementationDetails = translation !== implementationDetailsKey ? translation : "Translation missing";
+    });
+}
+
+private loadTranslatedDuration(projectKey: string) {
+    const durationKey = `Home.Projects.ProjectCollection.${projectKey}.Duration`;
+    this.translate.get(durationKey).subscribe((translation: string) => {
+        this.translatedDuration = translation !== durationKey ? translation : "Translation missing";
+    });
+}
+
+private loadTranslatedTechStack() {
+    this.translatedTechStack = [];
+    this.translate.get('Home.Projects.TechStack').subscribe((techStack: any) => {
+        this.project.used_tech.forEach(tech => {
+            if (techStack[tech]) {
+                this.translatedTechStack.push({
+                    name: techStack[tech].name,
+                    icon: techStack[tech].icon
+                });
+            }
+        });
+    });
 }
 
 
