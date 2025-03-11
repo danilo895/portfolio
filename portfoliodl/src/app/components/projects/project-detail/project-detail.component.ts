@@ -47,28 +47,18 @@ export class ProjectDetailComponent implements OnChanges {
         const descriptionKey = `Home.Projects.ProjectCollection.${projectKey}.Description`;
         const implementationDetailsKey = `Home.Projects.ProjectCollection.${projectKey}.ImplementationDetails`;
         const durationKey = `Home.Projects.ProjectCollection.${projectKey}.Duration`;
-
-
         this.translate.get(titleKey).subscribe((translation: string) => {
             this.translatedTitle = translation !== titleKey ? translation : "Translation missing";
         });
-
-
         this.translate.get(descriptionKey).subscribe((translation: string) => {
             this.translatedDescription = translation !== descriptionKey ? translation : "Translation missing";
-        });
-
-  
+        });  
         this.translate.get(implementationDetailsKey).subscribe((translation: string) => {
             this.translatedImplementationDetails = translation !== implementationDetailsKey ? translation : "Translation missing";
         });
-
-
         this.translate.get(durationKey).subscribe((translation: string) => {
             this.translatedDuration = translation !== durationKey ? translation : "Translation missing";
         });
-
-
         this.translatedTechStack = [];
         this.translate.get('Home.Projects.TechStack').subscribe((techStack: any) => {
             this.project.used_tech.forEach(tech => {
