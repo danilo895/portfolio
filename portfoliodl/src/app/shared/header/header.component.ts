@@ -124,7 +124,14 @@ export class HeaderComponent {
   private scrollToSection(sectionId: string) {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const headerOffset = 100;
+      const elementPosition = section.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   }
+  
 }

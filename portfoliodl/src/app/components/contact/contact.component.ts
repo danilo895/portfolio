@@ -57,9 +57,15 @@ export class ContactComponent implements AfterViewInit {
         this.successMessage = "E-Mail successfully sent!";
         this.contactData = { name: '', email: '', message: '' };
         ngForm.resetForm();
-        this.isButtonDisabled = true;
         this.isCheckboxChecked = false;
+        const checkbox = document.getElementById('privacy-checkbox') as HTMLInputElement;
+        if (checkbox) {
+          checkbox.checked = false;
+        }
+  
+        this.isButtonDisabled = true;
         this.isFormTouched = false;
+  
         setTimeout(() => {
           this.successMessage = '';
         }, 3000);
@@ -70,6 +76,7 @@ export class ContactComponent implements AfterViewInit {
       console.warn("Formular ist ungültig, wird nicht gesendet.");
     }
   }
+  
   
   
   
