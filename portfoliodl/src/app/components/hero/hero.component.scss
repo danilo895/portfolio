@@ -242,7 +242,7 @@ background-color: rgba(255, 255, 255, 0.499);
 .polaroid-cont {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50%, -50%) translate(330px, -200px);
 }
 
@@ -252,7 +252,17 @@ background-color: rgba(255, 255, 255, 0.499);
     margin-left: 150px;
 }
 
-
+.polaroid-pic {
+    transform: rotate(8deg);
+    border-radius: 4px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, filter 0.3s ease-out;
+  }
+  
+.polaroid-pic:hover {
+    transform: rotate(3deg) translateY(-10px) scale(1.05);
+    box-shadow: 10px 10px 20px rgba(232, 225, 225, 0.3);
+    filter: brightness(1.1) contrast(1.05);
+}
 
 
 
@@ -298,6 +308,10 @@ background-color: rgba(255, 255, 255, 0.499);
     
     :host-context(html[lang="en"]) h1 {
         font-size: 100px !important;
+    }
+
+    .polaroid-cont {
+        left: 50%;
     }
 }
 
