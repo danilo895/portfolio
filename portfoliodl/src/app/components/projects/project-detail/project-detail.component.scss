@@ -22,7 +22,6 @@
 .project-detail-container {
     width: 100%;
     height: 100%;
-    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +31,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    background-color: black;
 }
 
 .each-techicon-cont{
@@ -266,7 +266,7 @@
         width: 100%;
         height: 80vh;
         background-image: url('/assets/img/project-detail/project-detail-bg-s.webp');
-        background-size: cover; /* Bild füllt den Bereich optimal aus */
+        background-size: cover;
         background-repeat: no-repeat;
         overflow: auto;
         position: relative;
@@ -299,7 +299,7 @@
 
     .arrow-forward, .arrow-back {
         position: fixed;
-        bottom: calc(4dvh + env(safe-area-inset-bottom)); // Fügt den Safe-Area-Rand hinzu
+        bottom: calc(4dvh + env(safe-area-inset-bottom));
     }
     
 
@@ -424,6 +424,14 @@
 
     .tech-item span{
         font-size: 12px;}
+
+    :host-context(html[lang="de"]) .arrow-back p {
+            font-size: 14px !important;
+    }
+
+    :host-context(html[lang="de"]) .arrow-forward p {
+        font-size: 14px !important;
+}
 }
 
 @media(max-width: 350px){

@@ -296,5 +296,9 @@
     .colleague-job {
         font-size: 12px;
     }
+
+    :host-context(html[lang="de"]) .zitat-container p{
+        font-size: 12px !important;
+    }
 }
 

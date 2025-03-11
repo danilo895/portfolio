@@ -505,11 +505,22 @@ span.error-text:not(:empty) {
     white-space: nowrap;
 }
 
+@media(max-width: 1000px){
+
+.sticker-container{
+    transform:scale(0.8);
+}
+}
+
 @media(max-width: 950px){
 
     .contact-content {
         flex-direction: column;
         margin-top: 300px;
+    }
+
+    .sticker-container{
+        transform:scale(1);
     }
 
     .arrow-container{
@@ -564,5 +575,11 @@ span.error-text:not(:empty) {
 @media(max-width: 500px){
     .ready-to-work {
         font-size: 38px;
+    }
+}
+
+@media(max-width: 400px){
+    .sticker-container{
+        transform:scale(0.9);
     }
 }
