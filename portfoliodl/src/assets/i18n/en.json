@@ -56,7 +56,7 @@
                 }
             },
             "Details":{
-                "GoBack": "Go Back",
+                "GoBack": "Home",
                 "Description": "Description",
                 "ImplementationDetails": "Implementation Details",
                 "Duration": "Duration:",

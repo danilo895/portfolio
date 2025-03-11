@@ -383,10 +383,6 @@
         font-size: 18px;
     }
 
-    .text-description{
-        font-size: 14px;
-    }
-
     .tech-item{
         padding: 4px;
     }
@@ -431,6 +427,13 @@
 
     :host-context(html[lang="de"]) .arrow-forward p {
         font-size: 14px !important;
+}
+
+.arrow-back p {
+    font-size: 16px;
+}
+.arrow-forward p {
+    font-size: 16px;
 }
 }
 

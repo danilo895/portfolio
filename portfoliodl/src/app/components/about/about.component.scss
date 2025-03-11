@@ -189,26 +189,11 @@
 
 }
 
+
 @media(max-width: 500px){
 
     .fact-container {
         width: 400px;
-    }
-
-    .about-facts{
-        gap: 32px;
-    }
-
-    .fact-container:nth-child(2){
-        margin-top: -62px;
-    }
-
-}
-
-@media(max-width: 500px){
-
-    .fact-container {
-        width: 300px;
     }
 
     .about-facts{
@@ -226,5 +211,19 @@
     .loc-icon, .move-icon, .remote-icon{
         width: 32px;
         height: 32px;
+    }
+}
+
+@media(max-width: 410px){
+
+    .fact-container {
+        width: 370px;
+    }
+}
+
+@media(max-width: 380px){
+
+    .fact-container {
+        width: 300px;
     }
 }
