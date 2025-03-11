@@ -35,19 +35,19 @@ export const projects = [
     },
     {
         id: 3,
-        title: "Portfolio",
-        description: "A modern, fully responsive portfolio website built with Angular and TypeScript to showcase my frontend development skills and projects.",
-        implementationDetails: "Built using Angular and TypeScript with a modular and standalone component architecture, ensuring easy scalability and maintainability. The project structure enables component reusability, and the navigation is dynamically managed through Angular’s event-driven model.",
+        title: "Pokedex",
+        description: "A dynamic web project built with JavaScript, featuring API data fetching, processing, and visualization, including asynchronous data handling, filtering functions, and an interactive UI.",
+        implementationDetails: "Uses JavaScript with fetch() for asynchronous API calls, Promise.all() for efficient data handling, and dynamic DOM updates.",
         duration: "2 weeks",
-        used_tech: ["TypeScript", "Angular", "SCSS"],
-        image: "/assets/img/projects/portfolio1.png",
+        used_tech: ["HTML", "CSS", "JavaScript"],
+        image: "/assets/img/projects/pokedex.png",
         animatedLineImage: "/assets/img/project-detail/hr-blue-line.svg",
         techIcons: [
             "/assets/img/project-detail/typescript-detail.svg",
             "/assets/img/project-detail/angular-detail.svg",
             "/assets/img/project-detail/css-detail.svg"
         ],
-        repoLink: "https://github.com/danilo895/portfolio/tree/main/portfoliodl",
+        repoLink: "https://github.com/danilo895/Pokedex",
         liveDemo: "[TODO: Add Live Demo URL later]"
     }
     

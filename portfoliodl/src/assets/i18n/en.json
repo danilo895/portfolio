@@ -80,13 +80,13 @@
                     "Duration": "3 weeks"
                 }
                 ,
-                "Portfolio": {
+                "Pokedex": {
                     "Id": "3",
-                    "Title": "Portfolio",
-                    "Description": "A high-performance and responsive portfolio showcasing my projects and skills as a developer.",
-                    "ImplementationDetails": "Multilingual with ngx-translate, dynamic data management, and a component-based structure for scalability.",
-                    "Image": "/assets/img/projects/portfolio1.png",
-                    "Duration": "3 weeks"
+                    "Title": "Pokedex",
+                    "Description": "A dynamic web project built with JavaScript, featuring API data fetching, processing, and visualization, including asynchronous data handling, filtering functions, and an interactive UI.",
+                    "ImplementationDetails": "Uses JavaScript with fetch() for asynchronous API calls, Promise.all() for efficient data handling, and dynamic DOM updates.",
+                    "Image": "/assets/img/projects/pokedex.png",
+                    "Duration": "4 days"
                 }
             }
         },
@@ -128,12 +128,12 @@
             "MessagePlaceholder": "Write your message here",
             "PrivacyText": "I've read the <a class='privacy-link' style='cursor:pointer;' (click)='navigateToPrivacy()'>privacy policy</a> and agree to the processing of my data as outlined.",
             "SendButton": "Send",
-            "EmailRequired": "Oops! Your email is required",
+            "EmailRequired": "youremail@email.com",
             "EmailInvalid": "Invalid email format",
             "MessageRequired": "What do you need to develop?",
             "MessageTooShort": "Please provide at least 10 characters",
             "PrivacyError": "Please accept the privacy policy",
-            "NameRequired": "Ooops! It seems your name is missing",
+            "NameRequired": "First name and last name required",
             "NameInvalid": "Invalid characters detected! Only letters allowed"
         }
     }

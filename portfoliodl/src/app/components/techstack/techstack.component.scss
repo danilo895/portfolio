@@ -98,14 +98,25 @@ height: 140px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scaleX(-1) rotate(-90deg);
+    transform: translate(-50%, -50%) scaleX(-1);
     width: 110%;
     clip-path: inset(0 100% 0 0);
-    animation: draw-image 0.09s ease-in-out forwards, rotate-back 0.2s ease-in-out forwards;
-    animation-delay: 0s;
-    overflow-y: hidden;
-    animation-iteration-count: infinite;
-    animation-duration: 4s;
+    animation: drawLine 4s ease-in-out infinite;
+}
+
+@keyframes drawLine {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+    40% {
+        clip-path: inset(0 0 0 0);
+    }
+    90% {
+        clip-path: inset(0 0 0 0);
+    }
+    100% {
+        clip-path: inset(0 100% 0 0);
+    }
 }
 
 @keyframes rotate-back {
@@ -119,25 +130,6 @@ height: 140px;
         transform: translate(-50%, -50%) scaleX(-1) rotate(0deg);
     }
 }
-
-@keyframes draw-image {
-    0% {
-        clip-path: inset(0 100% 0 0);
-    }
-    6% {
-        clip-path: inset(0 0 0 0);
-    }
-    100% {
-        clip-path: inset(0 0 0 0);
-    }
-}
-
-
-
-
-
-
-
 
 .techstack-columns{
     display: flex;
@@ -165,25 +157,23 @@ height: 140px;
     gap: 6px;
 }
 
-
 .each-icon-cont img {
     width: 70px;
     height: 70px;
-    filter: grayscale(100%);
-    transition: filter 0.2s ease-in-out;
+    animation: pulseAnimation 1s infinite alternate ease-in-out;
 }
 
-.each-icon-cont img {
-    width: 70px;
-    height: 70px;
-    filter: grayscale(100%);
-    transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+        filter: grayscale(0%);
+    }
+    100% {
+        transform: scale(0.8);
+        filter: grayscale(100%);
+    }
 }
 
-.each-icon-cont img:hover {
-    filter: grayscale(0%);
-    transform: scale(0.8);
-}
 
 
 .first-row-icons, .second-row-icons{
@@ -375,7 +365,7 @@ height: 140px;
 }
 
 
-@media(max-width: 1070px){
+@media(max-width: 1080px){
 
     .peeloff-cont {
         transform: rotate(14deg) scale(0.8);
@@ -385,7 +375,7 @@ height: 140px;
 
 }
 
-@media(max-width: 970px){
+@media(max-width: 990px){
 
 .techstack-main{
     padding: 10vh 0 20vh 0;
@@ -461,6 +451,6 @@ height: 140px;
     }
 
     .torn-paper-descr{
-        font-size: 14px !important;
+        font-size: 15px !important;
     }
 }

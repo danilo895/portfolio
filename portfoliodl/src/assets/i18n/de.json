@@ -80,13 +80,13 @@
                     "Duration": "3 Wochen"
                 }
                 ,
-                "Portfolio": {
+                "Pokedex": {
                     "Id": "3",
-                    "Title": "Portfolio",
-                    "Description": "Ein leistungsstarkes und responsives Portfolio zur Präsentation meiner Projekte und Fähigkeiten als Entwickler",
-                    "ImplementationDetails": "Mehrsprachig mit ngx-translate, dynamische Datenverwaltung und komponentenbasierte Struktur für Skalierbarkeit.",
-                    "Image": "/assets/img/projects/portfolio1.png",
-                    "Duration": "3 Wochen"
+                    "Title": "Pokedex",
+                    "Description": "Ein dynamisches Webprojekt mit JavaScript, das API-Daten abruft, verarbeitet und visuell darstellt, inklusive asynchronem Datenhandling, Filterfunktionen und einer interaktiven UI.",
+                    "ImplementationDetails": "Verwendet JavaScript mit fetch() für asynchrone API-Abfragen, Promise.all() für effiziente Datenverarbeitung und dynamische DOM-Updates",
+                    "Image": "/assets/img/projects/pokedex.png",
+                    "Duration": "4 Tage"
                 }
             }
         },
@@ -129,12 +129,12 @@
                 "MessagePlaceholder": "Schreibe deine Nachricht hier",
                 "PrivacyText": "Ich habe die <a class='privacy-link' style='cursor:pointer;' (click)='navigateToPrivacy()'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
                 "SendButton": "Senden",
-                "EmailRequired": "Hoppla! Deine E-Mail wird benötigt",
+                "EmailRequired": "deineemail@email.com",
                 "EmailInvalid": "Ungültiges E-Mail-Format",
                 "MessageRequired": "Was möchtest du entwickeln?",
                 "MessageTooShort": "Bitte mindestens 10 Zeichen eingeben",
                 "PrivacyError": "Bitte akzeptiere die Datenschutbestimmungen",
-                "NameRequired": "Ooops! Es scheint, als fehlt dein Name",
+                "NameRequired": "Vorname und Nachname werden benötigt",
                 "NameInvalid": "Ungültige Zeichen! Nur Buchstaben erlaubt"
             }
         }
