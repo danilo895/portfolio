@@ -6,12 +6,6 @@ import { HttpClient } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { RouterModule, Router } from '@angular/router';
- 
-
-
-
-
-
 
 @Component({
   selector: 'app-contact',
@@ -52,20 +46,29 @@ export class ContactComponent implements AfterViewInit {
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid && ngForm.submitted) {
       console.log("Formular ist gültig! Simulierte Datenübertragung...", this.contactData);
-
+  
       setTimeout(() => {
         console.log("Simulierter Server-Antwort erhalten:", {
           status: "success",
           message: "Formulardaten erfolgreich verarbeitet",
           receivedData: this.contactData
         });
-  
-        console.info("Simulierter Test abgeschlossen");
-      }, 2000);
+        this.contactData = {
+          name: '',
+          email: '',
+          message: ''
+        };
+        ngForm.resetForm();
+        this.isButtonDisabled = true;
+        this.isCheckboxChecked = false;
+        this.isFormTouched = false;
+        console.info("Formular wurde zurückgesetzt.");
+      }, 1000);
     } else {
       console.warn("Formular ist ungültig, wird nicht gesendet.");
     }
   }
+  
   
   
   

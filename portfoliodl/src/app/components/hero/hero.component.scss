@@ -253,16 +253,18 @@ background-color: rgba(255, 255, 255, 0.499);
 }
 
 .polaroid-pic {
+    filter: grayscale(80%);
     transform: rotate(8deg);
     border-radius: 4px;
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, filter 0.3s ease-out;
-  }
-  
+}
+
 .polaroid-pic:hover {
     transform: rotate(3deg) translateY(-10px) scale(1.05);
     box-shadow: 10px 10px 20px rgba(232, 225, 225, 0.3);
-    filter: brightness(1.1) contrast(1.05);
+    filter: grayscale(0%) brightness(1.1) contrast(1.05);
 }
+
 
 
 
