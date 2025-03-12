@@ -14,7 +14,7 @@ export const projects = [
             "/assets/img/project-detail/js-detail.svg"
         ],
         repoLink: "https://github.com/danilo895/join",
-        liveDemo: "https://join-399.developerakademie.net/join2/login.html"
+        liveDemo: "https://join.daniel-loeffler.com/login.html"
     },
     {
         id: 2,
@@ -31,7 +31,7 @@ export const projects = [
             "/assets/img/project-detail/js-detail.svg"
         ],
         repoLink: "https://github.com/danilo895/El-Pollo-Loco",
-        liveDemo: "https://daniel-loeffler.developerakademie.net/polloloco/index.html"
+        liveDemo: "https://el-pollo-loco.daniel-loeffler.com/index.html"
     },
     {
         id: 3,
