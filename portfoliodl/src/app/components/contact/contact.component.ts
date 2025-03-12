@@ -46,36 +46,42 @@ export class ContactComponent implements AfterViewInit {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid && ngForm.submitted) {
-      console.log("Formular ist gültig! Simulierte Datenübertragung...", this.contactData);
+      console.log("Formular ist gültig! Sende echte Anfrage...", this.contactData);
   
-      setTimeout(() => {
-        console.log("Simulierter Server-Antwort erhalten:", {
-          status: "success",
-          message: "Formulardaten erfolgreich verarbeitet",
-          receivedData: this.contactData
-        });
-        this.successMessage = "E-Mail successfully sent!";
-        this.contactData = { name: '', email: '', message: '' };
-        ngForm.resetForm();
-        this.isCheckboxChecked = false;
-        const checkbox = document.getElementById('privacy-checkbox') as HTMLInputElement;
-        if (checkbox) {
-          checkbox.checked = false;
+      this.http.post('https://daniel-loeffler.com/sendMail.php', this.contactData, {
+        headers: { 'Content-Type': 'application/json' }
+      }).subscribe(
+        (response: any) => {
+          console.log("Server-Antwort:", response);
+          if (response.status === "success") {
+            this.successMessage = "E-Mail successfully sent!";
+            this.contactData = { name: '', email: '', message: '' };
+            ngForm.resetForm();
+            this.isCheckboxChecked = false;
+            const checkbox = document.getElementById('privacy-checkbox') as HTMLInputElement;
+            if (checkbox) {
+              checkbox.checked = false;
+            }
+            this.isButtonDisabled = true;
+            this.isFormTouched = false;
+            setTimeout(() => {
+              this.successMessage = '';
+            }, 3000);
+            console.info("Formular wurde zurückgesetzt.");
+          } else {
+            this.successMessage = "Fehler beim Senden der E-Mail.";
+          }
+        },
+        (error) => {
+          console.error("Fehler beim Senden der E-Mail:", error);
+          this.successMessage = "Es gab ein Problem beim Senden der Nachricht.";
         }
-  
-        this.isButtonDisabled = true;
-        this.isFormTouched = false;
-  
-        setTimeout(() => {
-          this.successMessage = '';
-        }, 3000);
-  
-        console.info("Formular wurde zurückgesetzt.");
-      }, 800);
+      );
     } else {
       console.warn("Formular ist ungültig, wird nicht gesendet.");
     }
   }
+
   
   validateName(event: Event) {
     this.isFormTouched = true;
