@@ -1,3 +1,5 @@
+
+
 <section class="projects-main" id="projectsSection">
 
     <div class="each-project-cont first-container">
@@ -27,8 +29,31 @@
             
         </div>
     </div>
+    
 </section>
 
+
+<div class="spinning-card-container">
+    <div class="first-child-card">
+
+        <div class="front">
+            <img src="/assets/img/projects/portfolio2.png" alt="">
+        </div>    
+
+
+        <div class="back">
+            <p class="handwritten">Coded with heart and</p>
+            <img src="/assets/img/techstack/peeloff/arrow-peel.svg" alt="">
+            <div class="portf-icons">
+            <img src="/assets/img/techstack/icons/color/angular.svg" alt="">
+            <img src="/assets/img/techstack/icons/color/ts.svg" alt="">
+            <img src="/assets/img/techstack/icons/color/css.svg" alt="">
+            </div>
+        </div>
+
+
+    </div>
+</div>
 
 <ng-container *ngIf="showProjectDetail">
     <app-project-detail [project]="selectedProject" (closeDialog)="toggleProjectDetail()"></app-project-detail>
