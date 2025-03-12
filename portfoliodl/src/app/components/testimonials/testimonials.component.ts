@@ -14,20 +14,18 @@ export class TestimonialsComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     console.log('TestimonialsComponent initialized');
-  
-    const container = this.el.nativeElement.querySelector('.testimonial-container');
-    
+
+    const container: HTMLElement | null = this.el.nativeElement.querySelector('.testimonial-container');
+
     if (!container) {
       console.error('Element `.testimonial-container` nicht gefunden!');
       return;
     }
-  
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
-          console.log('Intersection status:', entry.isIntersecting);
           if (entry.isIntersecting) {
-            console.log('Testimonials visible -> adding class');
             this.renderer.addClass(container, 'visible');
             observer.disconnect();
           }
@@ -35,9 +33,18 @@ export class TestimonialsComponent implements AfterViewInit {
       },
       { threshold: 0.2 }
     );
-  
+
     observer.observe(container);
+
+
+    const cards: NodeListOf<HTMLElement> = this.el.nativeElement.querySelectorAll('.testimonial-image-wrapper');
+
+    cards.forEach((card: HTMLElement) => {
+      card.addEventListener('touchstart', () => {
+        cards.forEach((c: HTMLElement) => this.renderer.removeClass(c, 'touched'));
+
+        this.renderer.addClass(card, 'touched');
+      });
+    });
   }
-  
-  
 }
