@@ -290,7 +290,7 @@
     display: flex;
     justify-content: center;
     gap: 40px;
-
+    margin-bottom: 12px;
 }
 
 .portf-icons img{
@@ -305,8 +305,25 @@
     font-style: normal;
     font-weight: 400;
     color: white;
+    display: inline-block;
+    transform: rotate(4deg);
+    margin-top: 20px;
 }
 
+.tech-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tech-item-font{
+    font-family: 'Bricolage Grotesque';
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
 
 @media (max-width: 900px) {
 
@@ -348,15 +365,21 @@
 
     .handwritten{
         font-size: 24px;
+        margin-top: 13px;
     }
 
     .portf-icons img{
         height: 44px;
         width: 44px;
     }
+
 }
 
 @media (max-width: 370px) { 
+
+    .projects-main {
+        margin-bottom: 250px;
+    }
 
     .first-child-card {
         width: 324px;
