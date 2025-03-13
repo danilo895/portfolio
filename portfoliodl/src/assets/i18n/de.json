@@ -11,14 +11,14 @@
             "SecondBulletPoint": "Offen, vor Ort zu Arbeiten",
             "ThirdBulletPoint": "Offen, remote zu Arbeiten",
             "WhoAmI": "WER IST DANIEL?",
-            "ShortDescription": "Mit fünf Jahren Berufserfahrung im eCommerce habe ich ein tiefes Verständnis für digitale Prozesse und nutzerzentrierte Lösungen entwickelt. Meine Begeisterung für Technologie und Innovation hat mich dazu bewegt, mich als Frontend-Entwickler weiterzuqualifizieren. Mein Anspruch ist es, intuitive und performante digitale Produkte zu gestalten, die Unternehmen und Nutzer gleichermaßen begeistern.",
+            "ShortDescription": "Mit fünf Jahren E-Commerce-Erfahrung und einer Weiterbildung als Frontend-Entwickler verbinde ich operative, strategische und kreative Komponenten mit Technik. Ich kenne digitale Prozesse, Schnittstellen und UX-Optimierung – mit einem klaren Blick für Effizienz und Skalierbarkeit.",
             "AboutMe":"Über Mich",
             "LetsTalk": "Lass uns reden"
         },
         "Skills":{
             "MyStack": "MEIN STACK",
             "SkillSet": "Skill Set",
-            "TechDescription": "E-Commerce-Manager, jetzt mit Fokus auf Frontend-Entwicklung. Erfahren in der Erstellung und Gestaltung von Webanwendungen mit tiefem Verständnis für digitales Business und agile Workflows.",
+            "TechDescription": "Neben Shopify, ERP, Automatisierungstools und E-Commerce-Systemen beherrsche ich moderne Frontend-Technologien. Mein Fokus liegt auf cleanem Code, nutzerfreundlichen Weblösungen und stetiger Weiterentwicklung.",
             "PullToPeel": "Zieh' es auf :)",
             "InterestedIn": "Außerdem interessiere ich mich für"
         },
@@ -67,7 +67,7 @@
                     "Id": "1",
                     "Title": "Join",
                     "Description": "Ein Kanban-Board-Gruppenprojekt, das Taskmanagement wie in Trello ermöglicht. Mit Funktionen zum Erstellen von Aufgaben, Zuweisen von Kontakten und mehr.",
-                    "ImplementationDetails":"Ich war verantwortlich für die Registrierung und Login-Logik, die Drag-&-Drop-Funktion des Boards, sowie die Umsetzung der Aufgaben-Detailansicht.",
+                    "ImplementationDetails":"Dies war ein Teamprojekt mit vier Mitgliedern. Ich war verantwortlich für die Implementierung der Registrierungs- und Login-Logik sowie die Entwicklung der Drag-and-Drop-Task-Funktion und der Edit-Task-Logik.",
                     "Image": "/assets/img/projects/join1.png",
                     "Duration": "6 Wochen"
                 },
@@ -110,7 +110,7 @@
                 "SebastianHarhammer": {
                     "Name": "Sebastian Harhammer",
                     "Job": "Frontend-Entwickler",
-                    "Quote": "Mit Daniel am Join-Projekt zu arbeiten, war eine fantastische Erfahrung. Durch Pair-Programming fanden wir dynamische Lösungen an den Schnittstellen unserer Aufgaben. Seine Fähigkeit zur Zusammenarbeit machte ihn zu einem unverzichtbaren Teil unseres Teams.",
+                    "Quote": "Mit Daniel am Join-Projekt zu arbeiten, war eine sehr gute Erfahrung. Durch Pair-Programming fanden wir dynamische Lösungen an den Schnittstellen unserer Aufgaben. Seine Fähigkeit zur Zusammenarbeit machte ihn zu einem unverzichtbaren Teil unseres Teams.",
                     "LinkedIn": "https://www.linkedin.com/in/"
                 }
             }
@@ -134,7 +134,7 @@
                 "MessageRequired": "Was möchtest du entwickeln?",
                 "MessageTooShort": "Bitte mindestens 10 Zeichen eingeben",
                 "PrivacyError": "Bitte akzeptiere die Datenschutbestimmungen",
-                "NameRequired": "Vorname und Nachname werden benötigt",
+                "NameRequired": "Gib deinen Namen ein",
                 "NameInvalid": "Ungültige Zeichen! Nur Buchstaben erlaubt"
             }
         }

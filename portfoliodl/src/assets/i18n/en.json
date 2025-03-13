@@ -11,14 +11,14 @@
             "SecondBulletPoint": "Open to working on-site",
             "ThirdBulletPoint": "Open to working remote",
             "WhoAmI": "WHO'S DANIEL?",
-            "ShortDescription": "With five years of experience in eCommerce, I have developed a deep understanding of digital processes and user-centric solutions. My passion for technology and innovation has driven me to further qualify as a frontend developer. My goal is to create intuitive and high-performance digital products that inspire both businesses and users alike.",
+            "ShortDescription": "With five years of e-commerce experience and training as a frontend developer, I combine operational, strategic, and creative components with technology. I understand digital processes, integrations, and UX optimization – always with a focus on efficiency and scalability.",
             "AboutMe":"About Me",
             "LetsTalk": "Let's Talk"
         },
         "Skills":{
             "MyStack": "MY STACK",
             "SkillSet": "Skill set",
-            "TechDescription": "E-Commerce Manager, now expanding into Frontend Development. Skilled in building and designing web applications, with a strong understanding of digital business and agile workflows.",
+            "TechDescription": "Alongside Shopify, ERP, automation tools, and e-commerce systems, I specialize in modern frontend technologies. My focus is on clean code, user-friendly web solutions, and continuous growth.",
             "PullToPeel": "Pull to peel",
             "InterestedIn": "Also, I'm interested in diving into"
         },
@@ -67,7 +67,7 @@
                     "Id": "1",
                     "Title": "Join",
                     "Description": "A Kanban board group project that enables task management like Trello, with features for creating tasks, assigning contacts, and more.",
-                    "ImplementationDetails": "This was a team project with four members. I was responsible for designing and implementing the registration and login logic.",
+                    "ImplementationDetails": "This was a team project with four members. I was responsible for implementing the registration and login logic, as well as developing the drag-and-drop task functionality and the edit task logic.",
                     "Image": "/assets/img/projects/join1.png",
                     "Duration": "6 weeks"
                 },
@@ -133,7 +133,7 @@
             "MessageRequired": "What do you need to develop?",
             "MessageTooShort": "Please provide at least 10 characters",
             "PrivacyError": "Please accept the privacy policy",
-            "NameRequired": "First name and last name required",
+            "NameRequired": "Enter your name",
             "NameInvalid": "Invalid characters detected! Only letters allowed"
         }
     }
