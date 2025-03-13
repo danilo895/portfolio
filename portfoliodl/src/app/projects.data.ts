@@ -48,7 +48,7 @@ export const projects = [
             "/assets/img/project-detail/css-detail.svg"
         ],
         repoLink: "https://github.com/danilo895/Pokedex",
-        liveDemo: "[TODO: Add Live Demo URL later]"
+        liveDemo: "https://pokedex.daniel-loeffler.com/index.html"
     }
     
     
