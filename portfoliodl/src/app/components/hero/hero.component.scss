@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: auto;
     min-height: auto; 
     padding: 220px 0 20vh 0; 
@@ -390,8 +390,8 @@ h1{
 @media(max-width: 620px){
 
     :host-context(html[lang="de"]) h1 {
-        font-size: 80px !important;
-        letter-spacing: 3px;
+        font-size: 70px !important;
+        letter-spacing: 1px;
     }
     
     :host-context(html[lang="en"]) h1 {
@@ -440,7 +440,7 @@ h1{
 @media(max-width: 450px){
 
     :host-context(html[lang="de"]) h1 {
-        font-size: 42px !important;
+        font-size: 41px !important;
     }
     
     :host-context(html[lang="en"]) h1 {

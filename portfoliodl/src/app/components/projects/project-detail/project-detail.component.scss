@@ -438,7 +438,15 @@
 }
 
 @media(max-width: 350px){
+
+    .project-section{
+        width: 95%;
+    }
     .project-text{
         margin-right: 6px;
+    }
+
+    .previewPic{
+        min-width: 280px !important;
     }
 }

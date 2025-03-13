@@ -1,6 +1,6 @@
 :host {
         display: flex;
-        width: 100vw;
+        width: 100%;
         position: relative;
         min-height: 1000px;
         position: relative;
@@ -37,7 +37,7 @@
     display: flex;
     border-radius: 12px;
     overflow: hidden;
-    width: 80%;
+    width: 100%;
     aspect-ratio: 16 / 9;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .project-short-infos-main {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -161,7 +161,7 @@
 }
 
 .first-container-content{
-    width: 80%;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -334,6 +334,8 @@
 
 .each-project-cont {
     align-items: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .intro-project-headline{
@@ -354,13 +356,18 @@
     .spinning-card-container {
         margin-bottom: 40px;
     }
+
+    .each-project-cont {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 420px) { 
 
-    .first-child-card {
-        width: 360px;
-        height: 207px;
+    .first-child-card{
+        width: 340px;
+        height: 195px;
     }
 
     .handwritten{
@@ -382,8 +389,8 @@
     }
 
     .first-child-card {
-        width: 324px;
-        height: 186px;
+        width: 300px;
+        height: 170px;
     }
 
     .handwritten{

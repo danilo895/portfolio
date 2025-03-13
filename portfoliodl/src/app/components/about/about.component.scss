@@ -1,6 +1,6 @@
 .about-main {
     display: flex;
-    width: 100vw;
+    width: 100%;
     position: relative;
 }
 
@@ -193,7 +193,7 @@
 @media(max-width: 500px){
 
     .fact-container {
-        width: 400px;
+        width: 350px;
     }
 
     .about-facts{
@@ -212,18 +212,22 @@
         width: 32px;
         height: 32px;
     }
+
+    .loc-cont, .move-cont, .remote-cont {
+        gap: 4px;
+    }
 }
 
 @media(max-width: 410px){
 
     .fact-container {
-        width: 370px;
+        width: 340px;
     }
 }
 
 @media(max-width: 380px){
 
     .fact-container {
-        width: 300px;
+        width: 280px;
     }
 }
