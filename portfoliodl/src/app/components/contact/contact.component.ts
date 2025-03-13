@@ -23,6 +23,10 @@ export class ContactComponent implements AfterViewInit {
   isCheckboxChecked: boolean = false;
   isButtonDisabled: boolean = true;
   isFormTouched: boolean = false;
+  nameTouched: boolean = false;
+  emailTouched: boolean = false;
+  messageTouched: boolean = false;
+
   successMessage: string = '';
   private http = inject(HttpClient);
 
@@ -82,51 +86,73 @@ export class ContactComponent implements AfterViewInit {
     }
   }
 
-  
   validateName(event: Event) {
-    this.isFormTouched = true;
     const input = (event.target as HTMLInputElement).value;
     const nameRegex = /^[A-Za-zÄÖÜäöüß\s]+$/;
 
-    if (input.trim() === '') {
-        this.nameError = this.translate.instant('Home.Contact.Form.NameRequired');
-    } else if (!nameRegex.test(input)) {
-        this.nameError = this.translate.instant('Home.Contact.Form.NameInvalid');
-    } else {
-        this.nameError = '';
+    if (input.length > 0) { 
+        this.nameTouched = true; 
     }
+
+    if (this.nameTouched) {
+        if (input.trim() === '') {
+            this.nameError = this.translate.instant('Home.Contact.Form.NameRequired');
+        } else if (!nameRegex.test(input)) {
+            this.nameError = this.translate.instant('Home.Contact.Form.NameInvalid');
+        } else {
+            this.nameError = '';
+        }
+    }
+
     this.validateCheckbox();
 }
 
 
+
+
 validateEmail(event: Event) {
-  this.isFormTouched = true;
   const input = (event.target as HTMLInputElement).value;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (input.trim() === '') {
-      this.emailError = this.translate.instant('Home.Contact.Form.EmailRequired');
-  } else if (!emailRegex.test(input)) {
-      this.emailError = this.translate.instant('Home.Contact.Form.EmailInvalid');
-  } else {
-      this.emailError = '';
+  if (input.length > 0) { 
+      this.emailTouched = true; 
   }
+
+  if (this.emailTouched) {
+      if (input.trim() === '') {
+          this.emailError = this.translate.instant('Home.Contact.Form.EmailRequired');
+      } else if (!emailRegex.test(input)) {
+          this.emailError = this.translate.instant('Home.Contact.Form.EmailInvalid');
+      } else {
+          this.emailError = '';
+      }
+  }
+
   this.validateCheckbox();
 }
+
+
 
 validateMessage(event: Event) {
-  this.isFormTouched = true;
   const input = (event.target as HTMLTextAreaElement).value.trim();
 
-  if (input === '') {
-      this.messageError = this.translate.instant('Home.Contact.Form.MessageRequired');
-  } else if (input.length < 10) {
-      this.messageError = this.translate.instant('Home.Contact.Form.MessageTooShort');
-  } else {
-      this.messageError = '';
+  if (input.length > 0) { 
+      this.messageTouched = true; 
   }
+
+  if (this.messageTouched) {
+      if (input === '') {
+          this.messageError = this.translate.instant('Home.Contact.Form.MessageRequired');
+      } else if (input.length < 10) {
+          this.messageError = this.translate.instant('Home.Contact.Form.MessageTooShort');
+      } else {
+          this.messageError = '';
+      }
+  }
+
   this.validateCheckbox();
 }
+
 
 
 isFormValid(): boolean {
@@ -140,14 +166,17 @@ isFormCompletelyValid(): boolean {
 
 validateCheckbox() {
   const allFieldsValid = !this.nameError && !this.emailError && !this.messageError;
+  this.isFormTouched = this.nameTouched || this.emailTouched || this.messageTouched;
 
   if (allFieldsValid && !this.isCheckboxChecked) {
       this.checkboxError = this.translate.instant('Home.Contact.Form.PrivacyError');
   } else {
       this.checkboxError = "";
   }
+
   this.isButtonDisabled = !(allFieldsValid && this.isCheckboxChecked && this.isFormTouched);
 }
+
 
 
 onCheckboxChange(event: Event) {

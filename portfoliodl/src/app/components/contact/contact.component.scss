@@ -421,9 +421,16 @@
     font-size: 14px;
     font-weight: 400;
     color: red;
-    opacity: 0;
+    opacity: 0; /* Anfangs unsichtbar */
     transition: opacity 0.3s ease-in-out;
 }
+
+/* Zeige Fehler erst, wenn das Feld nicht leer ist UND ungültig ist */
+input:focus:invalid ~ .error-container .error-text,
+textarea:focus:invalid ~ .error-container .error-text {
+    opacity: 1;
+}
+
 
 
 .error-text:not(:empty) {
@@ -450,6 +457,8 @@ span.error-text:empty {
 span.error-text:not(:empty) {
     opacity: 1;
 }
+
+
 
 
 .error-checkbox {
@@ -523,6 +532,8 @@ span.error-text:not(:empty) {
         opacity: 1;
     }
 }
+
+
 
 
 @media(max-width: 1000px){
