@@ -89,3 +89,20 @@
   cursor: pointer;
   background-color: #F87A55;
 }
+
+
+@media(max-width: 500px){
+
+  .imprint-container {
+    width: 100%;
+  }
+  .imprint-container h2{
+    font-size: 26px !important;
+    align-self: center;
+  }
+
+  .imprint-container h3{
+    font-size: 24px !important;
+    align-self: center;
+  }
+}
