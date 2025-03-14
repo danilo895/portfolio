@@ -4,16 +4,30 @@
 }
 
 
-* {
-    outline: 1px solid transparent;
-}
-
 
 html, body {
     font-family:'Bricolage Grotesque';
     color: white;
     width: 100%;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(51,85,255);
+    background: linear-gradient(0deg, rgba(51,85,255,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f87a55;
+    border-radius: 10px;
+}
+
+
+
+
 
 h1{
     display: flex;
@@ -43,7 +57,7 @@ h1 span::before {
     left: 50%;
     transform: translateX(-50%);
     text-transform: none;
-    color: #F7C518;
+    color: #f87a55;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, min-width 0.3s ease-in-out;
     white-space: nowrap; 
