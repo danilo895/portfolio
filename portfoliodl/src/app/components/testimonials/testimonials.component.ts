@@ -13,7 +13,6 @@ export class TestimonialsComponent implements AfterViewInit {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngAfterViewInit() {
-    console.log('TestimonialsComponent initialized');
 
     const container: HTMLElement | null = this.el.nativeElement.querySelector('.testimonial-container');
 

@@ -175,6 +175,10 @@
     padding-bottom: 0;
 }
 
+textarea{
+    resize: vertical;
+    max-height: 400px; 
+}
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {

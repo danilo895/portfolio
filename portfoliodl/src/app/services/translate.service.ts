@@ -9,7 +9,6 @@ export class AppTranslateService {
 
   constructor() {
     this.initTranslation();
-    console.log('AppTranslateService initialized', "currentLanguage: ", this.currentLanguage);
   }
 
   private initTranslation() {

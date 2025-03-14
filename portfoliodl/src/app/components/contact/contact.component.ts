@@ -54,13 +54,11 @@ export class ContactComponent implements AfterViewInit {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid && ngForm.submitted) {
-      console.log("Formular ist gültig! Sende echte Anfrage...", this.contactData);
   
       this.http.post('https://daniel-loeffler.com/sendMail.php', this.contactData, {
         headers: { 'Content-Type': 'application/json' }
       }).subscribe(
         (response: any) => {
-          console.log("Server-Antwort:", response);
           if (response.status === "success") {
             this.successMessage = "E-Mail successfully sent!";
             this.contactData = { name: '', email: '', message: '' };
@@ -75,7 +73,6 @@ export class ContactComponent implements AfterViewInit {
             setTimeout(() => {
               this.successMessage = '';
             }, 3000);
-            console.info("Formular wurde zurückgesetzt.");
           } else {
             this.successMessage = "Fehler beim Senden der E-Mail.";
           }
@@ -110,9 +107,6 @@ export class ContactComponent implements AfterViewInit {
 
     this.validateCheckbox();
 }
-
-
-
 
 validateEmail(event: Event) {
   const input = (event.target as HTMLInputElement).value;
@@ -170,16 +164,19 @@ isFormCompletelyValid(): boolean {
 
 validateCheckbox() {
   const allFieldsValid = !this.nameError && !this.emailError && !this.messageError;
-  this.isFormTouched = this.nameTouched || this.emailTouched || this.messageTouched;
+  const formFilledCompletely = this.contactData.name.trim() !== '' && 
+                            this.contactData.email.trim() !== '' && 
+                            this.contactData.message.trim() !== '';
+  this.isFormTouched = formFilledCompletely;
 
-  if (allFieldsValid && !this.isCheckboxChecked) {
+  if (allFieldsValid && !this.isCheckboxChecked && this.isFormTouched) {
       this.checkboxError = this.translate.instant('Home.Contact.Form.PrivacyError');
   } else {
       this.checkboxError = "";
   }
-
   this.isButtonDisabled = !(allFieldsValid && this.isCheckboxChecked && this.isFormTouched);
 }
+
 
 
 
